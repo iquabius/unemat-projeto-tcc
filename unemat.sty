@@ -1,0 +1,211 @@
+%%
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para a Universidade XXXX
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%%
+%% The Current Maintainer of this work is SEU_NOME, SEU_EMAIL
+%%
+%% Further information about abnTeX2 are available on http://abntex2.googlecode.com/
+%%
+
+% ---
+% INICIO DAS CUSTOMIZACOES PARA A UNIVERSIDADE XXX
+% ---
+
+\ProvidesPackage{abntex2novopacote}[2014/09/01 Criacao desta customizacao do abnTeX2]
+
+
+\makeatother
+
+% ----------------------------------------------------------
+% CUSTOMIZAÇÃO DA CAPA
+% ----------------------------------------------------------
+
+\renewcommand{\imprimircapa}
+{
+	\begin{capa}
+
+		\center
+
+		\begin{center}
+		\MakeUppercase{\bfseries\normalsize\imprimirautor}
+		\end{center}
+
+		\vfill
+
+		\begin{center}
+		\MakeUppercase{\bfseries\normalsize\imprimirtitulo}
+		\end{center}
+
+		\vfill
+
+		\MakeUppercase{\bfseries\normalsize\imprimirlocal}
+
+		\MakeUppercase{\bfseries\normalsize\imprimirdata}
+
+  \end{capa}
+}
+
+% ----------------------------------------------------------
+% CUSTOMIZAÇÃO DA CAPA DE ROSTO
+% ----------------------------------------------------------
+
+\makeatletter
+
+\renewcommand{\folhaderostocontent}
+{
+	\begin{center}
+
+	\MakeUppercase{\bfseries\normalsize\imprimirautor}
+
+	\vspace*{\fill}\vspace*{\fill}\vspace*{\fill}\vspace{0.5cm}
+
+	\begin{center}
+	\MakeUppercase{\bfseries\normalsize\imprimirtitulo}
+	\end{center}
+
+	\vspace*{3cm}
+
+	\abntex@ifnotempty{\imprimirpreambulo}
+	{
+	  \hspace{.45\textwidth}
+	  \begin{minipage}{.5\textwidth}
+	  \SingleSpacing
+	  \imprimirpreambulo
+	  \end{minipage}
+	  \vspace*{\fill}
+	}
+
+	\MakeUppercase{\bfseries\normalsize\imprimirlocal}
+
+	\MakeUppercase{\bfseries\normalsize\imprimirdata}
+
+	\end{center}
+}
+
+%NESTA PARTE E POSSÍVEL CUSTOMIZAR O LAYOUT DO SUMÁRIO%
+
+% ----------------------------------------------------------
+% ALTERA A FONTE DO NÚMERO DA SEÇÃO NO SUMÁRIO
+% ----------------------------------------------------------
+
+%\renewcommand*{\cftsectionname}{\space}		%altera o numero da seções
+
+% ----------------------------------------------------------
+% ALTERA O TEXTO DO TÍTULO NO SUMÁRIO
+% ----------------------------------------------------------
+
+%\renewcommand\cftsectionaftersnumb{\hspace{1cm}}	%altera o texto no sumário
+%\renewcommand\cftsubsectionaftersnumb{\hspace{1cm}}
+%\renewcommand\cftsubsubsectionaftersnumb{\hspace{1cm}}
+
+
+% ----------------------------------------------------------
+% ALTERA A FONTE DE TODA UMA LINHA NO SUMÁRIO
+% ----------------------------------------------------------
+
+\renewcommand\cftsubsectionfont{\normalfont} %altera a fonte de toda uma linha
+
+% ----------------------------------------------------------
+% MUDA A FONTE DOS CAPÍTULOS NO SUMÁRIO (EXEMPLO: AQUI MUDA PARA LETRAS EM MINUSCULO)
+% ----------------------------------------------------------
+
+%\makeatletter
+%\settocpreprocessor{\chapter}{%
+%\let\tempf@rtoc\f@rtoc%
+%\def\f@rtoc{%
+%\texorpdfstring{\MakeLowercase{\tempf@rtoc}}{\tempf@rtoc}}%
+%}
+%\makeatother
+
+% ----------------------------------------------------------
+% MUDA A FONTE DOS NÚMEROS DAS PÁGINAS NO SUMÁRIO
+% ----------------------------------------------------------
+
+%\cftchapterformatpnum{PAGE} %formato do numero da pagina
+
+% ----------------------------------------------------------
+% MUDA OS PONTINHOS DO SUMÁRIO QUE LIGA OS TÍTULOS AO NÚMEROS (TENTE COLOCAR UM *)
+% ----------------------------------------------------------
+
+%\renewcommand{\cftdot}{.} %formato dos pontinhos
+
+
+% ----------------------------------------------------------
+% FAZ A PALAVRA REFERÊNCIAS FICAR EM MAIÚSCULO E NEGRITO NO SUMÁRIO
+% ----------------------------------------------------------
+
+\renewcommand{\bibsection}
+{
+	\chapter*{\bibname}
+	\bibmark
+	\ifnobibintoc\else
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\uppercase{\textbf{\bibname}}}
+	\fi
+	\prebibhook
+}
+
+% ----------------------------------------------------------
+% FAZ OS TÍTULOS DOS CAPÍTULOS FICAREM EM MAIÚSCULOS E COM A FONTE MODERN FAMILY
+% ----------------------------------------------------------
+
+\makeatother
+
+\renewcommand{\ABNTEXchapterfont}
+{
+	\renewcommand{\printchaptertitle}[1]{\MakeUppercase{##1}}
+}
+
+% ----------------------------------------------------------
+% AQUI VOCÊ PODE TROCAR OS NOMES FIXADOS, POR EXEMPLO: LISTA DE TABELAS, LISTA DE FIGURAS
+% SEGUNDO AS NORMAS DA UNEMAT, OS TÍTULOS DEVEM SER EM CAIXA ALTA E NEGRITO
+% ----------------------------------------------------------
+
+\addto\captionsbrazil
+{
+	\renewcommand{\listtablename}{\bfseries{LISTA DE TABELAS}}
+	\renewcommand{\listfigurename}{\bfseries{LISTA DE FIGURAS}}
+	\renewcommand{\bibname}{\bfseries{REFERÊNCIAS}}
+	\renewcommand{\listadesiglasname}{\bfseries{LISTA DE ABREVIATURAS E SIGLAS}}
+	\renewcommand{\contentsname}{\bfseries{SUMÁRIO}}
+}
+
+% ----------------------------------------------------------
+% FAZ MUDAR A FONTE DE CAPÍTULOS, PARTES, SUBSEÇÕES...
+% COLOCAMOS OS NOMES DE CAPÍTULOS E SEÇÕES PRIMÁRIAS EM NEGRITO E SUBSEÇÕES NA FONTE NORMAL
+% ----------------------------------------------------------
+
+\renewcommand{\ABNTEXchapterfont}{\bfseries}
+\renewcommand{\ABNTEXsectionfont}{\bfseries}
+\renewcommand{\ABNTEXsubsectionfont}{\normalfont}
+
+% ----------------------------------------------------------
+% MUDA O TAMANHO DAS FONTES DE CAPÍTULOS, PARTES, SUBSEÇÕES...
+% ----------------------------------------------------------
+
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+\renewcommand{\ABNTEXpartfontsize}{\normalsize}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+
+\makeatother
+% ---
+% FIM DAS CUSTOMIZACOES PARA A UNIVERSIDADE DO ESTADO DE MATO GROSSO
+% ---
+
+%- Remove a numeração das seções (e.g. "Projeto de Pesquisa")
+%- http://bit.ly/1Wjtsyk, http://bit.ly/1WjAEdR
+\makeatletter
+  \renewcommand* \thesection {\@arabic\c@section}
+  \@removefromreset{section}{chapter}
+\makeatother

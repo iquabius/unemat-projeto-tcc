@@ -1,0 +1,8 @@
+rm -r out 2> /dev/null
+mkdir out
+pdflatex -output-directory=out main
+cp refs.bib out
+(cd out; bibtex main)
+makeglossaries -d out main
+pdflatex -output-directory=out main
+pdflatex -output-directory=out main
