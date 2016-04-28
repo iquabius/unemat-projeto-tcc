@@ -1,11 +1,38 @@
-\section{Hipóteses}\label{lhipotese}
+\section{Hipóteses}\label{lhipoteses}
 
-Interfaces web ricas e interativas são inerentemente orientadas a eventos
-assíncronos.
-FRP permite a composição de programas orientados a eventos assíncronos através
-de abstrações declarativas e concisas, facilitando o desenvolvimento de
-interfaces responsivas1 às interações com o usuário, e resultando em código
-expressivo e de fácil manutenção.
+
+\subsection{Hipótese Básica}
+
+Interfaces interativas em aplicações \textit{web}
+são inerentemente orientadas a eventos assíncronos
+ou seja, precisam reagir a comandos do usuário e
+mensagens de servidores remotos.
+Recentemente os paradigmas de \textit{Programação Funcional}
+e \textit{Programação Reativa} tem chamado a atenção de
+comunidades de desenvolvimento \textit{web}, \textit{mobile}
+e \textit{desktop}.
+Conceitos de ambos os paradigmas podem ser usados
+no desenvolvimento de interfaces gráficas,
+e oferecem uma maneira de coordenar
+computações assíncronas\footnote{
+  Clicks do mouse, pressionamento de teclas no teclado,
+  requisições ao servidor, etc.
+}
+através da composição de eventos de forma declarativa
+e concisa, resultando em código expressivo e de fácil
+manutenção.
+
+
+\subsection{Hipóteses Secundárias}
+
+\textit{Programação Funcional} e \textit{Programação Reativa}:
+\begin{itemize}[noitemsep]
+  \item Fornecem melhor tratamento de erros.
+  \item Fornecem um modelo de programação com um nível mais elevado
+        de abstração.
+  \item Podem ser difíceis de serem adotados devido ao nível de abstração
+        mais elevado.
+\end{itemize}
 
 % Hipóteses
 % - PF torna um sistema mais previsível através do gerenciamento do estado
