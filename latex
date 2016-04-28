@@ -3,6 +3,5 @@ mkdir out
 texfot pdflatex -output-directory=out main
 cp refs.bib out
 (cd out; bibtex -terse main)
-makeglossaries -d out main
 texfot pdflatex -output-directory=out main
 texfot pdflatex -output-directory=out main

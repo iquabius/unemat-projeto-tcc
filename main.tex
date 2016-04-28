@@ -37,11 +37,6 @@
 % ---
 
 % ---
-% Pacotes glossaries
-% ---
-\usepackage[toc,xindy={language=portuguese},translate=babel]{glossaries}
-
-% ---
 % Pacotes de citações
 % ---
 \usepackage[brazilian,hyperpageref]{backref}
@@ -130,9 +125,6 @@ Professor MSc. Luciano Zamperetti Wolski.}
 
 \makeindex
 
-\makeglossaries
-\input{glossarie}
-
 \begin{document}
 
 % Seleciona o idioma do documento (conforme pacotes do babel)
@@ -171,6 +163,7 @@ Professor MSc. Luciano Zamperetti Wolski.}
 % ---
 \begin{siglas}
   \item[FRP] Functional Reactive Programming
+  \item[HTML5] HyperText Markup Language, versão 5
 \end{siglas}
 % ---
 
@@ -222,11 +215,6 @@ Professor MSc. Luciano Zamperetti Wolski.}
 % Referências bibliográficas
 % ----------------------------------------------------------
 \bibliography{refs}
-
-% ----------------------------------------------------------
-% Glossário
-% ----------------------------------------------------------
-\printglossaries
 
 \phantompart
 \printindex
