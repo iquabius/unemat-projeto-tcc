@@ -20,7 +20,8 @@ quanto de outro software (e.g. mensagens do servidor).
 
 %  in a timely fashion = em tempo hábil
 Atualmente o modelo de programação mais empregado na
-coordenação desses eventos em programas interativos é o
+coordenação desses eventos em sistemas interativos
+--- também chamados de sistemas reativos --- é o
 \textit{event-driven programming}\footnote{
   Programação orientada a eventos.
 },
@@ -72,8 +73,8 @@ lógica de manuseio de eventos, \textit{widgets}, e outros
 componentes da interface gráfica, representa cerca de
 um terço do código, e mais da metade dos \textit{bugs}
 reportados \cite{jarvi2008property}.
-Sendo interfaces gráficas com alto grau de interatividade
-parte inerente de uma aplicação, seu desenvolvimento e
+Sendo o alto grau de interatividade parte inerente de uma
+aplicação com interface gráficas, seu desenvolvimento e
 manutenção se tornam um desafio.
 
 %   - observer pattern
@@ -90,7 +91,40 @@ manutenção se tornam um desafio.
 %    embarcado que reage a sinais de sensores, ou um sistema distribuído que
 %    precisa reagir a mensagens na rede.
 
-<Apresentar FRP como alternativa>
+% Perspectivas/Paradigmas diferentes tem sido propostas para
+% abordar o desenvolvimento de aplicações interativas.
+% Programação Reativa tem sido cada vez mais utilizado para
+% estruturar código em sistemas interativos
+% --- também chamados de sistemas reativos.
+% \textit{Programação Funcional Reativa} oferece uma forma
+% declarativa de se estruturar código em sistemas reativos,
+% e tem mostrado seu potencial em uma variedade de domínios,
+% como robótica, síntese de música, animações,
+% \textit{video games}, e interfaces gráficas.
+\textit{Programação Funcional Reativa} oferece uma forma
+declarativa de se estruturar código em sistemas reativos,
+e tem mostrado seu potencial na implementação de
+interfaces gráficas e em uma variedade de outros domínios,
+como robótica, síntese de música, animações e
+\textit{video games}. Esses domínios são considerados
+reativos porque precisam reagir a vários tipos de
+eventos externos provindos de \textit{mouses}, teclados,
+acelerômetros, etc.
+
+Um sistema \textit{FRP} pode ser implementado como uma
+linguagem em si, ou como um \textit{framework} para ser
+usado em alguma linguagem já existente, fornecendo alguns
+tipos de dados que representam eventos como valores de
+primeira classe\footnote{
+  Significa que um evento pode ser atribuído a uma
+  variável, passada pra uma função ou retornado de
+  uma função.
+},
+chamados de \textit{event streams}, permitindo que eventos
+possam ser compostos a partir de outros eventos.
+Outra característica importante de sistemas \textit{FRP}
+é que a atualização desses valores ocorrem de forma
+automática (\textit{reatividade}).
 
 % - Documentar o estado da arte em:
 %   - técnologias web
@@ -100,4 +134,15 @@ manutenção se tornam um desafio.
 % Web conhecida como Ajax. E prover uma aplicação Web de
 % georeferenciamento do campus da UFSC utilizando a abordagem Ajax."
 
-<Descrever proposta do projeto>
+Este trabalho pretende contextualizar a situação atual
+de como interfaces orientadas a eventos são implementadas,
+apresentar os conceitos das abordagens alternativas, e
+fornecer implementações de alguns componentes comuns em
+interfaces gráficas, com a finalidade de testar e comparar
+tais abordagens através do uso de algumas ferramentas
+(linguagens e/ou \textit{frameworks}). Atenção especial será
+dada ao ambiente \textit{web}, ou seja, interfaces de
+aplicações utilizadas nos navegadores, e dependendo do
+levantamento feito, alguns exemplos poderão ser dados
+com alguma ferramenta \textit{FRP} para o ambiente
+\textit{mobile} e/ou \textit{desktop}.
