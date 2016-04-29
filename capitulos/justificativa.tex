@@ -1,78 +1,80 @@
 \section{Justificativa}\label{ljustificativa}
 
-% Aplicações modernas|contemporâneas estão se tornando cada vez mais interativas,
-% precisando reagir|responder a muitos estímulos/eventos imprevisíveis do ambiente
-% externo -- como comandos de um usuário, sinais de um sensor, ou requisições|
-% menssagens em uma rede.
-% Uma interfaces gráfica precisa responder a comandos do usuário, um
-% sistema embarcado reage a sinais de sensores, e um sistema distribuído precisa
-% processar requisições em uma rede.
-
-% - Mencionar que o javascript foi inventado para tornar as páginas interativas
-% - Interfaces gráficas (GUIs) são inerentemente orientadas a eventos (event-driven)
-% - GUIs possuem a característica de precisarem reagir e coordernar vários eventos,
-%   como clicks do mouse, pressionamento de teclas, gestos no touchscreen, etc.
-% - Alto grau de responsividade
 % - websockets, push notifications, AppCache, service workers, web workers
 %   - http://bit.ly/serviceworkers_webworkers_websockets
-Interatividade em páginas \textit{web} se deu com a introdução do
-\textit{JavaScript} em navegadores
-\cite{
-  paolini1995netscape,
-  thau2000javascript}.
-O advento de outras tecnologias tem tornado as interfaces \textit{web}
-cada vez mais interativas
-(e.g. Ajax\footciteref{garrett2005ajax} e \textit{Web Sockets\footnotemark}),
-\footnotetext{Tecnologia recentemente definida pela especificação do \gls{html5}}
-dando origem a uma nova gama de aplicações \textit{web} com interfaces ricas que oferecem ao usuário uma
-experiência similar as aplicações \textit{mobile} ou \textit{desktop}.
-Assim como em qualquer interface gráfica, interfaces \textit{web} precisam reagir
-a vários eventos imprevisíveis do ambiente externo,
-provindos tanto do usuário (e.g. \textit{clicks} do mouse, pressionamento de teclas, etc) % ponto dps de etc?
-quanto de outro software (e.g. mensagens do servidor). % ponto antes do parenteses?
-% pois essa precisa reagir a vários eventos imprevisíveis do ambiente externo,
-% provindos tanto do usuário (e.g. \textit{clicks} do mouse, pressionamento de teclas, etc)
-% quanto de outro software (e.g. mensagens do servidor).
+Interatividade em páginas \textit{web} se deu com a
+introdução do \textit{JavaScript} em navegadores.
+O advento de outras tecnologias tem tornado as interfaces
+\textit{web} cada vez mais interativas
+(e.g. Ajax e \textit{Web Sockets}\footnote{
+  Tecnologia recentemente definida pela especificação do HTML5.
+}),
+dando origem a uma nova gama de aplicações \textit{web}
+com interfaces ricas que oferecem ao usuário uma experiência
+similar as aplicações \textit{mobile} ou \textit{desktop}.
+Assim como em qualquer interface gráfica, interfaces \textit{web}
+precisam reagir a vários eventos imprevisíveis do ambiente
+externo, provindos tanto do usuário (e.g. \textit{clicks}
+do \textit{mouse}, pressionamento de teclas, etc)
+quanto de outro software (e.g. mensagens do servidor).
 
-% A coordenação de desses eventos é o aspecto mais complexo de um programa interativo.
 %  in a timely fashion = em tempo hábil
-Atualmente o modelo de programação mais empregado na coordenação desses eventos
-em programas interativos é o \textit{event-driven programming}\footnotemark,
-que consiste de um \textit{event-loop} que espera por eventos de forma contínua,
-e quando um evento é detectado, uma função de
-\textit{callback} apropriada é chamada para tratá-lo.
-\footnotetext{Programação orientada a eventos.}
-Essa abordagem configura uma das formas mais complexas de se programar sistemas interativos
-\cite{edwards2009coherent,maier2010deprecating,reppy1992higher}, devido ao fato de que
-aplicações desenvolvidas utilizando esse mecanismo apresentam um fluxo de controle
-desestruturado e imprevisível, além de depender crucialmente de \textit{efeitos colaterais\footnotemark} pra
-gerenciar seu estado \cite{meyerovich2009flapjax,muller2015interactive,muller2015practical}.
-\footnotetext{Do inglês \textit{side-effects:} característica muito comum em
-linguagens imperativas, onde uma função ou expressão pode modificar algum estado
-externo (e.g. alterar uma variável global, produzir uma saída na tela/terminal,
-escrever no sistema de arquivos, etc).
-Em programação funcional o uso de efeitos colaterais é desencorajado, e deve ser
-usado apenas quando absolutamente necessário -- e.g. manipular uma variável
-global não é absolutamente necessário, mas imprimir uma mensagem na tela pode ser.}
-Na literatura, essa abordagem é descrita como \textit{"Callback Hell"}, devido % colocar página na citação
-a forma desconcertante com que o fluxo de controle coordena mudanças no estado
-do programa \cite[p.~2]{edwards2009coherent}. % bainomugisha2013survey, muller2015practical
+Atualmente o modelo de programação mais empregado na
+coordenação desses eventos em programas interativos é o
+\textit{event-driven programming}\footnote{
+  Programação orientada a eventos.
+},
+que consiste de um \textit{event-loop} que espera por
+eventos de forma contínua, e quando um evento é detectado,
+uma função de \textit{callback} apropriada é chamada para
+tratá-lo.
+Essa abordagem configura uma das formas mais complexas de se
+programar sistemas interativos \cite{
+  edwards2009coherent,
+  maier2010deprecating,
+  reppy1992higher},
+devido ao fato de que aplicações desenvolvidas utilizando
+esse mecanismo apresentam um fluxo de controle desestruturado
+% implícito (Flapjax)
+e imprevisível, além de depender crucialmente de
+\textit{efeitos colaterais\footnotemark} pra
+\footnotetext{
+  Do inglês \textit{side-effects:} característica muito comum
+  em linguagens imperativas, onde uma função ou expressão pode
+  modificar algum estado externo (e.g. alterar uma variável
+  global, produzir uma saída na tela/terminal, escrever no
+  sistema de arquivos, etc). Em programação funcional o uso de
+  efeitos colaterais é desencorajado, e deve ser usado apenas
+  quando absolutamente necessário -- e.g. manipular uma variável
+  global não é absolutamente necessário, mas imprimir uma mensagem
+  na tela pode ser.
+}
+gerenciar seu estado \cite{
+  meyerovich2009flapjax,
+  muller2015interactive,
+  muller2015practical}.
+Na literatura, essa abordagem é descrita como \textit{"Callback Hell"},
+devido a forma desconcertante com que o fluxo de controle coordena
+mudanças no estado do programa \cite[p.~2]{edwards2009coherent}.
+% bainomugisha2013survey, muller2015practical
 % inversão de controle
 
-Vale ressaltar que a preocupação desnecessária com o fluxo de controle e o mau
-gerenciamento de estado são consideradas as principais causas de complexidade em
-sistemas contemporâneos, pois afetam o entendimento das várias partes do código
-por parte do desenvolvedor, além de dificultar a realização de testes de software
+Vale ressaltar que a preocupação desnecessária com o
+fluxo de controle e o mau gerenciamento de estado são
+consideradas as principais causas de complexidade em
+sistemas contemporâneos, pois afetam o entendimento das
+várias partes do código por parte do desenvolvedor,
+além de dificultar a realização de testes de software
 \cite{Moseley06outof}.
-Uma análise das aplicações \textit{desktop} da Adobe, relatada em 2006, indicou
-que o código que coordena a lógica de manuseio de eventos, \textit{widgets},
-e outros componentes da interface gráfica, representa cerca de um terço do código, e
-% manuseio, manejo, manipulação
-% que o código responsável por componentes da interface gráfica e da lógica de
-% coordenação de eventos representa cerca de um terço do código, e
-mais da metade dos \textit{bugs} reportados \cite{jarvi2008property}.
-Sendo interfaces gráficas com alto grau de interatividade parte inerente
-de uma aplicação, seu desenvolvimento e manutenção se tornam um desafio.
+Uma análise das aplicações \textit{desktop} da Adobe,
+relatada em 2006, indicou que o código que coordena a
+lógica de manuseio de eventos, \textit{widgets}, e outros
+componentes da interface gráfica, representa cerca de
+um terço do código, e mais da metade dos \textit{bugs}
+reportados \cite{jarvi2008property}.
+Sendo interfaces gráficas com alto grau de interatividade
+parte inerente de uma aplicação, seu desenvolvimento e
+manutenção se tornam um desafio.
 
 %   - observer pattern
 
