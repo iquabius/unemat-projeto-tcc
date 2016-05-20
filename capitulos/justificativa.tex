@@ -2,33 +2,28 @@
 
 % - websockets, push notifications, AppCache, service workers, web workers
 %   - http://bit.ly/serviceworkers_webworkers_websockets
-Interatividade em páginas \textit{web} se deu com a
-introdução do \textit{JavaScript} em navegadores.
-O advento de outras tecnologias tem tornado as interfaces
-\textit{web} cada vez mais interativas
-(e.g. Ajax e \textit{Web Sockets}\footnote{
-  Tecnologia recentemente definida pela especificação do HTML5.
-}),
-dando origem a uma nova gama de aplicações \textit{web}
+Interatividade em páginas web se deu com a
+introdução do \emph{JavaScript} em navegadores.
+O advento de tecnologias como o \emph{Ajax}\footciteref{garrett2005ajax} tem tornado as interfaces
+web cada vez mais interativas,
+dando origem a uma nova gama de aplicações web
 com interfaces ricas que oferecem ao usuário uma experiência
 similar as aplicações \textit{mobile} ou \textit{desktop}.
-Assim como em qualquer interface gráfica, interfaces \textit{web}
+Assim como em qualquer interface gráfica, interfaces web
 precisam reagir a vários eventos imprevisíveis do ambiente
 externo, provindos tanto do usuário (e.g. \textit{clicks}
 do \textit{mouse}, pressionamento de teclas, etc)
 quanto de outro software (e.g. mensagens do servidor).
 
 %  in a timely fashion = em tempo hábil
-Atualmente o modelo de programação mais empregado na
+Atualmente o modelo de \emph{programação orientada a eventos
+(event-driven programming)} é o mais empregado na
 coordenação desses eventos em sistemas interativos
---- também chamados de sistemas reativos --- é o
-\textit{event-driven programming}\footnote{
-  Programação orientada a eventos.
-},
-que consiste de um \textit{event-loop} que espera por
+-- também chamados de sistemas reativos.
+Esse modelo consiste de um \emph{laço de eventos (event loop)} que espera por
 eventos de forma contínua, e quando um evento é detectado,
-uma função de \textit{callback} apropriada é chamada para
-tratá-lo.
+uma \emph{função de chamada de retorno (callback)}
+apropriada é invocada para tratá-lo.
 Essa abordagem configura uma das formas mais complexas de se
 programar sistemas interativos \cite{
   edwards2009coherent,
@@ -38,7 +33,7 @@ devido ao fato de que aplicações desenvolvidas utilizando
 esse mecanismo apresentam um fluxo de controle desestruturado
 % implícito (Flapjax)
 e imprevisível, além de depender crucialmente de
-\textit{efeitos colaterais\footnotemark} pra
+\textit{efeitos colaterais\footnotemark} para
 \footnotetext{
   Do inglês \textit{side-effects:} característica muito comum
   em linguagens imperativas, onde uma função ou expressão pode
@@ -74,7 +69,7 @@ componentes da interface gráfica, representa cerca de
 um terço do código, e mais da metade dos \textit{bugs}
 reportados \cite{jarvi2008property}.
 Sendo o alto grau de interatividade parte inerente de uma
-aplicação com interface gráficas, seu desenvolvimento e
+aplicação com interface gráfica, seu desenvolvimento e
 manutenção se tornam um desafio.
 
 %   - observer pattern
@@ -101,7 +96,7 @@ manutenção se tornam um desafio.
 % e tem mostrado seu potencial em uma variedade de domínios,
 % como robótica, síntese de música, animações,
 % \textit{video games}, e interfaces gráficas.
-\textit{Programação Funcional Reativa} oferece uma forma
+\emph{Programação Funcional Reativa (FRP)} oferece uma forma
 declarativa de se estruturar código em sistemas reativos,
 e tem mostrado seu potencial na implementação de
 interfaces gráficas e em uma variedade de outros domínios,
@@ -117,7 +112,7 @@ usado em alguma linguagem já existente, fornecendo alguns
 tipos de dados que representam eventos como valores de
 primeira classe\footnote{
   Significa que um evento pode ser atribuído a uma
-  variável, passada pra uma função ou retornado de
+  variável, passada para uma função ou retornado de
   uma função.
 },
 chamados de \textit{event streams}, permitindo que eventos

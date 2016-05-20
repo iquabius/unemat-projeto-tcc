@@ -3,20 +3,21 @@
 
 \subsection{Hipótese Básica}
 
-Interfaces interativas em aplicações \textit{web}
-são inerentemente orientadas a eventos assíncronos
+Interfaces interativas em aplicações web
+são inerentemente orientadas a eventos assíncronos,
 ou seja, precisam reagir a comandos do usuário e
 mensagens de servidores remotos.
-Recentemente o paradigma de \textit{Programação Funcional Reativa}
+Recentemente o paradigma \textit{FRP}
 tem chamado a atenção de
-comunidades de desenvolvimento \textit{web}, \textit{mobile}
-e \textit{desktop}, devido as facilidades que essas
-oferecem para se desenvolver programas orientados a eventos.
-Conceitos de ambos os paradigmas podem ser usados
-no desenvolvimento de interfaces gráficas,
+comunidades de desenvolvimento web, \textit{mobile}
+e \textit{desktop}, devido as facilidades que \textit{FRP}
+oferece para se programar aplicações orientadas a eventos.
+Conceitos de \textit{FRP} podem ser usados
+na programação de interfaces gráficas interativas
+-- que são altamente orientadas a eventos --
 e oferecem uma maneira de coordenar
 computações assíncronas\footnote{
-  Clicks do mouse, pressionamento de teclas no teclado,
+  Clicks do \textit{mouse}, pressionamento de teclas no teclado,
   requisições ao servidor, etc.
 }
 através da composição de eventos de forma declarativa
@@ -26,11 +27,11 @@ manutenção.
 
 \subsection{Hipóteses Secundárias}
 
-\textit{Programação Funcional Reativa}:
 \begin{itemize}[noitemsep]
-  \item Fornece um modelo de programação com um nível mais elevado
-        de abstração.
-  \item Pode ser difícil de ser adotado devido ao alto nível de abstração.
+  \item \textit{FRP} fornece um modelo de programação com um
+        nível mais elevado de abstração.
+  \item O paradigma \textit{FRP} pode ser difícil de ser adotado
+        devido ao alto nível de abstração.
 \end{itemize}
 
 % Hipóteses
