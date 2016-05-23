@@ -27,10 +27,10 @@ Atualmente o modelo de \emph{programação orientada a eventos
 (event-driven programming)} é o mais empregado na
 coordenação desses eventos em sistemas interativos
 -- também chamados de sistemas reativos.
-Esse modelo consiste de um \emph{laço de eventos (event loop)} que espera por
-eventos de forma contínua, e quando um evento é detectado,
-uma \emph{função de chamada de retorno (callback)}
-apropriada é invocada para tratá-lo.
+Esse modelo consiste de um \emph{laço de eventos (event loop)}
+que repetidamente espera por eventos, e quando ocorre um
+evento, uma \emph{função de chamada de retorno (callback)}
+apropriada é disparada para tratá-lo.
 Essa abordagem configura uma das formas mais complexas de se
 programar sistemas interativos \cite{
   edwards2009coherent,
@@ -66,17 +66,18 @@ Vale ressaltar que a preocupação desnecessária com o
 fluxo de controle e o mau gerenciamento de estado são
 consideradas as principais causas de complexidade em
 sistemas contemporâneos, pois afetam o entendimento das
-várias partes do código por parte do desenvolvedor,
+várias partes do código por parte do programador,
 além de dificultar a realização de testes de software
-\cite{Moseley06outof}.
+\cite{moseley06out}.
 Uma análise das aplicações \emph{desktop} da Adobe,
 relatada em 2006, indicou que o código que coordena a
 lógica de manuseio de eventos, \emph{widgets}, e outros
 componentes da interface gráfica, representa cerca de
-um terço do código, e mais da metade dos \emph{bugs}
+um terço de todo o código, e mais da metade dos \emph{bugs}
 reportados \cite{jarvi2008property}.
-Sendo o alto grau de interatividade parte inerente de uma
-aplicação com interface gráfica, seu desenvolvimento e
+Sendo o alto grau de interatividade parte inerente da
+interface gráfica de uma aplicação, levando essa a ser
+altamente orientada a eventos, seu desenvolvimento e
 manutenção se tornam um desafio.
 
 %   - observer pattern
