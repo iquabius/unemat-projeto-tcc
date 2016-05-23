@@ -1,7 +1,17 @@
 rm -r out 2> /dev/null
 mkdir out
-texfot pdflatex -output-directory=out main
+
+texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out main 1> /tmp/projeto_latex.log
+
+if [ $? -eq 0 ]; then
+  echo "pdflatex 1 -> SUCESSO"
+else
+  echo "pdflatex 1 -> ERRO"
+  cat /tmp/projeto_latex.log
+  exit
+fi
+
 cp refs.bib out
 (cd out; bibtex -terse main)
-texfot pdflatex -output-directory=out main
-texfot pdflatex -output-directory=out main
+texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out main 1> /dev/null
+texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out main
