@@ -15,11 +15,11 @@ e o advento de abordagens como o \emph{Ajax}\footnote{
 tem tornado as interfaces web cada vez mais interativas,
 dando origem a uma nova gama de aplicações web com interfaces
 ricas e responsivas que oferecem ao usuário uma experiência
-similar as aplicações \textit{mobile} ou \textit{desktop}.
+similar as aplicações \emph{mobile} ou \emph{desktop}.
 Assim como em qualquer interface gráfica, interfaces web
 precisam reagir a vários eventos imprevisíveis do ambiente
-externo, provindos tanto do usuário (e.g. \textit{clicks}
-do \textit{mouse}, pressionamento de teclas, etc)
+externo, provindos tanto do usuário (e.g. \emph{clicks}
+do \emph{mouse}, pressionamento de teclas, etc)
 quanto de outro software (e.g. mensagens do servidor).
 
 %  in a timely fashion = em tempo hábil
@@ -40,9 +40,9 @@ devido ao fato de que aplicações desenvolvidas utilizando
 esse mecanismo apresentam um fluxo de controle desestruturado
 % implícito (Flapjax)
 e imprevisível, além de depender crucialmente de
-\textit{efeitos colaterais\footnotemark} para
+\emph{efeitos colaterais\footnotemark} para
 \footnotetext{
-  Do inglês \textit{side-effects:} característica muito comum
+  Do inglês \emph{side-effects:} característica muito comum
   em linguagens imperativas, onde uma função ou expressão pode
   modificar algum estado externo (e.g. alterar uma variável
   global, produzir uma saída na tela/terminal, escrever no
@@ -56,7 +56,7 @@ gerenciar seu estado \cite{
   meyerovich2009flapjax,
   muller2015interactive,
   muller2015practical}.
-Na literatura, essa abordagem é descrita como \textit{"Callback Hell"},
+Na literatura, essa abordagem é descrita como \emph{"Callback Hell"},
 devido a forma desconcertante com que o fluxo de controle coordena
 mudanças no estado do programa \cite[p.~2]{edwards2009coherent}.
 % bainomugisha2013survey, muller2015practical
@@ -69,11 +69,11 @@ sistemas contemporâneos, pois afetam o entendimento das
 várias partes do código por parte do desenvolvedor,
 além de dificultar a realização de testes de software
 \cite{Moseley06outof}.
-Uma análise das aplicações \textit{desktop} da Adobe,
+Uma análise das aplicações \emph{desktop} da Adobe,
 relatada em 2006, indicou que o código que coordena a
-lógica de manuseio de eventos, \textit{widgets}, e outros
+lógica de manuseio de eventos, \emph{widgets}, e outros
 componentes da interface gráfica, representa cerca de
-um terço do código, e mais da metade dos \textit{bugs}
+um terço do código, e mais da metade dos \emph{bugs}
 reportados \cite{jarvi2008property}.
 Sendo o alto grau de interatividade parte inerente de uma
 aplicação com interface gráfica, seu desenvolvimento e
@@ -98,23 +98,23 @@ manutenção se tornam um desafio.
 % Programação Reativa tem sido cada vez mais utilizado para
 % estruturar código em sistemas interativos
 % --- também chamados de sistemas reativos.
-% \textit{Programação Funcional Reativa} oferece uma forma
+% \emph{Programação Funcional Reativa} oferece uma forma
 % declarativa de se estruturar código em sistemas reativos,
 % e tem mostrado seu potencial em uma variedade de domínios,
 % como robótica, síntese de música, animações,
-% \textit{video games}, e interfaces gráficas.
+% \emph{video games}, e interfaces gráficas.
 \emph{Programação Funcional Reativa (FRP)} oferece uma forma
 declarativa de se estruturar código em sistemas reativos,
 e tem mostrado seu potencial na implementação de
 interfaces gráficas e em uma variedade de outros domínios,
 como robótica, síntese de música, animações e
-\textit{video games}. Esses domínios são considerados
+\emph{video games}. Esses domínios são considerados
 reativos porque precisam reagir a vários tipos de
-eventos externos provindos de \textit{mouses}, teclados,
+eventos externos provindos de \emph{mouses}, teclados,
 acelerômetros, etc.
 
-Um sistema \textit{FRP} pode ser implementado como uma
-linguagem em si, ou como um \textit{framework} para ser
+Um sistema \emph{FRP} pode ser implementado como uma
+linguagem em si, ou como um \emph{framework} para ser
 usado em alguma linguagem já existente, fornecendo alguns
 tipos de dados que representam eventos como valores de
 primeira classe\footnote{
@@ -122,11 +122,11 @@ primeira classe\footnote{
   variável, passada para uma função ou retornado de
   uma função.
 },
-chamados de \textit{event streams}, permitindo que eventos
+chamados de \emph{event streams}, permitindo que eventos
 possam ser compostos a partir de outros eventos.
-Outra característica importante de sistemas \textit{FRP}
+Outra característica importante de sistemas \emph{FRP}
 é que a atualização desses valores ocorrem de forma
-automática (\textit{reatividade}).
+automática (\emph{reatividade}).
 
 % - Documentar o estado da arte em:
 %   - técnologias web
@@ -142,9 +142,9 @@ apresentar os conceitos das abordagens alternativas, e
 fornecer implementações de alguns componentes comuns em
 interfaces gráficas, com a finalidade de testar e comparar
 tais abordagens através do uso de algumas ferramentas
-(linguagens e/ou \textit{frameworks}). Atenção especial será
-dada ao ambiente \textit{web}, ou seja, interfaces de
+(linguagens e/ou \emph{frameworks}). Atenção especial será
+dada ao ambiente \emph{web}, ou seja, interfaces de
 aplicações utilizadas nos navegadores, e dependendo do
 levantamento feito, alguns exemplos poderão ser dados
-com alguma ferramenta \textit{FRP} para o ambiente
-\textit{mobile} e/ou \textit{desktop}.
+com alguma ferramenta \emph{FRP} para o ambiente
+\emph{mobile} e/ou \emph{desktop}.
