@@ -1,3 +1,5 @@
+#!/bin/sh
+
 rm -r out 2> /dev/null
 mkdir out
 
@@ -15,3 +17,10 @@ cp refs.bib out
 (cd out; bibtex -terse projeto)
 texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out projeto 1> /dev/null
 texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out projeto
+
+if [ $1 = "-v" ] || [ $1 = "-view" ]; then
+  echo "Compilando e abrindo com Evince!"
+  evince ./out/projeto.pdf
+else
+  echo "Somente compilando!"
+fi
