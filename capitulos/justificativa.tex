@@ -108,25 +108,31 @@ manutenção se tornam um desafio.
 %    embarcado que reage a sinais de sensores, ou um sistema distribuído que
 %    precisa reagir a mensagens na rede.
 
-% Perspectivas/Paradigmas diferentes tem sido propostas para
-% abordar o desenvolvimento de aplicações interativas.
-% Programação Reativa tem sido cada vez mais utilizado para
-% estruturar código em sistemas interativos
-% --- também chamados de sistemas reativos.
-% \emph{Programação Funcional Reativa} oferece uma forma
-% declarativa de se estruturar código em sistemas reativos,
-% e tem mostrado seu potencial em uma variedade de domínios,
-% como robótica, síntese de música, animações,
-% \emph{video games}, e interfaces gráficas.
-\emph{Programação Funcional Reativa (FRP)} oferece uma forma
-declarativa de se estruturar código em sistemas reativos,
-e tem mostrado seu potencial na implementação de
-interfaces gráficas e em uma variedade de outros domínios,
-como robótica, síntese de música, animações e
-\emph{video games}. Esses domínios são considerados
-reativos porque precisam reagir a vários tipos de
-eventos externos provindos de \emph{mouses}, teclados,
-acelerômetros, etc.
+\emph{Programação Funcional Reativa (FRP)} é uma
+alternativa promissora que recentemente tem sido
+explorada e aplicada na programação de sistemas
+orientados a eventos, como interfaces gráficas,
+e em uma variedade de outros domínios
+de característica reativa, tal como robótica,
+síntese de música, animações e \emph{video games}.
+Conceitos de \emph{FRP} podêm ser adotados para
+se coordenar eventos em aplicações interativas de forma declarativa
+% programar aplicações interativas de forma declarativa
+em um nível mais elevado de abstração, resultando em
+código fonte que expressa melhor a solução implementada.
+
+% it replaces listeners (also known as callbacks) in the widely-used
+% observer pattern, making your code cleaner, clearer, more robust
+% and more maintainable – in a word – simpler. (FRP, 2016)
+
+% FRP is a specific programming technique to improve your code in
+% an area that just happens to be a common source of complexity (and
+% therefore bugs): event propagation. (FRP, 2016)
+
+% This yields the advantage that programmers need not to worry about
+% the order of events and computation dependencies. Hence, reactive
+% programming languages abstract over time management, just as garbage
+% collectors abstract over memory management. (A Survery on RP)
 
 Um sistema \emph{FRP} pode ser implementado como uma
 linguagem em si, ou como um \emph{framework} para ser
