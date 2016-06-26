@@ -6,21 +6,55 @@ mkdir out
 texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out projeto 1> /tmp/projeto_latex.log
 
 if [ $? -eq 0 ]; then
-  echo "pdflatex 1 -> SUCESSO"
+  echo "-> Primeira execução do pdflatex: SUCESSO"
 else
-  echo "pdflatex 1 -> ERRO"
+  echo "-> Primeira execução do pdflatex: ERRO"
   cat /tmp/projeto_latex.log
   exit
 fi
 
-cp refs.bib out
-(cd out; bibtex -terse projeto)
-texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out projeto 1> /dev/null
-texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out projeto
+# http://code.snipcademy.com/tutorials/shell-scripting/looping/while-loops-shift-getopts
 
-if [ $1 = "-v" ] || [ $1 = "-view" ]; then
-  echo "Compilando e abrindo com Evince!"
+# parâmetros padrões
+bibtex=true
+view=false
+
+#
+while [ $# -gt 0 ]
+do
+  case $1 in
+    -v | --view )
+      view=true
+      ;;
+    -nb | --no-bibtex )
+      bibtex=
+      ;;
+      # Opção não reconhecida
+    -*) echo "-> $0: $1: opção não reconhecida" >&2
+      ;;
+    **) break
+      ;;
+  esac
+
+  # shift for next option
+  shift
+done
+
+if [ "$bibtex" = true ]; then
+  echo "-> Executando o bibtex!"
+  cp refs.bib out
+  (cd out; bibtex -terse projeto)
+    echo "-> Segunda execução do pdflatex!"
+  texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out projeto 1> /dev/null
+    echo "-> Terceira execução do pdflatex!"
+  texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out projeto
+else
+  echo "-> O bibtex não foi executado!"
+fi
+
+if [ "$view" = true ]; then
+  echo "-> Abrindo pdf com Evince!"
   evince ./out/projeto.pdf
 else
-  echo "Somente compilando!"
+  echo "-> Somente compilando!"
 fi
