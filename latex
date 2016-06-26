@@ -1,7 +1,11 @@
 #!/bin/sh
 
-rm -r out 2> /dev/null
-mkdir out
+# Cria um diretório para manter a raiz do projeto 'limpa'
+COMPILE_DIR=out
+if [ ! -d "$COMPILE_DIR" ]; then
+  echo "-> Criando diretório para arquivos intermediários: $COMPILE_DIR"
+  mkdir "$COMPILE_DIR"
+fi
 
 texfot --quiet pdflatex -interaction=nonstopmode -output-directory=out projeto 1> /tmp/projeto_latex.log
 
