@@ -1,7 +1,5 @@
 \section{Justificativa}\label{ljustificativa}
 
-% - websockets, push notifications, AppCache, service workers, web workers
-%   - http://bit.ly/serviceworkers_webworkers_websockets
 Interatividade em páginas web se deu com a
 introdução do \emph{JavaScript} nos navegadores,
 e desde o advento do \emph{Ajax}\footnote{
@@ -35,7 +33,6 @@ sinais de sensores, etc.).
 Devido a esses aspectos, interfaces gráficas são caracterizadas
 como \emph{reativas}.
 
-%  in a timely fashion = em tempo hábil
 Atualmente o paradigma de \emph{Programação Orientada a Eventos
 (EDP)} é o mais empregado na
 coordenação de eventos em sistemas interativos.
@@ -51,7 +48,6 @@ programar aplicações interativas \cite{
   reppy1992higher},
 devido ao fato de que aplicações desenvolvidas utilizando
 esse mecanismo apresentam um fluxo de controle desestruturado
-% implícito (Flapjax)
 e imprevisível, além de depender crucialmente de
 \emph{efeitos colaterais\footnotemark} para
 \footnotetext{
@@ -72,8 +68,6 @@ gerenciar seu estado \cite{
 Na literatura, a forma desconcertante com que \emph{callbacks}
 coordenam alterações no estado instiga uma descrição infame:
 \emph{Callback Hell} \cite[p.~2]{edwards2009coherent}.
-% bainomugisha2013survey, muller2015practical
-% inversão de controle
 
 Vale ressaltar que a preocupação desnecessária com o
 fluxo de controle e o mau gerenciamento de estado são
@@ -93,20 +87,6 @@ interface gráfica de uma aplicação e, por consequência,
 altamente orientada a eventos, seu desenvolvimento e
 manutenção se tornam um desafio.
 
-%   - observer pattern
-
-% declarative vs imperative
-%   - specification (what) vs. execution (how)
-%     - Declarative Interaction Design for Data Visualization
-%   - modeling vs presentation
-%     - Elm
-%     - FR Animation
-%
-% FRP
-%  - Outros tipos de software podem ser considerados reativos, como um sistema
-%    embarcado que reage a sinais de sensores, ou um sistema distribuído que
-%    precisa reagir a mensagens na rede.
-
 \emph{Programação Funcional Reativa (FRP)} é uma
 alternativa promissora que recentemente tem sido
 explorada e aplicada na programação de sistemas
@@ -116,23 +96,8 @@ de característica reativa, tal como robótica,
 síntese de música, animações e \emph{video games}.
 Conceitos de \emph{FRP} podêm ser adotados para
 se coordenar eventos em aplicações interativas de forma declarativa
-% programar aplicações interativas de forma declarativa
 em um nível mais elevado de abstração, resultando em
 código fonte que expressa melhor a solução implementada.
-
-% it replaces listeners (also known as callbacks) in the widely-used
-% observer pattern, making your code cleaner, clearer, more robust
-% and more maintainable – in a word – simpler. (FRP, 2016)
-
-% FRP is a specific programming technique to improve your code in
-% an area that just happens to be a common source of complexity (and
-% therefore bugs): event propagation. (FRP, 2016)
-
-% This yields the advantage that programmers need not to worry about
-% the order of events and computation dependencies. Hence, reactive
-% programming languages abstract over time management, just as garbage
-% collectors abstract over memory management. (A Survery on RP)
-
 
 Este trabalho pretende contextualizar a situação atual
 de como interfaces orientadas a eventos são implementadas,
