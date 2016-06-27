@@ -50,23 +50,18 @@ O programa se torna difícil de compreender e dar manutenção,
 podendo ainda ser descrito coloquialmente como \enquote{\emph{Callback Hell}}
 \cite[p.~2]{edwards2009coherent}, como é costumeiro na literatura.
 
-Vale ressaltar que a preocupação desnecessária com o
-fluxo de controle e o mau gerenciamento de estado são
-consideradas as principais causas de complexidade em
-sistemas contemporâneos, pois afetam o entendimento das
-várias partes do código por parte do programador,
-além de dificultar manutenção e testes de software
-\cite{moseley06out}.
-Uma análise das aplicações \emph{desktop} da Adobe,
-relatada em 2006, indicou que o código que coordena a
-lógica de manuseio de eventos, \emph{widgets}, e outros
-componentes da interface gráfica, representa cerca de
-um terço de todo o código, e mais da metade dos \emph{bugs}
+Vale ressaltar que de acordo com \citeonline{moseley06out}
+o mau gerenciamento de estado é considerado a principal
+causa de complexidade em sistemas contemporâneos, pois
+impactam a compreensibilidade do programa, e os testes
+de software.
+Uma análise das aplicações \emph{desktop} da Adobe
+apontou que a lógica de coordenação de eventos residia
+em um terço do código e contia metade dos \emph{bugs}
 reportados \cite{jarvi2008property}.
-Sendo o alto grau de interatividade parte inerente da
-interface gráfica de uma aplicação e, por consequência,
-altamente orientada a eventos, seu desenvolvimento e
-manutenção se tornam um desafio.
+Interfaces gráficas inerentemente dispõem de um alto
+grau de interativade, tornando seu desenvolvimento e
+manutenção um desafio.
 
 \emph{Programação Funcional Reativa (FRP)} é uma
 alternativa promissora que recentemente tem sido
