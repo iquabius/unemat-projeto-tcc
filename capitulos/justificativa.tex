@@ -33,41 +33,22 @@ sinais de sensores, etc.).
 Devido a esses aspectos, interfaces gráficas são caracterizadas
 como \emph{reativas}.
 
-Atualmente o paradigma de \emph{Programação Orientada a Eventos
-(EDP)} é o mais empregado na
-coordenação de eventos em sistemas interativos.
-Esse modelo consiste de um \emph{laço de eventos (event loop)}
-que repetidamente espera por eventos, e quando ocorre um
-evento, uma \emph{função de chamada de retorno (callback)}
-apropriada é disparada para tratá-lo.
-Essa abordagem configura uma das formas mais complexas de se
-programar aplicações interativas \cite{
+O \emph{Observer Pattern}, usado na \emph{Programação Orientada
+a Objetos (POO)}, é o modelo tradicionalmente predominante na
+programação de GUIs.
+Inerentemente \emph{imperativo}, ele utiliza \emph{callbacks}
+como principal mecanismo de coordenação de eventos.
+No entanto, abordagens baseadas em \emph{callbacks} são
+consideradas muito complexas \cite{
   edwards2009coherent,
   fischer2007tasks,
   maier2010deprecating,
   reppy1992higher},
-devido ao fato de que aplicações desenvolvidas utilizando
-esse mecanismo apresentam um fluxo de controle desestruturado
-e imprevisível, além de depender crucialmente de
-\emph{efeitos colaterais\footnotemark} para
-\footnotetext{
-  Do inglês \emph{side-effects:} característica muito comum
-  em linguagens imperativas, onde uma função ou expressão pode
-  modificar algum estado externo (e.g. alterar uma variável
-  global, produzir uma saída na tela/terminal, escrever no
-  sistema de arquivos, etc.). Em programação funcional o uso de
-  efeitos colaterais é desencorajado, e deve ser usado apenas
-  quando absolutamente necessário -- e.g. manipular uma variável
-  global não é absolutamente necessário, mas imprimir uma mensagem
-  na tela pode ser.
-}
-gerenciar seu estado \cite{
-  meyerovich2009flapjax,
-  muller2015interactive,
-  muller2015practical}.
-Na literatura, a forma desconcertante com que \emph{callbacks}
-coordenam alterações no estado instiga uma descrição infame:
-\emph{Callback Hell} \cite[p.~2]{edwards2009coherent}.
+devido a forma desconcertante com que \emph{callbacks}
+coordenam alterações no estado do programa.
+O programa se torna difícil de compreender e dar manutenção,
+podendo ainda ser descrito coloquialmente como \enquote{\emph{Callback Hell}}
+\cite[p.~2]{edwards2009coherent}, como é costumeiro na literatura.
 
 Vale ressaltar que a preocupação desnecessária com o
 fluxo de controle e o mau gerenciamento de estado são
