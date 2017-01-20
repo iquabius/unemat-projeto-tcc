@@ -1,21 +1,16 @@
 \section{Justificativa}\label{ljustificativa}
 
-
-O \emph{Observer Pattern}, usado na \emph{Programação Orientada
-a Objetos (POO)}, é o modelo tradicionalmente predominante na
-programação de GUIs.
-Inerentemente \emph{imperativo}, ele utiliza \emph{callbacks}
-como principal mecanismo de coordenação de eventos.
-No entanto, abordagens baseadas em \emph{callbacks} são
-consideradas muito complexas \cite{
+Inerentemente \emph{imperativos}, modelos que utilizam \emph{callbacks}
+como principal mecanismo de coordenação de eventos são
+consideradas muito complexos\cite{
   edwards2009coherent,
   fischer2007tasks,
   maier2010deprecating,
-  reppy1992higher},
-devido a forma desconcertante com que \emph{callbacks}
+  reppy1992higher}.
+Isso se deve a forma desconcertante com que \emph{callbacks}
 coordenam alterações no estado do programa.
-O programa se torna difícil de compreender e dar manutenção,
-podendo ainda ser descrito coloquialmente como \enquote{\emph{Callback Hell}}
+O código da aplicação se torna difícil de compreender e dar manutenção,
+podendo ainda ser descrito coloquialmente como \emph{\enquote{Callback Hell}}
 \cite[p.~2]{edwards2009coherent}, como é costumeiro na literatura.
 
 Vale ressaltar que de acordo com \citeonline{moseley06out}
