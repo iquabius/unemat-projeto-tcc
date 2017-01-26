@@ -1,54 +1,42 @@
 \section{Justificativa}
 \label{sec:justificativa}
 
-Inerentemente \emph{imperativos}, modelos que utilizam \emph{callbacks}
-como principal mecanismo de coordenação de eventos são
-consideradas muito complexos\cite{
-  edwards2009coherent,
-  fischer2007tasks,
-  maier2010deprecating,
-  reppy1992higher}.
-Isso se deve a forma desconcertante com que \emph{callbacks}
-coordenam alterações no estado do programa.
-O código da aplicação se torna difícil de compreender e dar manutenção,
-podendo ainda ser descrito coloquialmente como \emph{\enquote{Callback Hell}}
+Inerentemente \emph{imperativos}, modelos que utilizam \emph{callbacks} como
+principal mecanismo de coordenação de eventos são consideradas muito
+complexos\cite{ edwards2009coherent, fischer2007tasks, maier2010deprecating,
+  reppy1992higher}. Isso se deve a forma desconcertante com que \emph{callbacks}
+coordenam alterações no estado do programa. O código da aplicação se torna
+difícil de compreender e dar manutenção, podendo ainda ser descrito
+coloquialmente como \emph{\enquote{Callback Hell}}
 \cite[p.~2]{edwards2009coherent}, como é costumeiro na literatura.
 
-Vale ressaltar que de acordo com \citeonline{moseley06out}
-o mau gerenciamento de estado é considerado a principal
-causa de complexidade em sistemas contemporâneos, pois
-impactam a compreensibilidade do programa, e os testes
-de software.
-Uma análise das aplicações \emph{desktop} da Adobe
-apontou que a lógica de coordenação de eventos residia
-em um terço do código e contia metade dos \emph{bugs}
-reportados~\cite{jarvi2008property}.
-Interfaces gráficas inerentemente dispõem de um alto
-grau de interativade, tornando seu desenvolvimento e
-manutenção um desafio.
+Vale ressaltar que de acordo com \citeonline{moseley06out} o mau gerenciamento
+de estado é considerado a principal causa de complexidade em sistemas
+contemporâneos, pois impactam a compreensibilidade do programa, e os testes de
+software. Uma análise das aplicações \emph{desktop} da Adobe apontou que a
+lógica de coordenação de eventos residia em um terço do código e contia metade
+dos \emph{bugs} reportados~\cite{jarvi2008property}. Interfaces gráficas
+inerentemente dispõem de um alto grau de interativade, tornando seu
+desenvolvimento e manutenção um desafio.
 
 \emph{Programação Funcional Reativa (PFR)} é uma alternativa promissora para o
 desenvolvimento de sistemas reativos, e tem sido explorada em vários domínios,
-como: animação digital~\cite{Elliott-H:1997:Fran}, GUIs~\cite{Czaplicki:2012:Elm},
-jogos digitais, robótica, e síntese de música.
-PFR permite que aplicações interativas sejam programadas de forma declarativa
-em um nível mais elevado de abstração, com código fonte que expressa melhor a
-solução implementada.
-Como resultado, o programa se torna mais compreensível, mais fácil de dar
-manutenção e, em geral, menos complexo.
+como: animação digital~\cite{Elliott-H:1997:Fran},
+GUIs~\cite{Czaplicki:2012:Elm}, jogos digitais, robótica, e síntese de música.
+PFR permite que aplicações interativas sejam programadas de forma declarativa em
+um nível mais elevado de abstração, com código fonte que expressa melhor a
+solução implementada. Como resultado, o programa se torna mais compreensível,
+mais fácil de dar manutenção e, em geral, menos complexo.
 
-Este trabalho pretende contextualizar a situação atual
-de como interfaces orientadas a eventos são implementadas,
-apresentar os conceitos das abordagens alternativas, e
-fornecer implementações de alguns componentes comuns em
-interfaces gráficas, com a finalidade de testar e comparar
-tais abordagens através do uso de algumas ferramentas
-(linguagens e/ou \emph{frameworks}). Atenção especial será
-dada ao ambiente \emph{web}, ou seja, interfaces de
-aplicações utilizadas nos navegadores, e dependendo do
-levantamento feito, alguns exemplos poderão ser dados
-com alguma ferramenta que implemente a PFR para o ambiente
-\emph{mobile} e/ou \emph{desktop}.
+Este trabalho pretende contextualizar a situação atual de como interfaces
+orientadas a eventos são implementadas, apresentar os conceitos das abordagens
+alternativas, e fornecer implementações de alguns componentes comuns em
+interfaces gráficas, com a finalidade de testar e comparar tais abordagens
+através do uso de algumas ferramentas (linguagens e/ou \emph{frameworks}).
+Atenção especial será dada ao ambiente \emph{web}, ou seja, interfaces de
+aplicações utilizadas nos navegadores, e dependendo do levantamento feito,
+alguns exemplos poderão ser dados com alguma ferramenta que implemente a PFR
+para o ambiente \emph{mobile} e/ou \emph{desktop}.
 
 %%% Local Variables:
 %%% mode: latex
