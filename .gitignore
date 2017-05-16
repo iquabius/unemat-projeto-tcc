@@ -1,5 +1,6 @@
 /out
 /versoes
+/_minted*
 *.aux
 *.bbl
 *.blg
