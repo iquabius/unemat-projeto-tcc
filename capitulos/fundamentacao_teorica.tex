@@ -42,61 +42,27 @@
 \begin{listing}[H]
   \centering
   \caption{Atribuição de funções a variáveis}
-  \begin{minted}
-    [
-    frame=lines,
-    framesep=2mm,
-    baselinestretch=1.2,
-    fontsize=\scriptsize, % scriptsize, footnotesize, small
-    linenos,
-    mathescape
-    ]
-    {js}
-    var sumar = function(x, y) {
-      return x + y
-    }
-
-    // Utilizando 'let' e 'Arrow Functions' do JavaScript ES6
-    let subtrair = (x, y) => {
-      return x - y
-    }
-
-    // Quando a função possui apenas uma expressão
-    // as chaves podem ser removidas
-    let multiplicar = (x, y) => return x * y
-
-    // Quando a única expressão é um retorno, a palavra chave
-    // 'return' também pode ser removida
-    let dividir = (x, y) => x / y
-  \end{minted}
-  \label{code:app-init}
+  \inputminted[frame=lines,
+               framesep=2mm,
+               baselinestretch=1.2,
+               fontsize=\scriptsize, % scriptsize, footnotesize, small
+               linenos,
+               mathescape]
+               {js}{code/fp_first_class_functions.js}
+  \label{code:fp_first_class_functions}
 \end{listing}
 
 \begin{listing}[H]
   \centering
   \caption{Expressões \emph{lambda}}
-  \begin{minted}
-    [
-    frame=lines,
-    framesep=2mm,
-    baselinestretch=1.2,
-    fontsize=\scriptsize, % scriptsize, footnotesize, small
-    linenos,
-    mathescape
-    ]
-    {js}
-    // A função 'f' chama a função 'g' passando o valor do parâmetro 'x'
-    // como argumento.
-    let f = (g, x) => g(x)
-
-    // Dois valores são passados a função 'f':
-    // O primeiro é uma função 'lambda' que retorna 'y + 1'
-    // O segundo é o numero '99'
-    let resultado = f((y) => y + 1, 99)
-    // Ao executar a função 'f', a expressão lambda é vinculada
-    // a variável 'g', definida na lista de argumentos.
-  \end{minted}
-  \label{code:app-init}
+  \inputminted[frame=lines,
+               framesep=2mm,
+               baselinestretch=1.2,
+               fontsize=\scriptsize, % scriptsize, footnotesize, small
+               linenos,
+               mathescape]
+               {js}{code/fp_lambdas.js}
+  \label{code:fp_lambdas}
 \end{listing}
 
 \subsubsection{Funções de Ordem Superior \emph{(Higher-order Functions)}}
@@ -118,50 +84,27 @@ As primitivas \emph{map} e \emph{filter} são funções de ordem superior.
 \begin{listing}[H]
   \centering
   \caption{Primitiva \emph{map}}
-  \begin{minted}
-    [
-    frame=lines,
-    framesep=2mm,
-    baselinestretch=1.2,
-    fontsize=\scriptsize, % scriptsize, footnotesize, small
-    linenos,
-    mathescape
-    ]
-    {js}
-    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-    // Computa uma lista com os quadrados dos valores de 'numbers'
-    let squaredNumbers = numbers.map(num => Math.pow(num, 2))
-
-    //-> [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-  \end{minted}
-  \label{code:app-init}
+  \inputminted[frame=lines,
+               framesep=2mm,
+               baselinestretch=1.2,
+               fontsize=\scriptsize, % scriptsize, footnotesize, small
+               linenos,
+               mathescape]
+               {js}{code/fp_primitives_map.js}
+  \label{code:fp_primitives_map}
 \end{listing}
 
 \begin{listing}[H]
   \centering
   \caption{Primitiva \emph{filter}}
-  \begin{minted}
-    [
-    frame=lines,
-    framesep=2mm,
-    baselinestretch=1.2,
-    fontsize=\scriptsize, % scriptsize, footnotesize, small
-    linenos,
-    mathescape
-    ]
-    {js}
-    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-    // Função que diz se um número é ou não par
-    let isEven = (n) => n % 2 == 0
-
-    // Filtra os números pares
-    let evenNumbers = numbers.filter(isEven)
-
-    //-> [0, 2, 4, 6, 8]
-  \end{minted}
-  \label{code:app-init}
+  \inputminted[frame=lines,
+               framesep=2mm,
+               baselinestretch=1.2,
+               fontsize=\scriptsize, % scriptsize, footnotesize, small
+               linenos,
+               mathescape]
+               {js}{code/fp_primitives_filter.js}
+  \label{code:fp_primitives_filter}
 \end{listing}
 
 \subsubsection{Composição de Funções}
@@ -179,51 +122,27 @@ o estilo \emph{imperativo} de programação.
 \begin{listing}[H]
   \centering
   \caption{Dobrando números de uma lista de forma imperativa}
-  \begin{minted}
-    [
-    frame=lines,
-    framesep=2mm,
-    baselinestretch=1.2,
-    fontsize=\scriptsize, % scriptsize, footnotesize, small
-    linenos,
-    mathescape
-    ]
-    {js}
-    function doubleNumbers(numbers) {
-      const doubled = []
-      const l = numbers.length
-
-      for (let i = 0; i < l; i++) {
-        doubled.push(numbers[i] * 2)
-      }
-
-      return doubled
-    }
-  \end{minted}
-  \label{code:dobrar-nums-imperativo}
+  \inputminted[frame=lines,
+               framesep=2mm,
+               baselinestretch=1.2,
+               fontsize=\scriptsize, % scriptsize, footnotesize, small
+               linenos,
+               mathescape]
+               {js}{code/fn_double_numbers_imperative.js}
+  \label{code:fn_double_numbers_imperative}
 \end{listing}
 
 \begin{listing}[H]
   \centering
   \caption{Dobrando números de uma lista de forma declarativa}
-  \begin{minted}
-    [
-    frame=lines,
-    framesep=2mm,
-    baselinestretch=1.2,
-    fontsize=\scriptsize, % scriptsize, footnotesize, small
-    linenos,
-    mathescape
-    ]
-    {js}
-    function doubleNumbers(numbers) {
-      return numbers.map(n => n * 2)
-    }
-
-    doubleNumbers([1, 2, 3])
-    // [2, 4, 6]
-  \end{minted}
-  \label{code:dobrar-nums-declarativo}
+  \inputminted[frame=lines,
+               framesep=2mm,
+               baselinestretch=1.2,
+               fontsize=\scriptsize, % scriptsize, footnotesize, small
+               linenos,
+               mathescape]
+               {js}{code/fn_double_numbers_declarative.js}
+  \label{code:fn_double_numbers_declarative}
 \end{listing}
 
 \subsection{Programação Orientada a Objetos e o \emph{Observer Pattern}}
