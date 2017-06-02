@@ -31,6 +31,8 @@
 \subsubsection{Funções Puras \emph{(Pure Functions)}}
 \label{sec:func-puras}
 
+% transparência referêncial
+
 \subsubsubsection{Efeitos Colaterais \emph{(Side-effects)}}
 
 \subsubsection{Funções de Primeira Classe \emph{(First Class Functions)}}
@@ -166,6 +168,63 @@ As primitivas \emph{map} e \emph{filter} são funções de ordem superior.
 
 %\subsubsection{\emph{Currying}}
 %
+
+\subsection{O Imperativo e o Declarativo na Programação}
+
+A função \emph{doubleNumbers} no Fragmento de Código
+\ref{code:dobrar-nums-imperativo} recebe uma lista de números e produz numa nova
+lista onde todos os números são multiplicados por 2. Essa implementação utiliza
+o estilo \emph{imperativo} de programação.
+
+\begin{listing}[H]
+  \centering
+  \caption{Dobrando números de uma lista de forma imperativa}
+  \begin{minted}
+    [
+    frame=lines,
+    framesep=2mm,
+    baselinestretch=1.2,
+    fontsize=\scriptsize, % scriptsize, footnotesize, small
+    linenos,
+    mathescape
+    ]
+    {js}
+    function doubleNumbers(numbers) {
+      const doubled = []
+      const l = numbers.length
+
+      for (let i = 0; i < l; i++) {
+        doubled.push(numbers[i] * 2)
+      }
+
+      return doubled
+    }
+  \end{minted}
+  \label{code:dobrar-nums-imperativo}
+\end{listing}
+
+\begin{listing}[H]
+  \centering
+  \caption{Dobrando números de uma lista de forma declarativa}
+  \begin{minted}
+    [
+    frame=lines,
+    framesep=2mm,
+    baselinestretch=1.2,
+    fontsize=\scriptsize, % scriptsize, footnotesize, small
+    linenos,
+    mathescape
+    ]
+    {js}
+    function doubleNumbers(numbers) {
+      return numbers.map(n => n * 2)
+    }
+
+    doubleNumbers([1, 2, 3])
+    // [2, 4, 6]
+  \end{minted}
+  \label{code:dobrar-nums-declarativo}
+\end{listing}
 
 \subsection{Programação Orientada a Objetos e o \emph{Observer Pattern}}
 
