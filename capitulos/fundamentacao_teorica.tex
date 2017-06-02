@@ -20,22 +20,58 @@
 %
 %% \subsubsection{Programação com \emph{Callbacks}}
 
-\subsection{Programação Funcional}
-\label{sec:prog-funcional}
+
+\subsection{Paradigmas de Programação}
+\label{sec:prog_paradigms}
+
+A função \emph{doubleNumbers} no Fragmento de Código
+\ref{code:fn_double_numbers_imperative} recebe uma lista de números e produz numa nova
+lista onde todos os números são multiplicados por 2. Essa implementação utiliza
+o estilo \emph{imperativo} de programação.
+
+\begin{listing}[H]
+  \centering
+  \caption{Dobrando números de uma lista de forma imperativa}
+  \inputminted{js}{code/fn_double_numbers_imperative.js}
+  \label{code:fn_double_numbers_imperative}
+\end{listing}
+
+
+\subsubsection{Programação Orientada a Objetos}
+\label{sec:oop}
+
+{\tiny\begin{description}[noitemsep]
+  \item [Design Patterns] \emph{Observer Pattern}
+  \item [\emph{Callbacks}]
+\end{description}}
+
+\subsubsection{Programação Funcional}
+\label{sec:fp}
 
 % "Functional Programming (enabled by lambdas with closure)"
 % Contextualização Histórica
 % Renascença da Programação Funcional
 
+{\tiny
+\begin{description}[noitemsep]
+\item[Lambda Calculus]
+\item[Programação declarativa]
+\item[Aplicação de funções] \emph{Function application}
+\item[Avaliações de expressões] \emph{expression evaluation}
+\item[Imutabilidade] Possibilita Transparência Referêncial
+\item[Efeitos colaterais] \emph{side-effects}
+\item[Funções Puras] \emph{Pure Functions}
+\item[Funções de primeira class] \emph{first-class functions}
+\item[Funções de Ordem Superior] \emph{(Higher-order Functions)}, Funções como
+  argumentos, Funções como valores retornados
+\item[Primitivas] \emph{map}, \emph{filter}, \emph{fold}, \emph{reduce},
+  \emph{scan}, \emph{zip}
+\item[Composição de funções] \emph{Function Composition}
+\item[Currying]
+\end{description}
+}
 
-\subsubsection{Funções Puras \emph{(Pure Functions)}}
-\label{sec:func-puras}
-
-% transparência referêncial
-
-\subsubsubsection{Efeitos Colaterais \emph{(Side-effects)}}
-
-\subsubsection{Funções de Primeira Classe \emph{(First Class Functions)}}
+Funções de Primeira Classe \emph{(First Class Functions)}…
 
 % - Expressões lambda / funções anônimas / Closures
 
@@ -53,21 +89,17 @@
   \label{code:fp_lambdas}
 \end{listing}
 
-\subsubsection{Funções de Ordem Superior \emph{(Higher-order Functions)}}
+Funções de Ordem Superior \emph{(Higher-order Functions)}…
+
 
 \emph{Funções de Ordem Superior} são funções que aceitam outras funções como
 argumento, ou retornam uma função.
 
-\subsubsubsection{Funções como argumentos}
 
-\subsubsubsection{Funções como valores retornados}
+Primitivas Básicas de Programação Funcional…
 
-\subsubsection{Primitivas Básicas da PF}
-\label{sec:primitivas-pf}
 
-% \emph{map}, \emph{filter}, \emph{fold}, \emph{reduce}, \emph{scan}, \emph{zip}.
-
-As primitivas \emph{map} e \emph{filter} são funções de ordem superior.
+As primitivas, ou operações, \emph{map} e \emph{filter} são funções de ordem superior.
 
 \begin{listing}[H]
   \centering
@@ -83,24 +115,6 @@ As primitivas \emph{map} e \emph{filter} são funções de ordem superior.
   \label{code:fp_primitives_filter}
 \end{listing}
 
-\subsubsection{Composição de Funções}
-
-%\subsubsection{\emph{Currying}}
-%
-
-\subsection{O Imperativo e o Declarativo na Programação}
-
-A função \emph{doubleNumbers} no Fragmento de Código
-\ref{code:dobrar-nums-imperativo} recebe uma lista de números e produz numa nova
-lista onde todos os números são multiplicados por 2. Essa implementação utiliza
-o estilo \emph{imperativo} de programação.
-
-\begin{listing}[H]
-  \centering
-  \caption{Dobrando números de uma lista de forma imperativa}
-  \inputminted{js}{code/fn_double_numbers_imperative.js}
-  \label{code:fn_double_numbers_imperative}
-\end{listing}
 
 \begin{listing}[H]
   \centering
@@ -109,11 +123,14 @@ o estilo \emph{imperativo} de programação.
   \label{code:fn_double_numbers_declarative}
 \end{listing}
 
-\subsection{Programação Orientada a Objetos e o \emph{Observer Pattern}}
+
+\subsubsection{Programação Reativa}
+\label{sec:rp}
 
 
-\subsection{Programação Funcional Reativa (PFR)}
-\label{sec:pfr}
+
+\subsubsection{Programação Funcional Reativa (PFR)}
+\label{sec:frp}
 
 % "FRP permits the modeling of systems that must respond to input over time in a
 % simple and declarative manner." ~ Amsden (2011), Survey on FRP
@@ -125,20 +142,14 @@ o estilo \emph{imperativo} de programação.
 %     - “[…] is programming with asynchronous data streams” – André Staltz
 %   - merge, replay, retry, skip, start, startWith
 
+{\tiny\begin{description}[noitemsep]
+  \item [As 10 Primitivas Básicas] \emph{map}, \emph{merge}, \emph{hold},
+    \emph{snapshot}, \emph{filter}, \emph{lift}, \emph{never}, \emph{constant},
+    \emph{sample}, \emph{switch};
+  \item [Combinação de Primitivas]
+  \item [Arcabouços \emph{(Frameworks)}] Rx.JS, Bacon.js
+\end{description}}
 
-\subsubsection{As 10 Primitivas Básicas da PFR}
-\label{sec:pfr-10-primitivas}
-
-\emph{map}, \emph{merge}, \emph{hold}, \emph{snapshot}, \emph{filter},
-\emph{lift}, \emph{never}, \emph{constant}, \emph{sample}, \emph{switch}.
-
-\subsubsection{Combinação de Primitivas}
-\label{sec:pfr-combinacao}
-
-\subsubsection{Arcabouços \emph{(Frameworks)} PFR}
-\label{sec:pfr-frameworks}
-
-Rx.JS, Bacon.js
 % Ferramentas
 %   Bibliotecas & Frameworks
 %   Bacon.js
