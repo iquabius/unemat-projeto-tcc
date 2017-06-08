@@ -112,20 +112,25 @@ o estilo \emph{imperativo} de programação.
 
 {\tiny
 \begin{description}[noitemsep]
-\item[Lambda Calculus]
+\item[Cálculo lambda não tipado] Inspiração original, em particular do
+  \emph{Lisp}, umas das primeiras linguagens a ter suporte para programação
+  funcional;
 \item[Programação declarativa]
-\item[Aplicação de funções] \emph{Function application}
-\item[Avaliações de expressões] \emph{expression evaluation}
-\item[Imutabilidade] Possibilita Transparência Referêncial
-\item[Efeitos colaterais] \emph{side-effects}
-\item[Funções Puras] \emph{Pure Functions}
-\item[Funções de primeira class] \emph{first-class functions}
+\item[Expressões] (1) Variáveis imutáveis (variáveis vinculadas a expressões,
+  que mantém um único valor durante todo o tempo de vida útil). (2) Expressões
+  puras e efeitos colaterais na redução de expressões;
+\item[Funções] (1) PF é baseada na aplicação de funções. (2) Faz amplo uso de
+  expressões \emph{lambda} (funções anônimas). (3) Também desencoraja o uso de
+  funções impuras (que contém efeitos colaterais);
+  % https://www.youtube.com/watch?v=yYze0gCBtvY&t=45s
+\item[Funções de primeira classe] \emph{first-class functions}
 \item[Funções de Ordem Superior] \emph{(Higher-order Functions)}, Funções como
   argumentos, Funções como valores retornados
-\item[Primitivas] \emph{map}, \emph{filter}, \emph{fold}, \emph{reduce},
-  \emph{scan}, \emph{zip}
-\item[Composição de funções] \emph{Function Composition}
-\item[Currying]
+\item[Composição de funções] Combinação de funções;
+  % https://www.youtube.com/watch?v=qJgff2spvzM&t=666s
+\item[Aplicação Parcial de Funções] \emph{Currying}
+\item[Primitivas Básicas de PF] \emph{map}, \emph{filter}, \emph{fold},
+  \emph{reduce}, \emph{scan}, \emph{zip}
 \end{description}
 }
 
