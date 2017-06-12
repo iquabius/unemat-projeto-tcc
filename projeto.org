@@ -30,6 +30,7 @@
 #+INCLUDE: "seções/hipóteses.org"
 #+INCLUDE: "seções/objetivos.org"
 #+INCLUDE: "seções/justificativa.org"
+#+INCLUDE: "seções/método.org"
 
 #+LATEX: \phantompart
 #+LATEX: \postextual
