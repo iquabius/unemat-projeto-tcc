@@ -68,6 +68,43 @@
     concerne o nível de abstração fornecido à manipulação de sequências, e à
     coordenação de eventos;
 
+* Justificativa
+  Inerentemente /imperativos/, modelos que utilizam /callbacks/ como principal
+  mecanismo de coordenação de eventos são consideradas muito complexos
+  cite:edwards2009,fischer2007,maier2010,reppy1992. Isso se deve a forma
+  desconcertante com que /callbacks/ coordenam alterações no estado do programa.
+  O código da aplicação se torna difícil de compreender e dar manutenção,
+  podendo ainda ser descrito coloquialmente como /‘Callback Hell’/
+  \cite[p.~2]{edwards2009}, como é costumeiro na literatura.
+
+  Vale ressaltar que de acordo com \citeonline{moseley2006} o mau gerenciamento de
+  estado é considerado a principal causa de complexidade em sistemas
+  contemporâneos, pois impactam a compreensibilidade do programa, e os testes de
+  software. Uma análise das aplicações /desktop/ da Adobe apontou que a lógica
+  de coordenação de eventos residia em um terço do código e contia metade dos
+  /bugs/ reportados cite:jarvi2008. Interfaces gráficas inerentemente
+  dispõem de um alto grau de interativade, tornando seu desenvolvimento e
+  manutenção um desafio.
+
+  /Programação Funcional Reativa (PFR)/ é uma alternativa promissora para o
+  desenvolvimento de sistemas reativos, e tem sido explorada em vários domínios,
+  como: animação digital cite:elliott1997, GUIs cite:czaplicki2012, jogos
+  digitais, robótica, e síntese de música. PFR permite que aplicações
+  interativas sejam programadas de forma declarativa em um nível mais elevado de
+  abstração, com código fonte que expressa melhor a solução implementada. Como
+  resultado, o programa se torna mais compreensível, mais fácil de dar
+  manutenção e, em geral, menos complexo.
+
+  Este trabalho pretende contextualizar a situação atual de como interfaces
+  orientadas a eventos são implementadas, apresentar os conceitos das abordagens
+  alternativas, e fornecer implementações de alguns componentes comuns em
+  interfaces gráficas, com a finalidade de testar e comparar tais abordagens
+  através do uso de algumas ferramentas (linguagens e/ou /frameworks/). Atenção
+  especial será dada ao ambiente /web/, ou seja, interfaces de aplicações
+  utilizadas nos navegadores, e dependendo do levantamento feito, alguns
+  exemplos poderão ser dados com alguma ferramenta que implemente a PFR para o
+  ambiente /mobile/ e/ou /desktop/.
+
 
 #+LATEX: \phantompart
 #+LATEX: \postextual
