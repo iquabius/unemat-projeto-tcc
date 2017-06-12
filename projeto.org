@@ -33,6 +33,7 @@
 #+INCLUDE: "seções/justificativa.org"
 #+INCLUDE: "seções/método.org"
 #+INCLUDE: "seções/cronograma.org"
+#+INCLUDE: "seções/orçamento.org"
 
 #+LATEX: \phantompart
 #+LATEX: \postextual

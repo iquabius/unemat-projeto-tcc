@@ -1,0 +1,24 @@
+* Orçamento
+
+  #+BEGIN_EXPORT latex
+  \begin{center}
+    \tiny
+    \begin{tabular}{| l | r | r |}
+      \hline
+        \textbf{Descrição das Despesas} & \textbf{Quant.} & \textbf{Valor (R\$)} \\
+      \hline
+        Papel sulfite A4 500 folhas & 1 & 25,00 \\
+      \hline
+        Aquisição de cartucho e tinta & 1 & 100,00 \\
+      \hline
+        Encadernação & 4 & 30,00 \\
+      \hline
+        Aquisição de livros & 1 & 160,00 \\
+      \hline
+        Confecção do \emph{CD} e capa & 1 & 25,00 \\
+      \hline
+        \textbf{Total} & & \textbf{340,00} \\
+    \hline
+    \end{tabular}
+  \end{center}
+  #+END_EXPORT
