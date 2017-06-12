@@ -25,108 +25,14 @@
 #+LATEX: \addcontentsline{toc}{chapter}{Projeto de Pesquisa}
 
 
-* Tema
-  Programação Funcional Reativa (PFR).
-
-* Delimitação
-  Programação Funcional Reativa (PFR) aplicada à coordenação de eventos em
-  Interfaces Gráficas do Usuário (GUIs)[fn:reactive].
-
-* Problema
-  O quê a Programação Funcional Reativa (PFR) tem a oferecer, e como ela se
-  compara aos modelos baseados em /callbacks/ quanto ao nível de abstração
-  fornecido para coordenação de eventos na programação de GUIs?
-
-* Hipóteses
-  O /Observer Pattern/ --- inerentemente orientado a objetos e /imperativo/ ---
-  utiliza callbacks[fn:callbacks] como principal mecanismo de coordenação de
-  eventos em GUIs. Porém a forma desconcertante com a qual /callbacks/ coordenam
-  eventos faz com que o programa se torne difícil de compreender e, de modo
-  geral, complexo e de manutenção laboriosa.
-
-  PFR permite que aplicações interativas sejam programadas de forma
-  /declarativa/ em um nível mais elevado[fn:abstracao] de abstração, com código
-  fonte que expressa melhor a solução implementada. Como resultado, o programa
-  se torna mais compreensível e, em geral, menos complexo e mais fácil de dar
-  manutenção.
-
-* Objetivos
-
-** Objetivo Geral
-   Demonstrar e analisar a PFR em comparação a modelos baseados em /callbacks/,
-   quanto ao nível de abstração fornecido à coordenação de eventos na
-   programação de GUIs.
-
-** Objetivos Específicos
-  - Demonstrar o modelo /declarativo/ da /Programação Funcional/, e o modelo
-    tradicional /imperativo/, aplicados na manipulação de sequências (e.g.
-    /arrays/, listas, mapas);
-  - Demonstrar o modelo /declarativo/ da PFR, e o modelo tradicional
-    /imperativo/ baseado /callbacks/, aplicados na coordenação de eventos em
-    GUIs;
-  - Analisar o modelo /declarativo/ em contraste com o /imperativo/ no que
-    concerne o nível de abstração fornecido à manipulação de sequências, e à
-    coordenação de eventos;
-
-* Justificativa
-  Inerentemente /imperativos/, modelos que utilizam /callbacks/ como principal
-  mecanismo de coordenação de eventos são consideradas muito complexos
-  cite:edwards2009,fischer2007,maier2010,reppy1992. Isso se deve a forma
-  desconcertante com que /callbacks/ coordenam alterações no estado do programa.
-  O código da aplicação se torna difícil de compreender e dar manutenção,
-  podendo ainda ser descrito coloquialmente como /‘Callback Hell’/
-  \cite[p.~2]{edwards2009}, como é costumeiro na literatura.
-
-  Vale ressaltar que de acordo com \citeonline{moseley2006} o mau gerenciamento de
-  estado é considerado a principal causa de complexidade em sistemas
-  contemporâneos, pois impactam a compreensibilidade do programa, e os testes de
-  software. Uma análise das aplicações /desktop/ da Adobe apontou que a lógica
-  de coordenação de eventos residia em um terço do código e contia metade dos
-  /bugs/ reportados cite:jarvi2008. Interfaces gráficas inerentemente
-  dispõem de um alto grau de interativade, tornando seu desenvolvimento e
-  manutenção um desafio.
-
-  /Programação Funcional Reativa (PFR)/ é uma alternativa promissora para o
-  desenvolvimento de sistemas reativos, e tem sido explorada em vários domínios,
-  como: animação digital cite:elliott1997, GUIs cite:czaplicki2012, jogos
-  digitais, robótica, e síntese de música. PFR permite que aplicações
-  interativas sejam programadas de forma declarativa em um nível mais elevado de
-  abstração, com código fonte que expressa melhor a solução implementada. Como
-  resultado, o programa se torna mais compreensível, mais fácil de dar
-  manutenção e, em geral, menos complexo.
-
-  Este trabalho pretende contextualizar a situação atual de como interfaces
-  orientadas a eventos são implementadas, apresentar os conceitos das abordagens
-  alternativas, e fornecer implementações de alguns componentes comuns em
-  interfaces gráficas, com a finalidade de testar e comparar tais abordagens
-  através do uso de algumas ferramentas (linguagens e/ou /frameworks/). Atenção
-  especial será dada ao ambiente /web/, ou seja, interfaces de aplicações
-  utilizadas nos navegadores, e dependendo do levantamento feito, alguns
-  exemplos poderão ser dados com alguma ferramenta que implemente a PFR para o
-  ambiente /mobile/ e/ou /desktop/.
-
+#+INCLUDE: "seções/tema.org"
+#+INCLUDE: "seções/problema.org"
+#+INCLUDE: "seções/hipóteses.org"
+#+INCLUDE: "seções/objetivos.org"
+#+INCLUDE: "seções/justificativa.org"
 
 #+LATEX: \phantompart
 #+LATEX: \postextual
 #+LATEX: \bibliography{/home/iquabius/LaTeX/refs.bib}
 #+LATEX: \phantompart
 #+LATEX: \printindex
-
-
-* Footnotes
-
-[fn:abstracao] Em seu ensaio, \citeauthoronline{braithwaite2007} elucida:
-  “\textelp{} quando o código se assemelha muito com a forma com a qual você
-  explicaria sua solução pelo telefone, costuma-se dizer que ele é de ‘nível
-  muito alto.’ (\citeyear{braithwaite2007}, tradução nossa)”.
-
-[fn:callbacks] /Callbacks/ são funções registradas para tratar eventos ou computações
-  assíncronas, e representão essêncialmente o mesmo conceito de /event
-  handlers/, /event listeners/ ou /observers./
-
-[fn:reactive] Para manter interação contínua com o ambiente externo, GUIs precisam
-  reagir a vários eventos, como cliques do mouse ou pressionamento de teclas.
-  Tais eventos são processados para executar uma tarefa correspondente, como
-  atualizar o estado interno da aplicação ou exibir dados na tela. Devido a
-  essas propriedades, uma GUI é considerada um sistema /reativo/ ou /orientado a
-  eventos./

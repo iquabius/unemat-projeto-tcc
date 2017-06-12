@@ -1,0 +1,18 @@
+* Objetivos
+
+** Objetivo Geral
+   Demonstrar e analisar a PFR em comparação a modelos baseados em /callbacks/,
+   quanto ao nível de abstração fornecido à coordenação de eventos na
+   programação de GUIs.
+
+** Objetivos Específicos
+  - Demonstrar o modelo /declarativo/ da /Programação Funcional/, e o modelo
+    tradicional /imperativo/, aplicados na manipulação de sequências (e.g.
+    /arrays/, listas, mapas);
+  - Demonstrar o modelo /declarativo/ da PFR, e o modelo tradicional
+    /imperativo/ baseado /callbacks/, aplicados na coordenação de eventos em
+    GUIs;
+  - Analisar o modelo /declarativo/ em contraste com o /imperativo/ no que
+    concerne o nível de abstração fornecido à manipulação de sequências, e à
+    coordenação de eventos;
+
