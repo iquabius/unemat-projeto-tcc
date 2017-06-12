@@ -1,0 +1,54 @@
+* Fundamentação Teórica
+
+** Teoria da Computação
+
+   O fenômeno da computação na qual a Ciência da Computação é fundada tem suas
+   raízes na teoria da computabilidade que estuda os formalismos na qual pode-se
+   expressar algorítimos e seus limites (Gabbrielli, 2010).
+
+   - Máquina de Turing :: É um modelo matemático de computação que define uma
+        máquina, abstrata, que manipula simbolos em uma tira de fita de acordo
+        com uma tabela de regras;
+   - Cálculo Lambda :: “Sistema formal que estuda funções recursivas
+                       computáveis, no que se refere a teoria da
+                       computabilidade”;
+   - Tese de Church-Turing :: “Hipótese sobre a natureza de dispositivos
+        mecânicos de cálculo, como computadores, e sobre que tipo de algoritmos
+        eles podem computar”;
+   - Máquina de Turing universal (MTU) :: Concepção de Turing, também conhecido
+        como ‘computador com programa armazenado’ (que coloca a ‘tabela de ação’
+        --- instruções para a máquina --- na mesma ‘memória’ que os dados de
+        entrada) influenciou fortemente /John von Neumann/ na concepção do
+        EDVAC, um dos primeiros computadores;
+   - Arquitetura de von Neumman :: Primeira descrição publicada --- no artigo
+        /First Draft of a Report on the EDVAC/ (Von Neumman, 1945) --- do
+        desenho /(design)/ lógico de um ‘computador com programa armazenado’;
+
+
+** Linguagens de Programação
+
+*** Construtos Linguísticos
+
+    - Expressões :: Formadas por operadores e operandos, uma expressão é
+                    qualquer código que dê um valor depois de sua redução (ou
+                    avaliação). “Em linguagens imperativas a redução de uma
+                    expressão pode modificar o valor de qualquer variável
+                    através de \emph{efeitos colaterais}” (Gabbrielli, 2010);
+    - Comandos :: Ao contrário das expressões, comandos nem sempre dá um valor
+                  ao ser avaliado:
+      - Atribuição :: Valores, variáveis e armazenamento na memória.
+      - Comandos de controle explícito :: Comandos que decidem o caminho de
+           execução do programa, dentre os vários possíveis:
+           1. comandos compostos (blocos /begin...end/, /.../, etc)
+           2. comando /goto/;
+           3. e outros, como /break/, /continue/, /return/, e exceções (comandos
+              mais elaborados para controle de sequência).
+      - Comandos Condicionais :: /if...else/, /switch...case/;
+      - Comandos Iterativos :: Unbounded (/while/, /do...while/) and bounded
+           iteration (/for/, /foreach/, /for...in/);
+      - Programação Estruturada :: A rejeição do comando /GOTO/ (Dijkstra, 1968)
+           e o surgimento do conceito de /‘paradigmas de programação’/;
+      - Recursão :: Na busca por linguagens /turing-equivalentes/, a recursão
+                    pode ser pensada como uma alternativa aos comandos de
+                    iteração.
+

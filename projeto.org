@@ -31,6 +31,7 @@
 #+INCLUDE: "seções/hipóteses.org"
 #+INCLUDE: "seções/objetivos.org"
 #+INCLUDE: "seções/justificativa.org"
+#+INCLUDE: "seções/fundamentação.org"
 #+INCLUDE: "seções/método.org"
 #+INCLUDE: "seções/cronograma.org"
 #+INCLUDE: "seções/orçamento.org"
