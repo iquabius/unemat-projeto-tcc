@@ -1,0 +1,68 @@
+* Cronograma
+
+  #+BEGIN_EXPORT latex
+  \begin{adjustbox}{center}
+    \tiny
+    \begin{tabular}{|p{4cm}|c|c|c|c|c|c|c|c|c|c|c|l|}
+      \cline{1-12}
+        \multicolumn{1}{|c|}{
+          \multirow{2}{*}{
+            \diagbox[width=4.4cm]{
+              \textbf{Atividades}
+            }{
+              \textbf{Ano/Mês}
+            }}}
+        & \multicolumn{5}{c|}{\textbf{2017/1}}
+        & \multicolumn{1}{c|}{\textbf{Férias}}
+        & \multicolumn{5}{c|}{\textbf{2017/2}} \\
+        \cline{2-12}
+        & Mar. & Abr. & Maio & Jun. & Jul. & Ago. & Set. & Out. & Nov. & Dez. & Jan. \\
+      \hline
+        Definição da Pesquisa, e Formação e Delimitação do Tema
+        & X &  &  &  &  &  &  &  &  &  &  \\
+      \hline
+        Revisão da Literatura
+        & X & X & X & X & X & X & & &  &  &  \\
+      \hline
+        Formulação do Problema, Hipóteses, e Objetivos
+        & & X & & &  &  &  &  &  &  &  \\
+      \hline
+        Composição da Justificativa e Metodologia
+        & & & X & & & & & & & & \\
+      \hline
+        Redação da Fundamentação Teórica
+        & & & & X & X & & & & & & \\
+      \hline
+        Preparação do Cronograma e Orçamento
+        & & & X & & & & & & & & \\
+      \hline
+        Encontros de Orientação
+        & & X & X & X & X & & X & X & X & X & X \\
+      \hline
+        Entrega e Apresentação do Projeto de Pesquisa
+        & & & & & X & & & & & & \\
+      \hline
+        Composição da Introdução
+        & & & & & & & & & X & & \\
+      \hline
+        Implementação dos Estudos de Caso
+        & & & & & X & X & X & & & & \\
+      \hline
+        Análise dos Estudos de Caso
+        & & & & & & & X & X & & & \\
+      \hline
+        Redação do TCC
+        & & & & & & & X & X & X & X & \\
+      \hline
+        Revisão e Correção de Erros
+        & & X & X & X & X & & X & X & X & X & X \\
+      \hline
+        Revisão Final do Texto e Elaboração da Apresentação
+        & & & & & & & & & & X & X \\
+      \hline
+        Entrega da Versão Final e Defesa do TCC
+        & & & & & & & & & & & X \\
+      \hline
+    \end{tabular}
+  \end{adjustbox}
+  #+END_EXPORT
