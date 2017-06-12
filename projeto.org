@@ -1,0 +1,55 @@
+#+OPTIONS: toc:nil
+#+LaTeX_CLASS: abntex2
+#+LATEX_HEADER: \usepackage{tex/unemat}
+#+LATEX_HEADER: \usepackage{org-tex/pkg_config}
+#+LATEX_HEADER: \usepackage{org-tex/proj_info}
+#+LATEX_HEADER: \usepackage{org-tex/pdf_styles}
+
+
+#+LATEX: \selectlanguage{brazil}
+#+LATEX: \frenchspacing
+
+#+LATEX: \imprimircapa
+#+LATEX: \imprimirfolhaderosto
+
+#+LATEX: \input{tex/siglas}
+
+#+LATEX: \pdfbookmark[0]{\contentsname}{toc}
+#+LATEX: {\center\tableofcontents*}
+#+LATEX: \cleardoublepage
+
+#+LATEX: \textual
+
+#+LATEX: \chapter*{Projeto de Pesquisa}
+#+LATEX: \markboth{Projeto de Pesquisa}{Projeto de Pesquisa}
+#+LATEX: \addcontentsline{toc}{chapter}{Projeto de Pesquisa}
+
+
+* Tema
+  Programação Funcional Reativa (PFR).
+
+* Delimitação
+  Programação Funcional Reativa (PFR) aplicada à coordenação de eventos em
+  Interfaces Gráficas do Usuário (GUIs)[fn:reactive].
+
+* Problema
+  O quê a Programação Funcional Reativa (PFR) tem a oferecer, e como ela se
+  compara aos modelos baseados em /callbacks/ quanto ao nível de abstração
+  fornecido para coordenação de eventos na programação de GUIs?
+
+
+* Footnotes
+
+[fn:reactive] Para manter interação contínua com o ambiente externo, GUIs precisam
+  reagir a vários eventos, como cliques do mouse ou pressionamento de teclas.
+  Tais eventos são processados para executar uma tarefa correspondente, como
+  atualizar o estado interno da aplicação ou exibir dados na tela. Devido a
+  essas propriedades, uma GUI é considerada um sistema /reativo/ ou /orientado a
+  eventos./
+
+#+LATEX: \phantompart
+#+LATEX: \postextual
+#+LATEX: \bibliography{tex/refs}
+#+LATEX: \phantompart
+#+LATEX: \printindex
+
