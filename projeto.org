@@ -37,8 +37,55 @@
   compara aos modelos baseados em /callbacks/ quanto ao nível de abstração
   fornecido para coordenação de eventos na programação de GUIs?
 
+* Hipóteses
+  O /Observer Pattern/ --- inerentemente orientado a objetos e /imperativo/ ---
+  utiliza callbacks[fn:callbacks] como principal mecanismo de coordenação de
+  eventos em GUIs. Porém a forma desconcertante com a qual /callbacks/ coordenam
+  eventos faz com que o programa se torne difícil de compreender e, de modo
+  geral, complexo e de manutenção laboriosa.
+
+  PFR permite que aplicações interativas sejam programadas de forma
+  /declarativa/ em um nível mais elevado[fn:abstracao] de abstração, com código
+  fonte que expressa melhor a solução implementada. Como resultado, o programa
+  se torna mais compreensível e, em geral, menos complexo e mais fácil de dar
+  manutenção.
+
+* Objetivos
+
+** Objetivo Geral
+   Demonstrar e analisar a PFR em comparação a modelos baseados em /callbacks/,
+   quanto ao nível de abstração fornecido à coordenação de eventos na
+   programação de GUIs.
+
+** Objetivos Específicos
+  - Demonstrar o modelo /declarativo/ da /Programação Funcional/, e o modelo
+    tradicional /imperativo/, aplicados na manipulação de sequências (e.g.
+    /arrays/, listas, mapas);
+  - Demonstrar o modelo /declarativo/ da PFR, e o modelo tradicional
+    /imperativo/ baseado /callbacks/, aplicados na coordenação de eventos em
+    GUIs;
+  - Analisar o modelo /declarativo/ em contraste com o /imperativo/ no que
+    concerne o nível de abstração fornecido à manipulação de sequências, e à
+    coordenação de eventos;
+
+
+#+LATEX: \phantompart
+#+LATEX: \postextual
+#+LATEX: \bibliography{/home/iquabius/LaTeX/refs.bib}
+#+LATEX: \phantompart
+#+LATEX: \printindex
+
 
 * Footnotes
+
+[fn:abstracao] Em seu ensaio, \citeauthoronline{braithwaite2007} elucida:
+  “\textelp{} quando o código se assemelha muito com a forma com a qual você
+  explicaria sua solução pelo telefone, costuma-se dizer que ele é de ‘nível
+  muito alto.’ (\citeyear{braithwaite2007}, tradução nossa)”.
+
+[fn:callbacks] /Callbacks/ são funções registradas para tratar eventos ou computações
+  assíncronas, e representão essêncialmente o mesmo conceito de /event
+  handlers/, /event listeners/ ou /observers./
 
 [fn:reactive] Para manter interação contínua com o ambiente externo, GUIs precisam
   reagir a vários eventos, como cliques do mouse ou pressionamento de teclas.
@@ -46,10 +93,3 @@
   atualizar o estado interno da aplicação ou exibir dados na tela. Devido a
   essas propriedades, uma GUI é considerada um sistema /reativo/ ou /orientado a
   eventos./
-
-#+LATEX: \phantompart
-#+LATEX: \postextual
-#+LATEX: \bibliography{tex/refs}
-#+LATEX: \phantompart
-#+LATEX: \printindex
-
