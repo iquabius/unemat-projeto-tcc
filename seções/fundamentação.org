@@ -85,3 +85,87 @@
     // [2, 4, 6]
     #+END_SRC
 
+
+** Paradigmas de Programação
+
+*** Programação Estruturada
+
+*** Programação Procedural
+
+*** Programação Orientada a Objetos
+
+*** Programação Orientada a Eventos
+   - Design Patterns :: /Observer Pattern/
+   - /Callbacks/ ::
+
+*** Programação Funcional
+
+    - Cálculo lambda não tipado :: Inspiração original, em particular do /Lisp/,
+         umas das primeiras linguagens a ter suporte para programação funcional;
+    - Programação declarativa ::
+    - Expressões :: (1) Variáveis imutáveis (variáveis vinculadas a expressões,
+                    que mantém um único valor durante todo o tempo de vida
+                    útil). (2) Expressões puras e efeitos colaterais na redução
+                    de expressões;
+    - Funções :: (1) PF é baseada na aplicação de funções. (2) Faz amplo uso de
+                 expressões /lambda/ (funções anônimas). (3) Também desencoraja
+                 o uso de funções impuras (que contém efeitos colaterais);
+    - Funções de primeira classe :: /first-class functions/
+    - Funções de Ordem Superior :: /(Higher-order Functions)/, Funções como
+         argumentos, Funções como valores retornados;
+    - Composição de funções :: Combinação de funções;
+    - Aplicação Parcial de Funções :: /Currying/
+    - Primitivas Básicas de PF :: /map/, /filter}/, /fold/, /reduce/, /scan/, e
+         /zip/;
+
+**** Notes                                                         :noexport:
+     "Functional Programming (enabled by lambdas with closure)".
+
+     Contextualização Histórica.
+
+     Renascença da Programação Funcional.
+
+     - [[  % https://www.youtube.com/watch?v=qJgff2spvzM&t=666s][Composition - Nik Graf at ReactEurope2017]]
+     - [[https://www.youtube.com/watch?v=yYze0gCBtvY&t=45s][Functional && Reactive - Preethi at ReactEurope2017]]
+       - imutability enables /referencial transparency/
+
+*** Programação Reativa
+
+*** Programação Funcional Reativa
+
+    - As 10 Primitivas Básicas :: /map/, /merge/, /hold/, /snapshot/, /filter/,
+         /lift/, /never/, /constant/, /sample/, /switch/;
+    - Combinação de Primitivas ::
+    - Arcabouços /(Frameworks)/ :: /Rx.JS/, /Bacon.js/.
+
+**** Notes                                                         :noexport:
+     % "FRP permits the modeling of systems that must respond to input over time in a
+     % simple and declarative manner." ~ Amsden (2011), Survey on FRP
+
+     % "A program in an FRP language generally corresponds quite closely to a
+     % mathematical model of the system being implemented." ~ Amsden (2011), Survey
+     % on FRP
+     %   - Programação Reativa
+     %     - “[…] is programming with asynchronous data streams” – André Staltz
+     %   - merge, replay, retry, skip, start, startWith
+
+     % Ferramentas
+     %   Bibliotecas & Frameworks
+     %   Bacon.js
+     %   Cycle.js → Model-View-Intent
+     %   Elm → Model-Update-View
+     %   Rx
+     %   Meteor
+
+
+** Interfaces Gráficas do Usuário (GUIs)
+
+*** Programação de GUIs
+
+*** Aplicações Desktop
+    - utilizam toolkits
+
+*** Aplicações Web
+    - JavaScript
+    - DOM /(Document Object Model)/
+    - Programação com /Callbacks/
