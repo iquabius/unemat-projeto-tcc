@@ -2,6 +2,7 @@
 #+LaTeX_CLASS: abntex2
 #+LATEX_HEADER: \usepackage{org-tex/pkg_tables}
 #+LATEX_HEADER: \usepackage{tex/unemat}
+#+LATEX_HEADER: \usepackage{org-tex/src_code}
 #+LATEX_HEADER: \usepackage{org-tex/pkg_config}
 #+LATEX_HEADER: \usepackage{org-tex/proj_info}
 #+LATEX_HEADER: \usepackage{org-tex/pdf_styles}
