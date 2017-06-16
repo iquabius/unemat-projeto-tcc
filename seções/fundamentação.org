@@ -30,6 +30,23 @@
 
 *** Construtos linguísticos
 
+    “Considerando a computação de um programa como uma máquina de transformação,
+    podemos distinguir dois *estados* primordiais do programa: o *estado
+    inicial* — quando nenhuma transformação sobre os dados ainda foi realizada —
+    e o *estado final*, após todas as transformações realizadas pelo programa.”
+    (Melo, 2003, pg.84)
+
+    “Para programas sequenciais, a computação de um programa é, na realidade,
+    uma transformação sucessiva de estados.” (Melo, 2003, pg.84)
+
+    Expressões são mecanismos para a transformação de dados, alguns dados de
+    entrada são fornecidos e um resultado obtido a partir da computação deles
+    (Melo, 2003, pg.84).
+
+    Comandos atuam sobre o fluxo de controle e estados do programa (Melo, 2003,
+    pg.84).
+
+
 *** Expressões
     Formadas por operadores e operandos, uma expressão é
                     qualquer código que dê um valor depois de sua redução (ou
