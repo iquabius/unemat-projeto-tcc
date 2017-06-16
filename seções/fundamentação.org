@@ -46,6 +46,10 @@
     Comandos atuam sobre o fluxo de controle e estados do programa (Melo, 2003,
     pg.84).
 
+    Segundo Sebesta (2003), os critérios de avaliação da linguagem são:
+    /legibilidade/, /capacidade de escrita (writability)/, /confiabilidade/, e
+    /custo/.
+
 
 *** Expressões
     Formadas por operadores e operandos, uma expressão é
