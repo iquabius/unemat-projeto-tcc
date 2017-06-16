@@ -6,6 +6,7 @@
    raízes na teoria da computabilidade que estuda os formalismos na qual pode-se
    expressar algorítimos e seus limites (Gabbrielli, 2010).
 
+   #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
    - Máquina de Turing :: É um modelo matemático de computação que define uma
         máquina, abstrata, que manipula simbolos em uma tira de fita de acordo
         com uma tabela de regras;
@@ -27,8 +28,9 @@
 
 ** Linguagens de Programação
 
-*** Construtos Linguísticos
+*** Construtos linguísticos
 
+    #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
     - Expressões :: Formadas por operadores e operandos, uma expressão é
                     qualquer código que dê um valor depois de sua redução (ou
                     avaliação). “Em linguagens imperativas a redução de uma
@@ -36,6 +38,7 @@
                     através de \emph{efeitos colaterais}” (Gabbrielli, 2010);
     - Comandos :: Ao contrário das expressões, comandos nem sempre dá um valor
                   ao ser avaliado:
+      #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
       - Atribuição :: Valores, variáveis e armazenamento na memória.
       - Comandos de controle explícito :: Comandos que decidem o caminho de
            execução do programa, dentre os vários possíveis:
@@ -52,7 +55,7 @@
                     pode ser pensada como uma alternativa aos comandos de
                     iteração.
 
-*** O Declarativo e o Imperativo nas Linguagens de Programação
+*** O declarativo e o imperativo nas linguagens de programação
 
     A função src_js[:exports code]{doubleNumbers} no Fragmento de Código
     \ref{code:doubleNumbersImperative} recebe uma lista de números e produz numa
@@ -100,6 +103,7 @@
 
 *** Programação Funcional
 
+    #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
     - Cálculo lambda não tipado :: Inspiração original, em particular do /Lisp/,
          umas das primeiras linguagens a ter suporte para programação funcional;
     - Programação declarativa ::
@@ -133,6 +137,7 @@
 
 *** Programação Funcional Reativa
 
+    #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
     - As 10 Primitivas Básicas :: /map/, /merge/, /hold/, /snapshot/, /filter/,
          /lift/, /never/, /constant/, /sample/, /switch/;
     - Combinação de Primitivas ::
