@@ -24,6 +24,29 @@
 \ProvidesPackage{abntex2novopacote}[2014/09/01 Criacao desta customizacao do abnTeX2]
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TIPOGRAFIA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Compilando com XeLaTeX ou LuaLaTeX, é possível utilizar qualquer fonte do
+% sistema, com o pacote 'fontspec'. XeTeX também permite o uso da tecnologia
+% OpenType de fontes modernas:
+%
+%   “like specifying  alternate glyphs and optical size variants.”
+%
+%   “XeTeX also uses Unicode by default,  which might be helpful for font
+%   issues.”
+%
+%   https://en.wikibooks.org/wiki/LaTeX/Fonts#Using_arbitrary_system_fonts
+%
+%\usepackage{fontspec}
+%\setmainfont{Liberation Serif}
+
+% Com o pdflatex
+% Latin Modern: versão aprimorada da Computer Modern (padrão do LaTeX)
+\usepackage{lmodern}
+%\usepackage{times}
+
 \makeatother
 
 % ----------------------------------------------------------
