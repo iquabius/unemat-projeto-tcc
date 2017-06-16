@@ -30,30 +30,33 @@
 
 *** Construtos linguísticos
 
-    #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
-    - Expressões :: Formadas por operadores e operandos, uma expressão é
+*** Expressões
+    Formadas por operadores e operandos, uma expressão é
                     qualquer código que dê um valor depois de sua redução (ou
                     avaliação). “Em linguagens imperativas a redução de uma
                     expressão pode modificar o valor de qualquer variável
                     através de \emph{efeitos colaterais}” (Gabbrielli, 2010);
-    - Comandos :: Ao contrário das expressões, comandos nem sempre dá um valor
+*** Comandos
+    Ao contrário das expressões, comandos nem sempre dá um valor
                   ao ser avaliado:
-      #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
-      - Atribuição :: Valores, variáveis e armazenamento na memória.
-      - Comandos de controle explícito :: Comandos que decidem o caminho de
-           execução do programa, dentre os vários possíveis:
-           1. comandos compostos (blocos /begin...end/, /.../, etc)
-           2. comando /goto/;
-           3. e outros, como /break/, /continue/, /return/, e exceções (comandos
-              mais elaborados para controle de sequência).
-      - Comandos Condicionais :: /if...else/, /switch...case/;
-      - Comandos Iterativos :: Unbounded (/while/, /do...while/) and bounded
-           iteration (/for/, /foreach/, /for...in/);
-      - Programação Estruturada :: A rejeição do comando /GOTO/ (Dijkstra, 1968)
-           e o surgimento do conceito de /‘paradigmas de programação’/;
-      - Recursão :: Na busca por linguagens /turing-equivalentes/, a recursão
-                    pode ser pensada como uma alternativa aos comandos de
-                    iteração.
+
+    #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
+    - Atribuição :: Valores, variáveis e armazenamento na memória.
+    - Comandos de controle explícito :: Comandos que decidem o caminho de
+         execução do programa, dentre os vários possíveis:
+         1. comandos compostos (blocos /begin...end/, /.../, etc)
+         2. comando /goto/;
+         3. e outros, como /break/, /continue/, /return/, e exceções (comandos
+            mais elaborados para controle de sequência).
+    - Comandos Condicionais :: /if...else/, /switch...case/;
+    - Comandos Iterativos :: Unbounded (/while/, /do...while/) and bounded
+         iteration (/for/, /foreach/, /for...in/);
+    - Programação Estruturada :: A rejeição do comando /GOTO/ (Dijkstra, 1968)
+         e o surgimento do conceito de /‘paradigmas de programação’/;
+    - Recursão :: Na busca por linguagens /turing-equivalentes/, a recursão
+                  pode ser pensada como uma alternativa aos comandos de
+                  iteração.
+
 
 *** O declarativo e o imperativo nas linguagens de programação
     “[...] ideia de estado de um programa e a computação de um programa como
