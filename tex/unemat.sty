@@ -105,15 +105,19 @@
 % ----------------------------------------------------------
 
 %\renewcommand\cftsectionaftersnumb{\hspace{1cm}}	%altera o texto no sumário
+\renewcommand\cftsectionaftersnumb{\uppercase}
 %\renewcommand\cftsubsectionaftersnumb{\hspace{1cm}}
 %\renewcommand\cftsubsubsectionaftersnumb{\hspace{1cm}}
+\renewcommand\cftsubsubsectionaftersnumb{\normalfont}
 
 
 % ----------------------------------------------------------
 % ALTERA A FONTE DE TODA UMA LINHA NO SUMÁRIO
 % ----------------------------------------------------------
 
-\renewcommand\cftsubsectionfont{\normalfont} %altera a fonte de toda uma linha
+%\renewcommand\cftsectionfont{\uppercase} %altera a fonte de toda uma linha
+%\renewcommand\cftsubsectionfont{\normalfont}
+%\renewcommand\cftsubsubsectionfont{\normalfont}
 
 % ----------------------------------------------------------
 % MUDA A FONTE DOS CAPÍTULOS NO SUMÁRIO (EXEMPLO: AQUI MUDA PARA LETRAS EM MINUSCULO)
@@ -188,7 +192,7 @@
 \renewcommand{\ABNTEXchapterfont}{\bfseries}
 \renewcommand{\ABNTEXsectionfont}{\bfseries}       % Tirar TITLE do projeto.tex
 \renewcommand{\ABNTEXsubsectionfont}{\bfseries}    % Está correto
-\renewcommand{\ABNTEXsubsubsectionfont}{\bfseries} % Negrito e Itálico
+\renewcommand{\ABNTEXsubsubsectionfont}{\bfseries\itshape} % Negrito e Itálico
 
 % ----------------------------------------------------------
 % MUDA O TAMANHO DAS FONTES DE CAPÍTULOS, PARTES, SUBSEÇÕES...
