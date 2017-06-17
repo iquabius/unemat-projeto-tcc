@@ -213,6 +213,18 @@
 
 *** Programação Funcional Reativa
 
+    Em relação a evolução das metodologias de desenvolvimento, Melo (2003)
+    comenta:
+
+    #+BEGIN_EXPORT latex
+    \begin{citacao}
+      Novos elementos são permanentemente incorporados às linguagens visando suprir
+      as características emergentes dessas metodologias de desenvolvimento, e/ou
+      novas formas de implementação de elementos das linguagens surgem junto com as
+      mudanças nas metodologias. (pg. 10)
+    \end{citacao}
+   #+END_EXPORT
+
     #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
     - As 10 Primitivas Básicas :: /map/, /merge/, /hold/, /snapshot/, /filter/,
          /lift/, /never/, /constant/, /sample/, /switch/;
