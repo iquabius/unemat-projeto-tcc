@@ -139,6 +139,21 @@
 
 
 ** Paradigmas de Programação
+   Melo (2003, pg. 10) fala sobre as diferentes formas de solucionar problemas.
+   Os elementos a serem representados, e os mecanismos que as linguagens devem
+   prover para permitir a representação e a manipulação naturais dos elementos
+   básicos.
+
+   #+BEGIN_EXPORT latex
+   \begin{citacao}
+     Linguagens de programação orientadas a objetos podem ser vistas como
+     ferramentas para construir soluções de problemas orientadas \emph{por}
+     objetos, linguagens imperativas podem ser vistas como ferramentas para
+     construir soluções de problemas orientadas \emph{por} dados, e linguagens
+     declarativas podem ser vistas como ferramentas para construir soluções de
+     problemas orientadas \emph{por} relações entre declarações. (pg. 10)
+   \end{citacao}
+   #+END_EXPORT
 
 *** Programação Estruturada
 
