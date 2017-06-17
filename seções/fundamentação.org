@@ -209,6 +209,25 @@
      - [[https://www.youtube.com/watch?v=yYze0gCBtvY&t=45s][Functional && Reactive - Preethi at ReactEurope2017]]
        - imutability enables /referencial transparency/
 
+***** Leitura Recomendada                                          :noexport:
+****** Melo, 2004, pg. 141
+       “Os aspectos teóricos da programação funcional, principalmente relativos
+       ao $\lambda$-cálculo, são apresentados de forma resumida em [10]. Uma
+       representação bastante mais extensa pode ser encontrada em [9]. Em [28]
+       encontramos outra exposição dos fundamentos de processos computacionais
+       com base no $\lambda$-cálculo.”
+
+       “Em [44] encontramos uma apresentação mais ‘leve’ da programação
+       funcional, que exige menos maturidade matemática do leitor.”
+
+       - [9] H.P. BARENDREGT. /The Lambda Calculus, its Syntax e Semantics/.
+         North-Holle, 1984.
+       - [10] H.P. BARENDREGT. Functional programming e lambda calculus.
+         Elsevier, 1990.
+       - [28] J.C. MITCHEL. Foundations of Programming Languages, MIT
+         Press, 1996.
+       - [44] D.A. WATT. Programming Language Concepts e Paradigms. 1990.
+
 *** Programação Reativa
 
 *** Programação Funcional Reativa
