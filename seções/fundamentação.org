@@ -151,6 +151,18 @@
    - /Callbacks/ ::
 
 *** Programação Funcional
+    #+BEGIN_EXPORT latex
+    \enquote{A base do $\lambda$-cálculo é o conceito de avaliação de funções
+      matemáticas, sendo esse o fundamento essencial da \emph{programação
+        funcional.}} (Melo, 2003, pg. 130).
+    #+END_EXPORT
+
+    “Esse processo se dá por meio de transformações sucessivas do programa, que
+    devem convergir para o resultado desejado. Essas transformações recebem o
+    nome de /reduções/.” (Melo, 2003, pg. 130).
+
+    “A execução de um programa funcional consiste na aplicação exaustiva das
+    regras de redução.” (Melo, 2003, pg. 133).
 
     #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
     - Cálculo lambda não tipado :: Inspiração original, em particular do /Lisp/,
@@ -168,7 +180,7 @@
          argumentos, Funções como valores retornados;
     - Composição de funções :: Combinação de funções;
     - Aplicação Parcial de Funções :: /Currying/
-    - Primitivas Básicas de PF :: /map/, /filter}/, /fold/, /reduce/, /scan/, e
+    - Primitivas Básicas de PF :: /map/, /filter/, /fold/, /reduce/, /scan/, e
          /zip/;
 
 **** Notes                                                         :noexport:
