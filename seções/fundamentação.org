@@ -52,14 +52,22 @@
 
 
 *** Expressões
-    Formadas por operadores e operandos, uma expressão é
-                    qualquer código que dê um valor depois de sua redução (ou
-                    avaliação). “Em linguagens imperativas a redução de uma
-                    expressão pode modificar o valor de qualquer variável
-                    através de \emph{efeitos colaterais}” (Gabbrielli, 2010);
+    formadas por operadores e operandos, uma expressão é qualquer código que dê
+    um valor depois de sua redução (ou avaliação). “em linguagens imperativas a
+    redução de uma expressão pode modificar o valor de qualquer variável através
+    de \emph{efeitos colaterais}” (gabbrielli, 2010).
+
+    “As expressões são os elementos de transformação de dados em um programa: a
+    partir de valores, uma transformação é aplicada e um valor resultado é
+    produzido.” (Melo, 2003, pg. 84).
+
+    “\textelp{} quando uma expressão que contém uma aplicação de função [],
+    algumas operações internas à função podem acarretar mudanças no estado do
+    programa.” (Melo, 2003, pg. 89).
+
 *** Comandos
-    Ao contrário das expressões, comandos nem sempre dá um valor
-                  ao ser avaliado:
+    Ao contrário das expressões, comandos nem sempre dá um valor ao ser
+    avaliado.
 
     #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
     - Atribuição :: Valores, variáveis e armazenamento na memória.
