@@ -272,6 +272,17 @@
      explícito, como no caso do comando ~for~ em
      \ref{code:forLoopDoubleNumbers}.
 
+     A chave para entender PFR é ter um bom fundamento sobre o uso de
+     programação funcional para manipular coleções (/sequências/ nos
+     *Objetivos*). Programação funcional oferece ferramentas para abstrair
+     operações comuns de coleções em blocos reutilizáveis e de fácil
+     composição[fn:composition].
+
+     A maioria das operações de manipulação de coleções podem ser realizadas com
+     cinco funções básicas — ~map~, ~filter~, ~concatAll~, ~reduce~, e ~zip~ —
+     consideradas ferramentas fundamentais no paradigma de programação
+     funcional.
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
