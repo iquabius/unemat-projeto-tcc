@@ -203,6 +203,15 @@
      compartilham algum significado ao problema a se resolver e (2) precisam ser
      manipulados juntos de forma controlada.
 
+     O único tipo de coleção no JavaScript é o arranjo (/array/), que pode ser
+     construído através do objeto[fn:prototypes] global ~Array~, ou da notação
+     de arranjos literais com colchetes:
+
+     #+BEGIN_SRC js
+     var collection1 = new Array()
+     var collection2 = []
+     #+END_SRC
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
