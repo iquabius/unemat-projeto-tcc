@@ -229,6 +229,25 @@
      }
      #+END_SRC
 
+     Em \ref{code:forLoopDoubleNumbers} é demonstrada a tarefa de dobrar os
+     valores de uma coleção de números, que utiliza a instrução ~for~ para
+     percorrer os itens. Cada valor é multiplicado por 2, e o resultado é
+     adicionado a outra coleção.
+
+     #+label: code:forLoopDoubleNumbers
+     #+caption: Dobrando os valores de uma coleção com ~for~
+     #+BEGIN_SRC js
+     var numbers = [1, 2, 3, 4]      // coleção original
+     var doubled = []                // coleção de resultados
+     var i                           // contador
+
+     for (i = 0; i < numbers.length; i++) {
+       var dobro = numbers[i] * 2    // dobra o valor
+       doubled.push(dobro)           // adiciona aos resultados
+     }
+     // doubled == [2, 4, 6, 8]
+     #+END_SRC
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
