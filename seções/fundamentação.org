@@ -212,6 +212,23 @@
      var collection2 = []
      #+END_SRC
 
+     Uma tarefa muito comum na programação é a iteração[fn:iteration] de
+     coleções. Um mecanismo muito utilizado para tal é o comando ~for~. Em
+     \ref{code:forLoopTraverse} é demonstrado o uso do comando ~for~ para
+     percorrer os itens da coleção ~people~ e mostrar cada um no console de
+     depuração.
+
+     #+caption: Percorrendo uma coleção com o laço ~for~
+     #+label: code:forLoopTraverse
+     #+BEGIN_SRC js
+     var people = ["Alan Turing", "Alonzo Church", "Kurt Gödel"]
+     var count
+
+     for (count = 0; count < people.length; count++) {
+       console.log(people[i])
+     }
+     #+END_SRC
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
