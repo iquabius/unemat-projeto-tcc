@@ -198,6 +198,11 @@
     - Primitivas Básicas de PF :: /map/, /filter/, /fold/, /reduce/, /scan/, e
          /zip/;
 
+**** Manipulação de coleções
+     Uma coleção é um agrupamento de um número variável de itens, que (1)
+     compartilham algum significado ao problema a se resolver e (2) precisam ser
+     manipulados juntos de forma controlada.
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
