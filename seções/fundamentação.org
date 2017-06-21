@@ -248,6 +248,30 @@
      // doubled == [2, 4, 6, 8]
      #+END_SRC
 
+     Outro construto usado para iterar coleções é o ~forEach~, implementado no
+     JavaScript como método do objeto ~Array~. Dada uma função, o ~forEach~ a
+     aplica a cada item da coleção. A tarefa de dobrar os valores de uma coleção
+     é demonstrada em \ref{code:forEachDoubleNumbers}, onde é passada uma função
+     /lambda/ ao método ~forEach~, que é aplica a cada item da coleção.
+
+     #+label: code:forEachDoubleNumbers
+     #+caption: Dobrando os valores de uma coleção com ~forEach()~
+     #+BEGIN_SRC js
+     var numbers = [1, 2, 3, 4]
+     var doubled = []
+
+     numbers.forEach(function (number) {
+       var dobro = number * 2
+       doubled.push(dobro)
+     })
+     // doubled == [2, 4, 6, 8]
+     #+END_SRC
+
+     O ~forEach~ permite especificar /o que/ acontece para cada item na coleção,
+     mas esconde /como/ a coleção é percorrida. Nota-se que não há um contador
+     explícito, como no caso do comando ~for~ em
+     \ref{code:forLoopDoubleNumbers}.
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
