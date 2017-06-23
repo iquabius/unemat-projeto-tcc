@@ -225,7 +225,7 @@
      var count
 
      for (count = 0; count < people.length; count++) {
-       console.log(people[i])
+       console.log(people[count])
      }
      #+END_SRC
 
