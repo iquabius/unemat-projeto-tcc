@@ -252,7 +252,8 @@
      JavaScript como método do objeto ~Array~. Dada uma função, o ~forEach~ a
      aplica a cada item da coleção. A tarefa de dobrar os valores de uma coleção
      é demonstrada em \ref{code:forEachDoubleNumbers}, onde é passada uma função
-     /lambda/ ao método ~forEach~, que é aplica a cada item da coleção.
+     /lambda/[fn:lambda] ao método ~forEach~, que é aplica a cada item da
+     coleção.
 
      #+label: code:forEachDoubleNumbers
      #+caption: Dobrando os valores de uma coleção com ~forEach()~
