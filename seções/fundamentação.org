@@ -267,10 +267,12 @@
      // doubled == [2, 4, 6, 8]
      #+END_SRC
 
-     O ~forEach~ permite especificar /o que/ acontece para cada item na coleção,
-     mas esconde /como/ a coleção é percorrida. Nota-se que não há um contador
-     explícito, como no caso do comando ~for~ em
-     \ref{code:forLoopDoubleNumbers}.
+     Na linha 4 do trecho de código \ref{code:forEachDoubleNumbers}, a expressão
+     ~numbers.forEach~ pode ser lida como: “Dada a coleção ~numbers~, aplique a
+     seguinte função para cada um de seus itens”. O ~forEach~ permite
+     especificar /o que/ acontece para cada item na coleção, porém esconde
+     /como/ a coleção é percorrida. Nota-se que não há um contador explícito,
+     como no caso do comando ~for~ em \ref{code:forLoopDoubleNumbers}.
 
      A chave para entender PFR é ter um bom fundamento sobre o uso de
      programação funcional para manipular coleções (/sequências/ nos
