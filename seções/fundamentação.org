@@ -329,6 +329,25 @@
         funcionam por sentenças que definem /o que/ elas são. E talvez
         esclarecer os objetivos da aplicação delas a coleções.
 
+***** Filtrando coleções com ~filter()~
+      Assim como projetar coleções, filtrar coleções é uma operação muito comum.
+      Para filtrar uma coleção, aplica-se um teste para cada item da coleção, e
+      os que passam no teste são coletados em uma nova coleção.
+
+      #+label: code:filterEvenOdd
+      #+BEGIN_SRC js
+      var numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+      var pares   = numeros.filter(num => num % 2 == 0) // filtra os números pares
+      var impares = numeros.filter(num => num % 2 != 0) // filtra os números ímpares
+
+      // pares   = [0, 2, 4, 6, 8]
+      // impares = [1, 3, 5, 7, 9]
+      #+END_SRC
+
+      Da mesma forma que ~map()~, ~filter()~ permite expressar /que/ valores são
+      desejados, sem exigir que se especifique /como/ coletá-los.
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
