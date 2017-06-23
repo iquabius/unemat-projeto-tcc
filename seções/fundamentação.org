@@ -283,6 +283,49 @@
      consideradas ferramentas fundamentais no paradigma de programação
      funcional.
 
+***** Projeção de coleções com ~map()~
+      A aplicação de uma função a um valor, afim de criar um novo valor, define
+      uma /projeção/. Uma função de projeção pode ser definida como $f(x)=x*2$,
+      a aplicação dessa projeção ao valor $2$, resulta no valor $4$:
+      $f(2)=2*2=4$.
+
+      Para projetar uma coleção em outra, deve-se aplicar uma
+      função a cada item da coleção e coletar os resultados em uma nova coleção.
+      Projeções são muito utilizadas para transformar os valores de uma lista —
+      e.g. multiplica-los por 2 para obter o dobro, como demonstrado em
+      \ref{code:forEachDoubleNumbers} com o ~forEach()~.
+
+      Além do ~forEach~, outro mecanismo para projeção de coleções é a função
+      ~map~, muito comum na programação funcional. No JavaScript ela também é
+      implementada como um método do objeto ~Array~. Dada uma função, o método
+      ~map()~ a aplica a cada item da coleção e coleta os resultados em uma nova
+      coleção, que é retornada no final da operação. Em
+      \ref{code:mapDoubleNumbers} o método ~map()~ é usado para demonstrar a
+      projeção de uma coleção de números inteiros — a mesma projeção feita em
+      \ref{code:forEachDoubleNumbers} com o método ~forEach~.
+
+      #+label: code:mapDoubleNumbers
+      #+caption: Dobrando os valores de uma coleção com ~map()~
+      #+BEGIN_SRC js
+      var numbers = [1, 2, 3, 4]
+      var doubled = []
+
+      doubled = numbers.map(function (numbers) {
+        return number * 2
+      })
+      // doubled == [2, 4, 6, 8]
+      #+END_SRC
+
+      Nota-se que a função ~map~ permite a especificação de qual projeção
+      aplicar a uma coleção, mas oculta /como/ a operação acontece.
+
+****** Notas                                                       :noexport:
+       [[http://www.pontov.com.br/site/arquitetura/54-matematica-e-fisica/238-matrizes-e-transformacoes-parte-1][Transformação de matrizes]].
+******* How -> What
+        Trocar sentenças que explicam /como/ as operações de transformação
+        funcionam por sentenças que definem /o que/ elas são. E talvez
+        esclarecer os objetivos da aplicação delas a coleções.
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
