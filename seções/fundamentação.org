@@ -319,8 +319,8 @@
       // doubled == [2, 4, 6, 8]
       #+END_SRC
 
-      Nota-se que a função ~map~ permite a especificação de qual projeção
-      aplicar a uma coleção, mas oculta /como/ a operação acontece.
+      Nota-se que a função ~map~ permite especificar /que/ projeção aplicar a
+      uma coleção, mas oculta /como/ a operação acontece.
 
 ****** Notas                                                       :noexport:
        [[http://www.pontov.com.br/site/arquitetura/54-matematica-e-fisica/238-matrizes-e-transformacoes-parte-1][Transformação de matrizes]].
