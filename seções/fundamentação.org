@@ -25,66 +25,63 @@
         /First Draft of a Report on the EDVAC/ (Von Neumman, 1945) --- do
         desenho /(design)/ lógico de um ‘computador com programa armazenado’;
 
-
 ** Linguagens de Programação
+*** Sintaxe de uma Linguagem
+**** Construtos linguísticos
 
-*** Construtos linguísticos
+     “Considerando a computação de um programa como uma máquina de transformação,
+     podemos distinguir dois *estados* primordiais do programa: o *estado
+     inicial* — quando nenhuma transformação sobre os dados ainda foi realizada —
+     e o *estado final*, após todas as transformações realizadas pelo programa.”
+     (Melo, 2003, pg.84)
 
-    “Considerando a computação de um programa como uma máquina de transformação,
-    podemos distinguir dois *estados* primordiais do programa: o *estado
-    inicial* — quando nenhuma transformação sobre os dados ainda foi realizada —
-    e o *estado final*, após todas as transformações realizadas pelo programa.”
-    (Melo, 2003, pg.84)
+     “Para programas sequenciais, a computação de um programa é, na realidade,
+     uma transformação sucessiva de estados.” (Melo, 2003, pg.84)
 
-    “Para programas sequenciais, a computação de um programa é, na realidade,
-    uma transformação sucessiva de estados.” (Melo, 2003, pg.84)
+     Expressões são mecanismos para a transformação de dados, alguns dados de
+     entrada são fornecidos e um resultado obtido a partir da computação deles
+     (Melo, 2003, pg.84).
 
-    Expressões são mecanismos para a transformação de dados, alguns dados de
-    entrada são fornecidos e um resultado obtido a partir da computação deles
-    (Melo, 2003, pg.84).
+     Comandos atuam sobre o fluxo de controle e estados do programa (Melo, 2003,
+     pg.84).
 
-    Comandos atuam sobre o fluxo de controle e estados do programa (Melo, 2003,
-    pg.84).
+     Segundo Sebesta (2003), os critérios de avaliação da linguagem são:
+     /legibilidade/, /capacidade de escrita (writability)/, /confiabilidade/, e
+     /custo/.
+**** Expressões
+     formadas por operadores e operandos, uma expressão é qualquer código que dê
+     um valor depois de sua redução (ou avaliação). “em linguagens imperativas a
+     redução de uma expressão pode modificar o valor de qualquer variável através
+     de \emph{efeitos colaterais}” (gabbrielli, 2010).
 
-    Segundo Sebesta (2003), os critérios de avaliação da linguagem são:
-    /legibilidade/, /capacidade de escrita (writability)/, /confiabilidade/, e
-    /custo/.
+     “As expressões são os elementos de transformação de dados em um programa: a
+     partir de valores, uma transformação é aplicada e um valor resultado é
+     produzido.” (Melo, 2003, pg. 84).
 
+     “\textelp{} quando uma expressão que contém uma aplicação de função [],
+     algumas operações internas à função podem acarretar mudanças no estado do
+     programa.” (Melo, 2003, pg. 89).
 
-*** Expressões
-    formadas por operadores e operandos, uma expressão é qualquer código que dê
-    um valor depois de sua redução (ou avaliação). “em linguagens imperativas a
-    redução de uma expressão pode modificar o valor de qualquer variável através
-    de \emph{efeitos colaterais}” (gabbrielli, 2010).
+**** Comandos
+     Ao contrário das expressões, comandos nem sempre dá um valor ao ser
+     avaliado.
 
-    “As expressões são os elementos de transformação de dados em um programa: a
-    partir de valores, uma transformação é aplicada e um valor resultado é
-    produzido.” (Melo, 2003, pg. 84).
-
-    “\textelp{} quando uma expressão que contém uma aplicação de função [],
-    algumas operações internas à função podem acarretar mudanças no estado do
-    programa.” (Melo, 2003, pg. 89).
-
-*** Comandos
-    Ao contrário das expressões, comandos nem sempre dá um valor ao ser
-    avaliado.
-
-    #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
-    - Atribuição :: Valores, variáveis e armazenamento na memória.
-    - Comandos de controle explícito :: Comandos que decidem o caminho de
-         execução do programa, dentre os vários possíveis:
-         1. comandos compostos (blocos /begin...end/, /.../, etc)
-         2. comando /goto/;
-         3. e outros, como /break/, /continue/, /return/, e exceções (comandos
-            mais elaborados para controle de sequência).
-    - Comandos Condicionais :: /if...else/, /switch...case/;
-    - Comandos Iterativos :: Unbounded (/while/, /do...while/) and bounded
-         iteration (/for/, /foreach/, /for...in/);
-    - Programação Estruturada :: A rejeição do comando /GOTO/ (Dijkstra, 1968)
-         e o surgimento do conceito de /‘paradigmas de programação’/;
-    - Recursão :: Na busca por linguagens /turing-equivalentes/, a recursão
-                  pode ser pensada como uma alternativa aos comandos de
-                  iteração.
+     #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
+     - Atribuição :: Valores, variáveis e armazenamento na memória.
+     - Comandos de controle explícito :: Comandos que decidem o caminho de
+          execução do programa, dentre os vários possíveis:
+          1. comandos compostos (blocos /begin...end/, /.../, etc)
+          2. comando /goto/;
+          3. e outros, como /break/, /continue/, /return/, e exceções (comandos
+             mais elaborados para controle de sequência).
+     - Comandos Condicionais :: /if...else/, /switch...case/;
+     - Comandos Iterativos :: Unbounded (/while/, /do...while/) and bounded
+          iteration (/for/, /foreach/, /for...in/);
+     - Programação Estruturada :: A rejeição do comando /GOTO/ (Dijkstra, 1968)
+          e o surgimento do conceito de /‘paradigmas de programação’/;
+     - Recursão :: Na busca por linguagens /turing-equivalentes/, a recursão
+                   pode ser pensada como uma alternativa aos comandos de
+                   iteração.
 
 
 *** O declarativo e o imperativo nas linguagens de programação
