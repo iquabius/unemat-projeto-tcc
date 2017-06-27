@@ -37,6 +37,27 @@
     LISP e linguagens funcionais.
     Linguagens declarativas.
 
+*** Programação Imperativa e a Máquina de Turing
+    “[...] ideia de estado de um programa e a computação de um programa como
+    sucessivas transformações de estados.” (Melo, 2003)
+
+    Melo (2003) apresenta uma tipologia das linguagens de programação:
+
+    #+ATTR_LATEX: :options [noitemsep,font={\normalfont\itshape}]
+    - assertivas
+      #+ATTR_LATEX: :options [noitemsep,font={\normalfont\itshape}]
+      - imperativas :: C, Pascal, Fortran
+      - orientadas a objetos :: C++, Smalltalk
+    #+ATTR_LATEX: :options [noitemsep]
+    - declarativas
+      #+ATTR_LATEX: :options [noitemsep,font={\normalfont\itshape}]
+      - funcionais :: LISP, ML, Miranda, Haskell
+      - lógicas :: PROLOG, Godel
+      - orientadas a satisfações de restrições :: Mozart/OZ, Alice
+
+
+*** Programação Declarativa e o Cálculo Lambda
+
 *** Sintaxe de uma Linguagem
 **** Construtos linguísticos
 
@@ -93,25 +114,6 @@
      - Recursão :: Na busca por linguagens /turing-equivalentes/, a recursão
                    pode ser pensada como uma alternativa aos comandos de
                    iteração.
-
-
-*** O declarativo e o imperativo nas linguagens de programação
-    “[...] ideia de estado de um programa e a computação de um programa como
-    sucessivas transformações de estados.” (Melo, 2003)
-
-    Melo (2003) apresenta uma tipologia das linguagens de programação:
-
-    #+ATTR_LATEX: :options [noitemsep,font={\normalfont\itshape}]
-    - assertivas
-      #+ATTR_LATEX: :options [noitemsep,font={\normalfont\itshape}]
-      - imperativas :: C, Pascal, Fortran
-      - orientadas a objetos :: C++, Smalltalk
-    #+ATTR_LATEX: :options [noitemsep]
-    - declarativas
-      #+ATTR_LATEX: :options [noitemsep,font={\normalfont\itshape}]
-      - funcionais :: LISP, ML, Miranda, Haskell
-      - lógicas :: PROLOG, Godel
-      - orientadas a satisfações de restrições :: Mozart/OZ, Alice
 
 
 
