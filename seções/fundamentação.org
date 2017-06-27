@@ -26,6 +26,17 @@
         desenho /(design)/ lógico de um ‘computador com programa armazenado’;
 
 ** Linguagens de Programação
+*** História
+    Máquina de Turing.
+    Arquitetura de von Neumman.
+    Instruções de máquina.
+    Assembly languages.
+    Linguagens imperativas.
+
+    Cálculo Lambda e a Tese de Church-Turing.
+    LISP e linguagens funcionais.
+    Linguagens declarativas.
+
 *** Sintaxe de uma Linguagem
 **** Construtos linguísticos
 
