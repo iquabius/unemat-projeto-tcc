@@ -114,36 +114,7 @@
       - orientadas a satisfações de restrições :: Mozart/OZ, Alice
 
 
-    A função src_js[:exports code]{doubleNumbers} no Fragmento de Código
-    \ref{code:doubleNumbersImperative} recebe uma lista de números e produz numa
-    nova lista onde todos os números são multiplicados por 2. Essa implementação
-    utiliza o estilo /imperativo/ de programação.
 
-    #+label: code:doubleNumbersImperative
-    #+CAPTION: Dobrando números de uma lista de forma /imperativa/
-    #+BEGIN_SRC js
-    function doubleNumbers(numbers) {
-      const doubled = []
-      const l = numbers.length
-
-      for (let i = 0; i < l; i++) {
-        doubled.push(numbers[i] * 2)
-      }
-
-      return doubled
-    }
-    #+END_SRC
-
-    #+label: code:doubleNumbersDeclarative
-    #+CAPTION: Dobrando números de uma lista de forma /declarativa/
-    #+BEGIN_SRC js
-    function doubleNumbers(numbers) {
-      return numbers.map(n => n * 2)
-    }
-
-    doubleNumbers([1, 2, 3])
-    // [2, 4, 6]
-    #+END_SRC
 
 
 ** Paradigmas de Programação
