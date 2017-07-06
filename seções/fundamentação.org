@@ -352,6 +352,26 @@
       Da mesma forma que ~map()~, ~filter()~ permite expressar /que/ valores são
       desejados, sem exigir que se especifique /como/ coletá-los.
 
+***** Nivelamento de coleções com ~concatAll()~
+      Concatena várias listas em uma única lista, ou seja, transforma uma
+      coleção de coleções em uma única coleção.
+
+      #+BEGIN_SRC js
+      var lista = [[1, 3, 5, 7], [2, 4]]
+
+      var listaNivelada = lista.concatAll()
+
+      // listaNivelada = [1, 3, 5, 7, 2, 4]
+      #+END_SRC
+
+      Vale observar que a função ~contatAll()~ espera que cada item da coleção
+      também seja uma coleção.
+
+****** Anotações                                                   :noexport:
+       Other names for ~concatAll~:
+       - flattenDeep ([[https://lodash.com/docs/4.17.4#flattenDeep][lodash]]);
+       - concat ([[http://package.elm-lang.org/packages/elm-lang/core/5.1.1/List#concat][elm]]);
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
