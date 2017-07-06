@@ -1,7 +1,7 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
 * Fundamentação Teórica
 
-** Teoria da Computação
+** COMMENT Teoria da Computação
 
    O fenômeno da computação na qual a Ciência da Computação é fundada tem suas
    raízes na teoria da computabilidade que estuda os formalismos na qual pode-se
@@ -27,6 +27,16 @@
         desenho /(design)/ lógico de um ‘computador com programa armazenado’;
 
 ** Linguagens de Programação
+*** Notas                                                          :noexport:
+    “category theory is the "foundation" for type theory. Here, I would like to
+    say something stronger. Category theory is type theory. Conversely, type
+    theory is category theory.” — [[https://cs.stackexchange.com/a/3256/47237][StackExchange: Uday Reddy]]
+
+    TODO: Look up
+    /Set Theory/ studies operations on mathematical sets. /Relational Algebra/
+    de builds on it's concepts to define data abstractions for databases.
+
+
 *** História
     Máquina de Turing.
     Arquitetura de von Neumman.
