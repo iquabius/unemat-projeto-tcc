@@ -372,6 +372,55 @@
        - flattenDeep ([[https://lodash.com/docs/4.17.4#flattenDeep][lodash]]);
        - concat ([[http://package.elm-lang.org/packages/elm-lang/core/5.1.1/List#concat][elm]]);
 
+***** Redução de coleções com ~reduce()~
+      Reduz uma lista a um valor
+
+      #+caption: Somar uma lista de números com ~reduce()~
+      #+BEGIN_SRC js
+      function somar (total, valor) {
+        return total + valor
+      }
+
+      let nums = [1, 2, 3]
+
+      let resultado = nums.reduce(somar, 0)
+
+      /* 0: segundo argumento de reduce
+         1: primeiro item da coleção
+         somar(0, 1) -> 1
+                  somar(1, 2) -> 3
+                           somar(3, 3) -> 6️
+      */
+      #+END_SRC
+
+
+      #+caption: Procurar o maior número com ~reduce()~
+      #+BEGIN_SRC js
+      let numeros = [2, 3, 1, 4, 5]
+
+      let qualEhMaior = (maior, atual) => {
+        if (maior > atual) {
+          return maior
+        } else {
+          return atual
+        }
+      }
+
+      let resultado = numeros.reduce(qualEhMaior)
+
+      // resultado == 5
+      #+END_SRC
+
+      #+caption: Aplicações de ~qualEhMaior()~ com pela função ~reduce()~
+      #+BEGIN_SRC js
+      /*
+       qualEhMaior(2, 3) -> 3
+                qualEhMaior(3, 1) -> 3
+                         qualEhMaior(3, 4) -> 4
+                                  qualEhMaior(4, 5) -> 5
+      */
+      #+END_SRC
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
