@@ -558,6 +558,25 @@
    Google Docs.
 
    # justificar o foco em aplicações web
+*** Programação de Interfaces Gráficas
+    Conforme é notado por \citeonline{blackheath2016}, a maioria das aplicações
+    que interagem com o ambiente externo são arquitetadas em torno de dois
+    modelos de programaçao, ou uma mistura dos dois:
+
+    - /Threads/ :: modelam transições de estado como um fluxo de controle.
+                   Adequadas para operações de I/O ou qualquer situação onde as
+                   iiiii         transições de estado se enquadram em uma sequência
+                   claramente definida.
+    - Eventos :: são mensagens discretas[fn:discrete] e assíncronas que são propagadas pela
+                 aplicação. Formam um modelo adequado para sequências menos
+                 óbvias, principalmente onde as interações entre componentes
+                 são mais complexas. Algumas aplicações incluem /GUIs/ e video
+                 games.
+
+    Alguns problemas de computação são melhor resolvidos com o modelo baseado
+    em /threads/. No entanto \citeonline{blackheath2016} afirmam que a
+    abordagem com eventos geralmente é a melhor escolha.
+
     - utilizam toolkits
 
 *** Aplicações Web
