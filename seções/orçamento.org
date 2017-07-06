@@ -1,3 +1,4 @@
+# -*- ispell-local-dictionary: "portugues"; -*-
 * Orçamento
 
   #+BEGIN_EXPORT latex

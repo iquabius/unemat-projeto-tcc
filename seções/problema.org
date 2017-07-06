@@ -1,3 +1,4 @@
+# -*- ispell-local-dictionary: "portugues"; -*-
 * Problema
   O quê a Programação Funcional Reativa (PFR) tem a oferecer, e como ela se
   compara aos modelos baseados em /callbacks/ quanto ao nível de abstração

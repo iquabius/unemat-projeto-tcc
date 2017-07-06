@@ -1,3 +1,4 @@
+# -*- ispell-local-dictionary: "portugues"; -*-
 * Justificativa
   Inerentemente /imperativos/, modelos que utilizam /callbacks/ como principal
   mecanismo de coordenação de eventos são consideradas muito complexos

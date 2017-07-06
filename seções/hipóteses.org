@@ -1,3 +1,4 @@
+# -*- ispell-local-dictionary: "portugues"; -*-
 * Hipóteses
   O /Observer Pattern/ --- inerentemente orientado a objetos e /imperativo/ ---
   utiliza callbacks[fn:callbacks] como principal mecanismo de coordenação de

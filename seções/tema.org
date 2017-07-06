@@ -1,3 +1,4 @@
+# -*- ispell-local-dictionary: "portugues"; -*-
 * Tema
   Programação Funcional Reativa (PFR).
 

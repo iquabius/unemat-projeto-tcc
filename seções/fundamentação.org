@@ -1,3 +1,4 @@
+# -*- ispell-local-dictionary: "portugues"; -*-
 * Fundamentação Teórica
 
 ** Teoria da Computação

@@ -1,3 +1,4 @@
+# -*- ispell-local-dictionary: "portugues"; -*-
 * Método de Pesquisa
   Apesar do paradigma de PFR ter sido apresentado há quase duas décadas com o
   artigo de \citeauthoronline{elliott1997} em \citeyear{elliott1997}, sua

@@ -1,3 +1,4 @@
+# -*- ispell-local-dictionary: "portugues"; -*-
 * Cronograma
 
   #+BEGIN_EXPORT latex
