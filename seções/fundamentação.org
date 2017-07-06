@@ -421,6 +421,34 @@
       */
       #+END_SRC
 
+***** Agrupando os itens de uma coleção com ~zip()~
+      Combina os itens de várias listas, um a um.
+
+      #+caption: ~zip()~
+      #+BEGIN_SRC js
+      var listas = [[1, 4],
+                    [2, 5],
+                    [3, 6]]
+
+      var l2 = zip(listas)
+
+      // l2 = [[1, 2, 3],
+      //       [4, 5, 6]]
+      #+END_SRC
+
+      #+caption: ~zip()~
+      #+BEGIN_SRC js
+      var listas = [['we', 'are'],
+                    [1111, 22222],
+                    [true, false]]
+
+      var ls = zip(listas)
+
+      // ls = [[ 'we',  1111,  true],
+      //       ['are', 22222, false]]
+      #+END_SRC
+
+
 **** Notes                                                         :noexport:
      "Functional Programming (enabled by lambdas with closure)".
 
