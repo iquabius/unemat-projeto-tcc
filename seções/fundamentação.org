@@ -26,7 +26,6 @@
         /First Draft of a Report on the EDVAC/ (Von Neumman, 1945) --- do
         desenho /(design)/ lógico de um ‘computador com programa armazenado’;
 
-** Linguagens de Programação
 *** Notas                                                          :noexport:
     “category theory is the "foundation" for type theory. Here, I would like to
     say something stronger. Category theory is type theory. Conversely, type
@@ -37,16 +36,18 @@
     de builds on it's concepts to define data abstractions for databases.
 
 
+** COMMENT Linguagens de Programação
 *** História
     Máquina de Turing.
     Arquitetura de von Neumman.
     Instruções de máquina.
-    Assembly languages.
-    Linguagens imperativas.
+    Linguagens de montagem /(Assembly)/.
+    Programação imperativa.
 
     Cálculo Lambda e a Tese de Church-Turing.
     LISP e linguagens funcionais.
-    Linguagens declarativas.
+    Programação declarativa.
+
 
 *** Programação Imperativa e a Máquina de Turing
     “[...] ideia de estado de um programa e a computação de um programa como
@@ -68,6 +69,8 @@
 
 
 *** Programação Declarativa e o Cálculo Lambda
+
+*** Semântica de uma Linguagem
 
 *** Sintaxe de uma Linguagem
 **** Construtos linguísticos
@@ -127,7 +130,16 @@
                    iteração.
 
 
+*** Notas                                                          :noexport:
+    “Some languages are discovered and some languages are invented. Some
+    languages feel like a force of nature, and others feel like they are bolted
+    together in a garage.” [[https://www.youtube.com/watch?v=bmFKEewRRQg][Rob Martin - Teaching functional programming to noobs]]
 
+    | Turing Machine    |   |   |   |   |
+    |-------------------+---+---+---+---|
+    | von Neumman Arch. |   |   |   |   |
+    | Assembly Langs.   |   |   |   |   |
+    | Lambda Calculus   |   |   |   |   |
 
 
 ** Paradigmas de Programação
