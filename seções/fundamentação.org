@@ -520,12 +520,44 @@
      %   Rx
      %   Meteor
 
+** Interfaces Gráficas do Usuário
+   Interfaces gráficas do usuário (GUIs) mediam a maioria de nossas interações
+   com computadores, seja através de páginas web, aplicativos de celular, ou
+   aplicações desktop cite:czaplicki2012. Um dos principais desafios no
+   desenvolvimento de interfaces gráficas é atender requisitos de usabilidade
+   cite:myers1994. Observar como interagimos com computadores pode motivar
+   maneiras aprimoradas de interação. /Observar/ e /projetar/ novas formas de
+   interação são estudadas pela área de /Interação Humano-computador (IHC)/.
 
-** Interfaces Gráficas do Usuário (GUIs)
+   Embora sejam aspectos muito importantes para o desenvolvimento de aplicações,
+   eles não concernem a este trabalho. Estamos interessados no desenvolvimento
+   de interfaces gráficas do ponto de vista da /programação/. A programação de
+   GUIs representa um domínio particularmente difícil. Além dos desafios comuns
+   de programação, analizar e transformar dados, elas precisam responder a ações
+   do usuário, como clicks do mouse, pressionamento de teclas, e gestos
+   multitoque. Devido a isso, interfaces gráficas são designadas /reativas/, ou
+   seja, reagem a eventos desencadeados pela interação com o usuário.
 
-*** Programação de GUIs
+   Um sistema reativo efetua computações em resposta a ocorrência de eventos,
+   que por sua vez pode desencadear novos eventos. Alguns exemplos são (1)
+   interfaces gráficas, que reagem a ações do usuário, (2) sistemas embarcados,
+   que reagem a sinais de hardware, e (3) programas de monitoração e controle,
+   que reagem a mudanças no ambiente externo cite:salvaneschi2015.
+   # De fato, as partes reativas de um programa são acionadas, de forma
+   # assíncrona, pela ocorrência de eventos.
 
-*** Aplicações Desktop
+   # Nosso objetivo é estudar conceitos de programação aplicados na resolução de
+   # problemas de característica assíncrona, inerentes de sistemas reativos como
+   # as interfaces gráficas.
+
+   Interfaces gráficas podem ser divididas em dois grupos: /nativas/ e /web/. As
+   nativas são encontradas em aplicações específicas de alguma plataforma, e.g.
+   /mobile/ (Android, iOS) ou /desktop/ (Ubuntu, RedHat, Windows, Mac).
+   Interfaces web são encontradas em aplicações acessadas por navegadores, em
+   algum endereço específico na internet, como por exemplo o Gmail, Facebook, e
+   Google Docs.
+
+   # justificar o foco em aplicações web
     - utilizam toolkits
 
 *** Aplicações Web
