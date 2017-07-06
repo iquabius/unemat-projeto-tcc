@@ -580,6 +580,29 @@
     - utilizam toolkits
 
 *** Aplicações Web
-    - JavaScript
-    - DOM /(Document Object Model)/
-    - Programação com /Callbacks/
+    Além de interagir com o usuário, aplicações web mantêm interação com outros
+    sistemas na internet, como programas servidores de conteúdo, chamados de
+    /servidores web ou ‘web servers’/. Isso representa uma gama de dificuldades
+    particulares, pois o sistema mantêm interação com elementos externos:
+
+    #+ATTR_LATEX: :options [noitemsep]
+    - humano;
+    - máquina local: computadores desktop, smartphones, tablets, consoles de
+      video game, dispositivos IoT, etc;
+    - máquinas remotas: servidores de aplicações e conteúdo, serviços de
+      terceiros (Login com facebook);
+    - dispositivos de hardware: câmera, placa de vídeo (WebGL);
+    - sistema operacional: notificações;
+
+    # talves escrever sobre IoT,
+
+    # “modifying document object model by reacting to events from user and server”
+    # — [[https://www.youtube.com/watch?v=mIwD27qqr5U][YT:Tomasz Kowal - Elixir and Elm - the perfect couple (Lambda Days 2016)]]
+
+    # “If someone says…??
+
+    # JavaScript
+    # DOM /(Document Object Model)/
+    # Programação com /Callbacks/
+    # Aplicações de Página Única
+
