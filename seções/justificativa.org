@@ -1,38 +1,105 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
 * Justificativa
-  Inerentemente /imperativos/, modelos que utilizam /callbacks/ como principal
-  mecanismo de coordenação de eventos são consideradas muito complexos
-  cite:edwards2009,fischer2007,maier2010,reppy1992. Isso se deve a forma
-  desconcertante com que /callbacks/ coordenam alterações no estado do programa.
-  O código da aplicação se torna difícil de compreender e dar manutenção,
-  podendo ainda ser descrito coloquialmente como /‘Callback Hell’/
-  \cite[p.~2]{edwards2009}, como é costumeiro na literatura.
+  Interfaces gráficas mediam a maioria das nossas interações com computadores,
+  seja através de /laptops/, tabletes, ou navegadores web. Desde o projeto até a
+  implementação elas apresentam muitos desafios cite:myers1994. Além de
+  problemas comuns de programação, como análise e processamento de dados,
+  destacam-se também a apresentação de dados e o gerenciamento de interações. Na
+  programação de interfaces, para gerenciar interações é necessário coordenar
+  vários eventos desencadeados pelo usuário — através de dispositivos de
+  interação como teclado, mouse, ou tela multitoque.
 
-  Vale ressaltar que de acordo com \citeonline{moseley2006} o mau gerenciamento
-  de estado é considerado a principal causa de complexidade em sistemas
-  contemporâneos, pois impactam a compreensibilidade do programa, e os testes de
-  software. Uma análise das aplicações /desktop/ da Adobe apontou que a lógica
-  de coordenação de eventos residia em um terço do código e contia metade dos
-  /bugs/ reportados cite:jarvi2008. Interfaces gráficas inerentemente dispõem de
-  um alto grau de interativade, tornando seu desenvolvimento e manutenção um
-  desafio.
+  # explicar 'estado' junto com o 'callback hell'?
+  Para coordenar eventos é comum usar o /callback/: um bloco de código executado
+  sempre que um dado evento ocorrer, p. ex., clique em um botão. Esse modelo é
+  criticado porque nele a ordem de execução do programa é imprevisível, ela é
+  definida por eventos externos, e não pela sequência especificada pelo
+  programador[fn:control_flow] cite:maier2010,edwards2009,fischer2007.
+  “Coordenar alterações ao estado compartilhada em meio a esse caos pode ser
+  desconcertante, e está longe de ser modular. A definição coloquial é /Inferno
+  de Callbacks/.”[fn:callback_hell] \cite[p. 2; tradução nossa]{edwards2009}.
+  Para esclarecer os desafios enfrentados por sistemas de software em produção,
+  podemos citar uma análise das aplicações /desktop/ da Adobe, de 2005, onde foi
+  concluído que a lógica de coordenação de eventos consistia de um terço do
+  código, além de conter metade dos /bugs/ reportados durante o ciclo de vida do
+  produto cite:jarvi2008.
 
-  /Programação Funcional Reativa (PFR)/ é uma alternativa promissora para o
-  desenvolvimento de sistemas reativos, e tem sido explorada em vários domínios,
-  como: animação digital cite:elliott1997, GUIs cite:czaplicki2012, jogos
-  digitais, robótica, e síntese de música. PFR permite que aplicações
-  interativas sejam programadas de forma declarativa em um nível mais elevado de
-  abstração, com código fonte que expressa melhor a solução implementada. Como
-  resultado, o programa se torna mais compreensível, mais fácil de dar
-  manutenção e, em geral, menos complexo.
+  Uma alternativa é a /programação reativa (PR)/, proposta recentemente como
+  modelo apropriado para sistemas orientados a eventos, como interfaces
+  gráficas, servidores web, e jogos digitais
+  cite:salvaneschi2015,bainomugisha2013. Nesse modelo um programa é descrito
+  como um fluxo de dados, representado por um grafo de dependências pelo modelo
+  de execução, que mantém os dados atualizados automaticamente. Esse
+  comportamento pode ser observado em sistemas de planilha eletrônica, como
+  /Google Sheets/ e /Microsoft Excel[fn:spreadsheet]/
+  cite:blackheath2016,bainomugisha2013. Um experimento controlado realizado na
+  Alemanha investigou a compreensibilidade de programação entre a PR e o
+  /Observer Pattern/[fn:observer_pattern]. Apesar da baixa significância
+  estatística, resultados empíricos confirmaram que a PR é mais simples para
+  compreensão de programas em comparação a abordagem tradicional
+  cite:salvaneschi2014.
 
-  Este trabalho pretende contextualizar a situação atual de como interfaces
-  orientadas a eventos são implementadas, apresentar os conceitos das abordagens
-  alternativas, e fornecer implementações de alguns componentes comuns em
-  interfaces gráficas, com a finalidade de testar e comparar tais abordagens
-  através do uso de algumas ferramentas (linguagens e/ou /frameworks/). Atenção
-  especial será dada ao ambiente /web/, ou seja, interfaces de aplicações
-  utilizadas nos navegadores, e dependendo do levantamento feito, alguns
-  exemplos poderão ser dados com alguma ferramenta que implemente a PFR para o
-  ambiente /mobile/ e/ou /desktop/.
+  # automaticamente mantém os dados atualizados, além de garantir a ordem
+  # correta de execução[fn:spreadsheet] cite:blackheath2016,bainomugisha2013.
+
+  PR é baseada no estilo declarativo e, de fato, compartilha vários conceitos
+  com o modelo de /programação funcional/ (PF). Já os /callbacks/ são comuns no
+  estilo imperativo, sobretudo com o modelo de /programação orientada a objetos/
+  (POO) através de alguma variação do /Observer Pattern/
+  cite:blackheath2016,maier2010. Visto que POO permeia o ensino de programação
+  cite:vanroy2003, e que a utilização inadequada do estilo imperativo é uma das
+  principais causas de complexidade em sistemas modernos[fn:complexity]
+  cite:moseley2006, indaga-se como modelos declarativos podem mitigar problemas
+  enfrentados no desenvolvimento de software em larga escala. Posto isso,
+  propomos estudar os modelos de PF e PR aplicados na programação de interfaces
+  gráficas.
+  # adicionar uma frase/parágrafo (3linhas) sobre os possíveis resultados
+
+  # Sanson questionou isso no fim da apresentação
+
+  # importâncias teóricas
+  # trabalhos de grande interesse acadêmico…
+  # demonstrar conceitos para fins práticos
+
+  # descrever utilidade academica
+
+  # descrever utilidade social, econômica
+
+  # possível relação com trabalhos referenciados
+
+  # relevância intelectual e prática do assunto investigado à experiência do
+  # investigador
+
+  # relevância do trabalho do ponto de vista pessoal, acadêmico, profissional e
+  # social.
+
+* Footnotes
+
+[fn:complexity] \citeauthoronline{moseley2006} (citeyear:moseley2006) distinguem
+complexidade /acidental/ e /essencial/, aqui nos referimos à primeira.
+
+[fn:control_flow] A ordem de execução de um programa também é denominada /fluxo
+de controle/.
+
+[fn:spreadsheet] “Possivelmente a linguagem de programação mais utilizada por
+usuários finais”, como é notado por \citeauthoronline{bainomugisha2013}
+(citeyear:bainomugisha2013; p. 2).
+
+[fn:imperative] Pela semelhança com a qual se expressa comandos usando o modo
+  imperativo de linguagens naturais: p. ex, ‘ande devagar’, ‘faça silêncio’, e
+  ‘espera 1 minuto’.
+
+[fn:callback_hell] Tradução literal do inglês /‘Callback Hell’/: expressão
+ popular na comunidade de programação.
+
+[fn:observer_pattern] O /Observer Pattern/ é usado para coordenar eventos em
+linguagens orientadas a objetos, e /callback/ as vezes é chamado de /event
+handler/, /event listener/ ou /observer/, mas em essência o conceito é o mesmo.
+
+[fn:reactive] Para manter interação contínua com o ambiente externo, GUIs precisam
+  reagir a vários eventos, como cliques do mouse ou pressionamento de teclas.
+  Tais eventos são processados para executar uma tarefa correspondente, como
+  atualizar o estado interno da aplicação ou exibir dados na tela. Devido a
+  essas propriedades, uma GUI é considerada um sistema /reativo/ ou /orientado a
+  eventos./
 
