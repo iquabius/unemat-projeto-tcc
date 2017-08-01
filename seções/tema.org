@@ -1,17 +1,18 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
 * Tema
-  Programação Funcional Reativa (PFR).
+  Programação de /interfaces gráficas./
 
 * Delimitação
-  Programação Funcional Reativa (PFR) aplicada à coordenação de eventos em
-  Interfaces Gráficas do Usuário (GUIs)[fn:reactive].
+  /Modelos de programação/ para interfaces gráficas.
 
+* COMMENT Anotações
+  [[http://www.explorando.com.br/o-que-e-interface-grafica/][_O que é interface gráfica?_]] — Marcos Elias, 2010.
+
+  # ADICIONAR /apresentação de dados/ caso eu aborde
+  # montagem/construção/composição de elementos na tela.
 
 * Footnotes
 
-[fn:reactive] Para manter interação contínua com o ambiente externo, GUIs precisam
-  reagir a vários eventos, como cliques do mouse ou pressionamento de teclas.
-  Tais eventos são processados para executar uma tarefa correspondente, como
-  atualizar o estado interno da aplicação ou exibir dados na tela. Devido a
-  essas propriedades, uma GUI é considerada um sistema /reativo/ ou /orientado a
-  eventos./
+[fn:gui] Uma interface gráfica (ou *GUI*, do inglês /Graphical User Interface/)
+denomina o conjunto de elementos gráficos de uma aplicação na tela do
+computador.
