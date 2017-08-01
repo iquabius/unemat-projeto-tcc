@@ -1,6 +1,16 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
-* Problema
-  O quê a Programação Funcional Reativa (PFR) tem a oferecer, e como ela se
-  compara aos modelos baseados em /callbacks/ quanto ao nível de abstração
-  fornecido para coordenação de eventos na programação de GUIs?
+* Problema e Questões
+  Quais os modelos adequados para programação de interfaces gráficas? Modelos
+  /imperativos/ são comuns em linguagens tradicionais. Linguagens funcionais e
+  lógicas utilizam o estilo /declarativo/, que é considerado mais simples e
+  intuitivo.[fn:intuitive] Portanto, questionamos: quais as vantagens de modelos
+  declarativos? E como eles se comparam aos imperativos na programação de
+  interfaces gráficas?
+  # Essas questões nortearão a pesquisa.
 
+* Footnotes
+
+[fn:intuitive] \citeauthoronline{roy2004} (citeyear:roy2004, p. 31): “\textelp{}
+we are interested in computation models that are useful and intuitive for
+programmers \textelp{}. The first and simplest computation model we will study
+is /declarative programming/.”
