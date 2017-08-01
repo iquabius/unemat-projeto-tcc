@@ -4,54 +4,53 @@
   seja através de /laptops/, tabletes, ou navegadores web. Desde o projeto até a
   implementação elas apresentam muitos desafios cite:myers1994. Além de
   problemas comuns de programação, como análise e processamento de dados,
-  destacam-se também a apresentação de dados e o gerenciamento de interações. Na
-  programação de interfaces, para gerenciar interações é necessário coordenar
-  vários eventos desencadeados pelo usuário — através de dispositivos de
-  interação como teclado, mouse, ou tela multitoque.
+  destacam-se também a apresentação de dados na tela e o gerenciamento de
+  interações. Na programação de interfaces, para gerenciar interações é
+  necessário coordenar vários eventos desencadeados pelo usuário — através de
+  dispositivos de interação como teclado, mouse, ou tela multitoque.
 
   # explicar 'estado' junto com o 'callback hell'?
   Para coordenar eventos é comum usar o /callback/: um bloco de código executado
-  sempre que um dado evento ocorrer, p. ex., clique em um botão. Esse modelo é
-  criticado porque nele a ordem de execução do programa é imprevisível, ela é
-  definida por eventos externos, e não pela sequência especificada pelo
-  programador[fn:control_flow] cite:maier2010,edwards2009,fischer2007.
-  “Coordenar alterações ao estado compartilhada em meio a esse caos pode ser
-  desconcertante, e está longe de ser modular. A definição coloquial é /Inferno
-  de Callbacks/.”[fn:callback_hell] \cite[p. 2; tradução nossa]{edwards2009}.
-  Para esclarecer os desafios enfrentados por sistemas de software em produção,
-  podemos citar uma análise das aplicações /desktop/ da Adobe, de 2005, onde foi
-  concluído que a lógica de coordenação de eventos consistia de um terço do
-  código, além de conter metade dos /bugs/ reportados durante o ciclo de vida do
-  produto cite:jarvi2008.
+  sempre que um dado evento ocorrer, p. ex., clique em um botão. Esse conceito é
+  criticado por tornar o programa complexo: sua ordem de execução é
+  imprevisível, é definida por eventos externos, e não pela sequência
+  especificada pelo programador[fn:control_flow]
+  cite:maier2010,edwards2009,fischer2007. “Coordenar alterações ao estado
+  compartilhada em meio a esse caos pode ser desconcertante, e está longe de ser
+  modular. A definição coloquial é /Inferno de Callbacks/.”[fn:callback_hell]
+  \cite[p. 2; tradução nossa]{edwards2009}. Para esclarecer os desafios
+  enfrentados por sistemas de software em produção, podemos citar uma análise
+  das aplicações /desktop/ da Adobe, de 2005, onde foi concluído que a lógica de
+  coordenação de eventos consistia de um terço do código, além de conter metade
+  dos /bugs/ reportados durante o ciclo de vida do produto cite:jarvi2008.
 
-  Uma alternativa é a /programação reativa (PR)/, proposta recentemente como
-  modelo apropriado para sistemas orientados a eventos, como interfaces
-  gráficas, servidores web, e jogos digitais
-  cite:salvaneschi2015,bainomugisha2013. Nesse modelo um programa é descrito
-  como um fluxo de dados, representado por um grafo de dependências pelo modelo
-  de execução, que mantém os dados atualizados automaticamente. Esse
-  comportamento pode ser observado em sistemas de planilha eletrônica, como
-  /Google Sheets/ e /Microsoft Excel[fn:spreadsheet]/
-  cite:blackheath2016,bainomugisha2013. Um experimento controlado realizado na
-  Alemanha investigou a compreensibilidade de programação entre a PR e o
-  /Observer Pattern/[fn:observer_pattern]. Apesar da baixa significância
-  estatística, resultados empíricos confirmaram que a PR é mais simples para
-  compreensão de programas em comparação a abordagem tradicional
-  cite:salvaneschi2014.
+  Uma alternativa é a /programação reativa (PR)/, um paradigma proposto como
+  solução apropriada para sistemas orientados a eventos, como interfaces
+  gráficas, jogos digitais, robôs, e servidores web
+  cite:salvaneschi2015,bainomugisha2013. Com PR um programa é descrito como um
+  fluxo de dados, representado por um grafo de dependências pelo modelo de
+  execução, que mantém os dados atualizados automaticamente. Esse comportamento
+  pode ser observado em aplicações de planilha eletrônica, como /Google Sheets/
+  e /Microsoft Excel/[fn:spreadsheet] cite:blackheath2016,bainomugisha2013. Um
+  experimento controlado realizado na Alemanha investigou a compreensibilidade
+  de programação entre a PR e o /Observer Pattern/[fn:observer_pattern]. Apesar
+  da baixa significância estatística, resultados empíricos confirmaram que a PR
+  é mais simples para compreensão de programas em comparação a abordagem
+  tradicional cite:salvaneschi2014.
 
   # automaticamente mantém os dados atualizados, além de garantir a ordem
   # correta de execução[fn:spreadsheet] cite:blackheath2016,bainomugisha2013.
 
   PR é baseada no estilo declarativo e, de fato, compartilha vários conceitos
-  com o modelo de /programação funcional/ (PF). Já os /callbacks/ são comuns no
-  estilo imperativo, sobretudo com o modelo de /programação orientada a objetos/
+  com o paradigma de /programação funcional/ (PF). Já os /callbacks/ são comuns no
+  paradigma imperativo, sobretudo com /programação orientada a objetos/
   (POO) através de alguma variação do /Observer Pattern/
   cite:blackheath2016,maier2010. Visto que POO permeia o ensino de programação
-  cite:vanroy2003, e que a utilização inadequada do estilo imperativo é uma das
+  cite:vanroy2003, e que a utilização inadequada de conceitos imperativos é uma das
   principais causas de complexidade em sistemas modernos[fn:complexity]
-  cite:moseley2006, indaga-se como modelos declarativos podem mitigar problemas
+  cite:moseley2006, indaga-se se a programação declarativa pode mitigar problemas
   enfrentados no desenvolvimento de software em larga escala. Posto isso,
-  propomos estudar os modelos de PF e PR aplicados na programação de interfaces
+  propomos estudar conceitos de PF e PR aplicados na programação de interfaces
   gráficas.
   # adicionar uma frase/parágrafo (3linhas) sobre os possíveis resultados
 

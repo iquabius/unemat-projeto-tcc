@@ -18,29 +18,29 @@
 
   \citeauthoronline{yin2001} (citeyear:yin2001) salienta que pesquisas desse
   tipo envolvem o estudo profundo e minucioso de um ou mais casos, que neste
-  trabalho serão programas concretos implementados para demonstrar cada modelo
+  trabalho serão programas concretos implementados para demonstrar os conceitos
   de programação. A linguagem /JavaScript/ será usada na implementação dos
   casos. Essa escolha pode ser resguardada pelo fato de que, além de ser a
-  língua franca da web, ela tem suporte para os modelos a serem estudados.
+  língua franca da web, ela tem suporte para os paradigmas a serem estudados.
 
-  A /priori/, o modelo de PF será demostrado com a implementação de programas
+  A /priori/, o paradigma de PF será demostrado com a implementação de programas
   para /processamento de listas/. Isso fundamentará diferenças essenciais entre
-  o estilo declarativo e imperativo. Em seguida, o modelo de PR e o baseado em
-  /callbacks/ serão demonstrados na /coordenação de eventos/ em interfaces
-  gráficas. Essa segunda parte esclarecerá o estilo declarativo do modelo de PR
-  e o tradicional imperativo com /callbacks/.
+  conceitos declarativos e imperativos. Em seguida, conceitos de PR e o
+  /callback/ serão demonstrados na /coordenação de eventos/ em interfaces
+  gráficas. Essa segunda parte esclarecerá conceitos declarativos do paradigma de PR
+  e o tradicional /callback/, imperativo.
 
   # Afim de contrastar as vantagens e desvantagens de cada modelo na compreensão
   # de programas,
 
-  Afim de contrastar as vantagens e desvantagens de cada modelo, a linguagem de
+  Afim de contrastar as vantagens e desvantagens de cada conceito, a linguagem de
   programação em cada caso será analisada através de um conjunto de critérios
   padronizados, chamados de /Dimensões Cognitivas de Notações/ (DCs), do inglês
   /Cognitive Dimensions of Notations/ cite:green1989. Criadas para analisar a
   usabilidade de ‘artefatos de informação’[fn:infoArtifactis], essas DCs
   já foram usadas para investigar API — /Application Programming Interface/
   cite:clarke2003, recursos de linguagens de programação cite:sadowski2011, e
-  modelos de programação cite:kiss2014.
+  paradigmas de programação cite:kiss2014.
   # linguagem de especificação cite:kutar2000
 
   # Contrastar vantagens e desvantagens de cada estilo na compreensão de programas

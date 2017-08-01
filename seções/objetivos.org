@@ -1,10 +1,10 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
 * Objetivos
 ** Objetivo Geral
-   Demonstrar e analisar os modelos declarativos de PF e PR.
+   Demonstrar e analisar conceitos declarativos de PF e PR.
 
 ** Objetivos Específicos
-   - Demonstrar conceitos essenciais do estilo declarativo com o modelo de PF;
-   - Demonstrar o modelo declarativo de PR e o imperativo com /callbacks/;
-   - Analisar e comparar os modelos quanto a usabilidade da linguagem de
+   - Demonstrar conceitos essenciais declarativos com o paradigma de PF;
+   - Demonstrar conceitos declarativos de PR e imperativos de POO com /callbacks/;
+   - Analisar e comparar os conceitos quanto a usabilidade da linguagem de
      programação.

@@ -1,11 +1,14 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
 * Problema e Questões
-  Quais os modelos adequados para programação de interfaces gráficas? Modelos
-  /imperativos/ são comuns em linguagens tradicionais. Linguagens funcionais e
-  lógicas utilizam o estilo /declarativo/, que é considerado mais simples e
-  intuitivo.[fn:intuitive] Portanto, questionamos: quais as vantagens de modelos
-  declarativos? E como eles se comparam aos imperativos na programação de
-  interfaces gráficas?
+  Quais os conceitos apropriados para programação de interfaces gráficas?
+  Conceitos de programação /imperativa/ são bastante comuns em linguagens
+  tradicionais, como as orientadas a objetos. Linguagens funcionais e lógicas
+  empregam conceitos de programação /declarativa/, que é considerada mais
+  simples e intuitiva.[fn:intuitive] Questiona-se então se programação
+  declarativa é adequada para o desenvolvimento de interfaces gráficas, e quais
+  suas vantagens e desvantagens em relação à programação imperativa.
+
+  # Como seus conceitos se comparam aos de programação imperativa?
   # Essas questões nortearão a pesquisa.
 
 * Footnotes

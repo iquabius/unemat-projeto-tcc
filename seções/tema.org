@@ -3,7 +3,7 @@
   Programação de /interfaces gráficas./
 
 * Delimitação
-  /Modelos de programação/ para interfaces gráficas.
+  Estudo de conceitos de programação para interfaces gráficas.
 
 * COMMENT Anotações
   [[http://www.explorando.com.br/o-que-e-interface-grafica/][_O que é interface gráfica?_]] — Marcos Elias, 2010.
