@@ -1,32 +1,177 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
-* Método de Pesquisa
-  Apesar do paradigma de PFR ter sido apresentado há quase duas décadas com o
-  artigo de \citeauthoronline{elliott1997} em \citeyear{elliott1997}, sua
-  exploração e aplicação prática na indústria ainda é recente. Por esse motivo
-  este trabalho tem um objetivo de cunho exploratório, que
-  \citeauthoronline{gil1994} descreve da seguinte forma:
+* Métodos
+  Esta pesquisa é de natureza /aplicada/, e quanto aos objetivos que visamos
+  alcançar ela se classifica como /exploratória/, pois tem o “\textelp{} foco
+  mais aberto para investigação de fenômenos (culturais, sociais, técnicos,
+  históricos, etc.) pouco sistematizados e/ou passíveis de várias perspectivas
+  de interpretação.” \cite[p. 32]{leal2011}. Quanto aos meios empregados este
+  trabalho constitui um /estudo de casos múltiplos/:
 
+  #+BEGIN_EXPORT latex
   \begin{citacao}
-  Pesquisas exploratórias são desenvolvidas com o objetivo de proporcionar visão
-  geral, de tipo aproximativo, acerca de determinado fato. Este tipo de pesquisa
-  é realizado especialmente quando o tema escolhido é pouco explorado e torna-se
-  difícil sobre ele formular hipóteses precisas e operacionalizáveis
-  (\citeyear{gil1994}, p. 20). \end{citacao}
+    O estudo de casos múltiplos – denominado, em algumas áreas, como
+    administração pública e ciência política, de método de caso comparativo – é
+    preferido quando há possibilidade de comparar semelhanças e de contrastar
+    diferenças entre os casos selecionados. \cite[p. 43]{leal2011}
+  \end{citacao}
+  #+END_EXPORT
 
-  Esse trabalho pretende estudar a usabilidade dos recursos oferecidos pelos
-  /frameworks/ e/ou linguagens para a programação de interfaces gráficas. Como
-  as propriedades a serem avaliadas não são quantificáveis, a abordagem a ser
-  utilizada será /qualitativa/. Uma avaliação qualitativa não se preocupa com
-  valores numéricos, mas procura aprofundar a compreensão do objeto de
-  estudo \cite[p.~31]{gerhardt2009}. A análise qualitativa será feita no
-  código fonte de estudos de caso implementados com as ferramentas a serem
-  apresentadas --- o código utilizado para implementar as interfaces será
-  avaliado, e não as interfaces em si. Para \citeauthoronline{santos2009},
-  um estudo de caso:
+  \citeauthoronline{yin2001} (citeyear:yin2001) salienta que pesquisas desse
+  tipo envolvem o estudo profundo e minucioso de um ou mais casos, que neste
+  trabalho serão programas concretos implementados para demonstrar cada modelo
+  de programação. A linguagem /JavaScript/ será usada na implementação dos
+  casos. Essa escolha pode ser resguardada pelo fato de que, além de ser a
+  língua franca da web, ela tem suporte para os modelos a serem estudados.
 
-  \begin{citacao}
-  É o estudo que analisa com profundidade um ou poucos fatos, com vistas à
-  obtenção de um grande conhecimento com riqueza de detalhes do objeto estudado.
-  É usada nos estudos exploratórios e no início de pesquisas mas complexas. Tem
-  aplicação em qualquer área do conhecimento (\citeyear{gil1994}, p.
-  172). \end{citacao}
+  A /priori/, o modelo de PF será demostrado com a implementação de programas
+  para /processamento de listas/. Isso fundamentará diferenças essenciais entre
+  o estilo declarativo e imperativo. Em seguida, o modelo de PR e o baseado em
+  /callbacks/ serão demonstrados na /coordenação de eventos/ em interfaces
+  gráficas. Essa segunda parte esclarecerá o estilo declarativo do modelo de PR
+  e o tradicional imperativo com /callbacks/.
+
+  # Afim de contrastar as vantagens e desvantagens de cada modelo na compreensão
+  # de programas,
+
+  Afim de contrastar as vantagens e desvantagens de cada modelo, a linguagem de
+  programação em cada caso será analisada através de um conjunto de critérios
+  padronizados, chamados de /Dimensões Cognitivas de Notações/ (DCs), do inglês
+  /Cognitive Dimensions of Notations/ cite:green1989. Criadas para analisar a
+  usabilidade de ‘artefatos de informação’[fn:infoArtifactis], essas DCs
+  já foram usadas para investigar API — /Application Programming Interface/
+  cite:clarke2003, recursos de linguagens de programação cite:sadowski2011, e
+  modelos de programação cite:kiss2014.
+  # linguagem de especificação cite:kutar2000
+
+  # Contrastar vantagens e desvantagens de cada estilo na compreensão de programas
+
+  # “quando envolve o estudo profundo e exaustivo de um ou poucos objetos de
+  # maneira que permita o seu amplo e detalhado conhecimento (YIN, 2001).”
+  # cite:prodanov2009 p. 60
+
+  # “O estudo de caso refere-se ao estudo minucioso e profundo de um ou mais
+  # objetos (YIN, 2001).” cite:prodanov2009 p. 60
+
+  # Os casos a serem estudados serão os programas de processamento de listas e as
+  # interfaces gráficas.
+
+* COMMENT Anotações
+** Exploratória
+   # quanto aos fins e objetivos
+
+   “O problema da pesquisa, as *questões* (ou hipóteses) e, *principalmente, os
+   objetivos* que o pesquisador definiu vão nortear a escolha do tipo mais
+   adequado de pesquisa entre os vários tipos possíveis.” cite:leal2011 p. 32
+
+   “É aquela realizada em áreas (de conhecimento) ou focada em problemas a
+   respeito dos quais há escasso ou nenhum conhecimento acumulado e
+   /sistematizado/.” cite:leal2011 p. 32
+
+   “É uma pesquisa temática com foco mais aberto para investigação de fenômenos
+   (culturais, sociais, *técnicos*, históricos, etc.) pouco sistematizados e/ou
+   passíveis de várias perspectivas de interpretação.” cite:leal2011 p. 32
+
+   “Vasconcelos (2002, p.158), denominando-a também de *pesquisa ensaística*,
+   observa ser um tipo de pesquisa bastante comum ‘[...] em ensaios históricos,
+   sociológicos, antropológicos, /filosóficos/, políticos, em psicanálise,
+   etc..’” cite:leal2011 p. 32
+
+** Métodos Qualitativos
+   ontologia relativista
+   epistemologia êmica
+   metodologia qualitativa
+   case studies vs. thematic analysis -> interpretação de temas recorrentes
+
+   “Context means everything in qualitative research.” - [[https://www.youtube.com/watch?v=hCOsY5rkRs8&t=381s][YouTube]]
+
+   “In qualitative studies ‘results’ are actually called ‘findings’.”
+   findings = conclusões
+
+   “When results are presented, they are always linked to the context it was
+   studied.”
+
+   “An inductive approach. Pattern analysis. This kind of logic is called
+   /inductive reasoning/.”
+
+   “Qualitative research uses smaller sample sizes and thematic analysis.”
+
+   -> YouTube: [[https://www.youtube.com/watch?v=8xvpxBVCo0c][Paradigms, Ontology, Epistemology and Methodology]]
+   quantitative <-> positivism
+   -> objective
+   -> hypotheses are tested with quantitative methods
+
+
+   qualitative  <-> modernism <-> constructive paradigm of research
+   “based on generalized truths about reality.”
+
+** Meios
+*** Estudo de casos
+    “Como estratégia de pesquisa, o estudo de caso contribui para a compreensão
+    de fenômenos complexos e de suas características mais significativas, razão
+    pela qual tem sido usado em muitos campos: Ciência Política e Administração
+    Pública; Psicologia e Sociologia; Administração. Também é usado em estudos
+    (interdisciplinares) de cidades e pesquisas de planejamento regional:
+    estudos de planos de desenvolvimento, de bairros etc..” cite:leal2011 p. 42
+
+    “O *estudo de casos múltiplos* – denominado, em algumas áreas, como
+    administração pública e ciência política, de /método de caso comparativo/ –
+    é preferido quando há possibilidade de *comparar semelhanças* e de
+    *contrastar diferenças* entre os casos selecionados.” cite:leal2011 p. 43
+
+    “quando envolve o estudo profundo e exaustivo de um ou poucos objetos de
+    maneira que permita o seu amplo e detalhado conhecimento (YIN, 2001).”
+    cite:prodanov2009 p. 60
+
+    “O estudo de caso refere-se ao estudo minucioso e profundo de um ou mais
+    objetos (YIN, 2001).” cite:prodanov2009 p. 60
+
+    “De acordo com Schramm (apud YIN, 2001), a essência do estudo de caso é
+    tentar esclarecer uma decisão, ou um conjunto de decisões, seus motivos,
+    implementações e resultados. Gil (2010, p. 37) afirma que o estudo de caso
+    ‘consiste no estudo profundo e exaustivo de um ou mais objetos, de maneira
+    que permita seu amplo e detalhado conhecimento.’” cite:prodanov2009 p. 60
+
+    Um estudo de caso orienta a elaboração “de uma teoria explicativa do caso
+    que possibilite condições para se fazerem inferências analíticas sobre
+    proposições constatadas no estudo e outros conhecimentos encontrados.”
+    (MARTINS, 2006, p. 12) cite:prodanov2009 p. 61.
+
+    “Em relação aos estudos de casos múltiplos, Yin (2001, p. 68) afirma que
+    estes costumam ser mais convincentes, ‘e o estudo global é visto, por
+    conseguinte, como sendo mais robusto.’ Uma questão essencial para se
+    construir um estudo de caso múltiplo bem-sucedido é que este atenda a uma
+    lógica de replicação (YIN, 2001, p. 68), e não a da amostragem, que é […]”
+    cite:prodanov2009 p. 63
+
+    “[…] o pesquisador também deve estar preparado para fazer uso de várias
+    fontes de evidências, que precisam convergir, oferecendo, desse modo,
+    condições para que haja fidedignidade e validade dos achados por meio de
+    /triangulações/ de informações, de dados, de evidências e mesmo de teorias.”
+    cite:prodanov2009 p. 63
+
+    “a *confiabilidade* de um Estudo de Caso poderá ser garantida pela
+    /utilização de várias fontes de evidências/, sendo que a significância dos
+    achados terá mais qualidade ainda se as técnicas forem distintas.” (MARTINS,
+    2006, p. 80). cite:prodanov2009 p. 63
+
+    “Assim sendo, quando há convergência de diversas fontes de evidências, temos
+    um fato que poderá ser tratado como uma descoberta e devida conclusão, ou
+    considerado como uma evidência que será somada a outras visando à melhor
+    compreensão e interpretação de um fenômeno (MARTINS, 2006).”
+    cite:prodanov2009 p. 64-65
+
+** Ensaio?
+   # NÃO tem nada a ver com método
+   # talvez seja um gênero apropriado para reportar as conclusões
+
+   “Originalmente, o ensaio se divide em formal ou discursivo e informal ou
+   comum. No formal, os textos são objetivos, metódicos e estruturados,
+   dirigidos mais a assuntos didáticos, críticas oficiais, etc... Já o informal
+   é mais subjetivo e caprichoso em fantasia[…]” [[https://pt.wikipedia.org/wiki/Ensaio_(literatura)][Wikipedia: Ensaio]]
+
+* Footnotes
+
+[fn:infoArtifactis] Geralmente sistemas de software, especialmente linguagens de
+programação. Mais informações podem ser encontradas no site
+http://www.cl.cam.ac.uk/~afb21/CognitiveDimensions/.
+
