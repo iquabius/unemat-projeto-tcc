@@ -4,7 +4,7 @@
   #+BEGIN_EXPORT latex
   \begin{adjustbox}{center}
     \tiny
-    \begin{tabular}{|p{4cm}|c|c|c|c|c|c|c|c|c|c|c|l|}
+    \begin{tabular}{|p{4.1cm}|c|c|c|c|c|c|c|c|c|c|c|l|}
       \cline{1-12}
         \multicolumn{1}{|c|}{
           \multirow{2}{*}{
@@ -19,49 +19,49 @@
         \cline{2-12}
         & Mar. & Abr. & Maio & Jun. & Jul. & Ago. & Set. & Out. & Nov. & Dez. & Jan. \\
       \hline
-        Definição da Pesquisa, e Formação e Delimitação do Tema
+        Definir e delimitar tema
         & X &  &  &  &  &  &  &  &  &  &  \\
       \hline
-        Revisão da Literatura
+        Revisar literatura
         & X & X & X & X & X & X & & &  &  &  \\
       \hline
-        Formulação do Problema, Hipóteses, e Objetivos
+        Formular problema, questões norteadoras, e objetivos
         & & X & & &  &  &  &  &  &  &  \\
       \hline
-        Composição da Justificativa e Metodologia
+        Redigir justificativa
         & & & X & & & & & & & & \\
       \hline
-        Redação da Fundamentação Teórica
+        Descrever métodos de pesquisa
+        & & & & X & & & & & & & \\
+      \hline
+        Redigir fundamentação teórica
         & & & & X & X & & & & & & \\
       \hline
-        Preparação do Cronograma e Orçamento
+        Fazer cronograma e orçamento
         & & & X & & & & & & & & \\
       \hline
-        Encontros de Orientação
-        & & X & X & X & X & & X & X & X & X & X \\
-      \hline
-        Entrega e Apresentação do Projeto de Pesquisa
+        Apresentar e entregar o projeto
         & & & & & X & & & & & & \\
       \hline
-        Composição da Introdução
-        & & & & & & & & & X & & \\
+        Redigir introdução
+        & & & & & & X & & & & & \\
       \hline
-        Implementação dos Estudos de Caso
-        & & & & & X & X & X & & & & \\
+        Implementar estudos de caso
+        & & & & & & X & X & X & & & \\
       \hline
-        Análise dos Estudos de Caso
-        & & & & & & & X & X & & & \\
+        Análisar estudos de casos
+        & & & & & & & X & X & X & & \\
       \hline
-        Redação do TCC
+        Redigir desenvolvimento
         & & & & & & & X & X & X & X & \\
       \hline
-        Revisão e Correção de Erros
-        & & X & X & X & X & & X & X & X & X & X \\
+        Redigir conclusão e resumo
+        & & & & & & & & & X & X & \\
       \hline
-        Revisão Final do Texto e Elaboração da Apresentação
+        Revisar texto e referências
         & & & & & & & & & & X & X \\
       \hline
-        Entrega da Versão Final e Defesa do TCC
+        Apresentar e entregar o TCC
         & & & & & & & & & & & X \\
       \hline
     \end{tabular}
