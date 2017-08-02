@@ -1,25 +1,24 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
 * Orçamento
 
-  #+BEGIN_EXPORT latex
-  \begin{center}
-    \tiny
-    \begin{tabular}{| l | r | r |}
-      \hline
-        \textbf{Descrição das Despesas} & \textbf{Quant.} & \textbf{Valor (R\$)} \\
-      \hline
-        Papel sulfite A4 500 folhas & 1 & 25,00 \\
-      \hline
-        Aquisição de cartucho e tinta & 1 & 100,00 \\
-      \hline
-        Encadernação & 4 & 30,00 \\
-      \hline
-        Aquisição de livros & 1 & 160,00 \\
-      \hline
-        Confecção do \emph{CD} e capa & 1 & 25,00 \\
-      \hline
-        \textbf{Total} & & \textbf{340,00} \\
-    \hline
-    \end{tabular}
-  \end{center}
-  #+END_EXPORT
+  #+ATTR_LATEX: :environment tabular :align |l|r|r| :font \tiny
+  |-----------------------------------------+----------+--------------|
+  | *Descrição das Despesas*                | *Quant.* | *Valor (R$)* |
+  |-----------------------------------------+----------+--------------|
+  | Aquisição de livros[fn:FRP_book]      |        1 | 160,00       |
+  |-----------------------------------------+----------+--------------|
+  | Impressão de cópias p/ correção         |        1 | 100,00       |
+  |-----------------------------------------+----------+--------------|
+  | Encadernação                            |        4 | 30,00        |
+  |-----------------------------------------+----------+--------------|
+  | Confecção do CD e capa                  |        1 | 25,00        |
+  |-----------------------------------------+----------+--------------|
+  | *Total*                                 |          | 315          |
+  |-----------------------------------------+----------+--------------|
+  #+TBLFM: @6$3=vsum(@2$3..@5$3)
+  #+NOTE: 'C-u C-c *' ou 'C-c C-c' na linha do TBLFM p/ calcular formulas
+
+* Footnotes
+
+[fn:FRP_book] Livro /Functional Reactive Programming/ de
+\citeauthoronline{blackheath2016} (citeyear:blackheath2016).
