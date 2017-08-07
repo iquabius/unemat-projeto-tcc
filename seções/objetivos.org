@@ -4,7 +4,7 @@
    Demonstrar e analisar conceitos declarativos de PF e PR.
 
 ** Objetivos Específicos
-   - Demonstrar conceitos essenciais declarativos com o paradigma de PF;
+   - Demonstrar a essência da programação declarativa com conceitos de PF;
    - Demonstrar conceitos declarativos de PR e imperativos de POO com /callbacks/;
    - Analisar e comparar os conceitos quanto a usabilidade da linguagem de
      programação.
