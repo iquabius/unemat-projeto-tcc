@@ -1,9 +1,9 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
 * Tema
-  Programação de /interfaces gráficas./
+  Programação de computadores.
 
 * Delimitação
-  Estudo de conceitos de programação para interfaces gráficas.
+  Conceitos de programação para /interfaces gráficas./
 
 * COMMENT Anotações
   [[http://www.explorando.com.br/o-que-e-interface-grafica/][_O que é interface gráfica?_]] — Marcos Elias, 2010.
