@@ -1,5 +1,5 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
-* Métodos
+* Métodos de Pesquisa
   Esta pesquisa é de natureza /aplicada/, e quanto aos objetivos que visamos
   alcançar ela se classifica como /exploratória/, pois tem o “\textelp{} foco
   mais aberto para investigação de fenômenos (culturais, sociais, técnicos,
