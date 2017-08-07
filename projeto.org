@@ -1,4 +1,6 @@
 # -*- org-export-headline-levels: 5; -*-
+# +TITLE: Coordenação de interação na programação de Interfaces Gráficas do
+# Usuário (GUIs)
 #+OPTIONS: toc:nil
 #+LaTeX_CLASS: abntex2
 #+LATEX_HEADER: \usepackage{org-tex/pkg_tables}
@@ -8,6 +10,9 @@
 #+LATEX_HEADER: \usepackage{org-tex/proj_info}
 #+LATEX_HEADER: \usepackage{org-tex/pdf_styles}
 
+# LATEX: \titulo{Gerenciamento de Interação na Programação de Interfaces Gráficas do Usuário}
+#+LATEX: \titulo{Demonstração e Análise de Conceitos de Programação para Interfaces Gráficas}
+#+NOTE: \maketitle
 
 #+LATEX: \selectlanguage{brazil}
 #+LATEX: \frenchspacing
@@ -17,9 +22,14 @@
 
 #+LATEX: \input{tex/siglas}
 
+#+NOTE: \hypersetup{linkcolor=green}
 #+LATEX: \pdfbookmark[0]{\contentsname}{toc}
 #+LATEX: {\center\tableofcontents*}
 #+LATEX: \cleardoublepage
+
+#+NOTE: \hypersetup{linkcolor=red}
+#+NOTE: \listoffigures
+#+LATEX: \hypersetup{linkcolor=blue}
 
 #+LATEX: \textual
 
@@ -30,11 +40,12 @@
 
 #+INCLUDE: "seções/tema.org"
 #+INCLUDE: "seções/problema.org"
-#+INCLUDE: "seções/hipóteses.org"
-#+INCLUDE: "seções/objetivos.org"
+# +INCLUDE: "seções/hipóteses.org"
 #+INCLUDE: "seções/justificativa.org"
+#+INCLUDE: "seções/objetivos.org"
 #+INCLUDE: "seções/fundamentação.org"
 #+INCLUDE: "seções/método.org"
+#+NOTE: "seções/estudos.org"
 #+INCLUDE: "seções/cronograma.org"
 #+INCLUDE: "seções/orçamento.org"
 
