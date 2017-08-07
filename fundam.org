@@ -1,0 +1,241 @@
+
+* Fundamentação Teórica
+
+** Teoria da Computação
+
+  “The phenomenon of computation on which Computer Science is founded has its
+  roots in the theory of computability which studies the formalisms in which one
+  can express algorithms and their limits.” (Gabbrielli2010, pg. 63)
+
+
+** Linguagens de Programação
+*** Primeiras Linguagens
+    Assembly
+*** Construtos Linguísticas
+    - Expressões
+    - Comandos
+      - Comando de Atribuição (e variáveis mutáveis/modificaveis)
+      - Comandos de Controle de Sequência
+        - Comandos para Controle Explícito de Sequência
+          - Comando Sequencial
+          - Comando Composto
+          - Goto: Programação Procedural pode ter sido uma resposta ao desuso do
+            goto ([[https://en.wikipedia.org/wiki/Goto][Findlay, 2014]]).
+          - Outros: break, continue, return, excess
+        - Comandos Condicionais: if, case
+        - Comandos Iterativos
+          - Unbounded Iteration
+          - Bounded Iteration
+        - Programação Estruturada
+          Rejeição do comando GOTO.
+          Surgimento do conceito de Paradigmas de Programação.
+          
+        - Recursão: Mecanismo alternativo aos comandos de iteração
+
+
+** Paradigmas de Programação
+*** Programação Imperativa
+    “uses statements that change a program's state.” Wikipedia.
+
+    “In much the same way that the imperative mood in natural languages
+    expresses commands, an imperative program consists of commands for the
+    computer to perform.” Wikipedia.
+    imperative mood = modo (verbal) imperativo
+
+    “Imperative programming focuses on describing how a program operates.” Wikipedia.
+*** Programação Declarativa
+    Livros: FRP
+*** Programação Estruturada
+    Livros: SICP, HtDP
+
+    structured program theorem ([[http://www.cs.unibo.it/~martini/PP/bohm-jac.pdf][Corrado1966]])
+
+    “Go To Statement Considered Harmful” open letter by Dijkstra1968.
+
+    Dijkstra1968 coined the term ‘structured programming’.
+
+    “From the 1960s onwards, structured programming and modular programming in
+    general have been promoted as techniques to improve the maintainability and
+    overall quality of imperative programs. The concepts behind object-oriented
+    programming attempt to extend this approach.” — Wikipedia
+
+    “It basically means using explicit control-flow structures rather than
+    jumping about directly from instruction to instruction.” [[https://stackoverflow.com/a/4401429/1787829][sclv]].
+
+    “Structured programming goes back to Djikstra's "Goto Considered Harmful"
+    paper. It means using if/then/else/elif structures, do/while/until/for
+    loops, etc. instead of resorting to goto. It's essentially abstracting a bit
+    away from the compare/branch machine level instructions. Structured
+    programming is orthogonal to both functional and procedural programming.”
+    [[https://stackoverflow.com/a/4401503/1787829][AshleyF]].
+
+**** Rejeição do Goto
+     Praticantes da comunidade de programação ‘flutuaram (floated)’ a difundir
+     os conceitos de programação estruturada. Atualmente os conceitos imperativos a maioria dos
+     paradigmas empregados em linguagens de programação
+
+*** Programação Procedural
+    C, Pascal, Ada, Go
+
+    “Heavily-procedural programming, in which state changes are localized to
+    procedures or restricted to explicit arguments and returns from procedures,
+    is a form of structured programming.” [[https://en.wikipedia.org/wiki/Imperative_programming][Wikipedia]].
+
+    “Procedural programming refers to the ability to encapsulate a common
+    sequence of instructions into a procedure so that those instructions can be
+    invoked from many places without resorting to copy-and-paste. As procedures
+    were a very early development in programming, the capability is almost
+    invariably linked with the (imperative) style of programming demanded by
+    machine — or assembly — language programming: a style that emphasizes the
+    notion of storage locations (mutable variables) and instructions (commands)
+    that move data between those locations.” [[https://stackoverflow.com/a/5280719/1787829][StackOverflow:WReach]].
+
+    “[idiot…] Procedural programming is what you'd consider "typical"
+    programming in any C language or its descendants, including OO languages
+    such as Java and C++. A program is a series of instructions, to be executed
+    serially, and invoking subprocedures along the way.” [[https://stackoverflow.com/a/4401429/1787829][sclv]].
+
+    “Programação Procedural refere-se a programação com subrotinas, consistindo
+    geralmente de uma série de comandos (statements) deixando efeitos colaterais
+    para trás.” [[https://stackoverflow.com/a/4401503/1787829][AshleyF]].
+    Características imperativas: Comandos e efeitos colaterais.
+
+    Programação Funcional refere-se a programação com funções puras, consistindo
+    geralmente de expressões.
+
+*** Programação Funcional
+    “Functional programming refers to the ability to treat functions as values.”
+     [[https://stackoverflow.com/a/5280719/1787829][StackOverflow:WReach]].
+
+    “Let's consider an analogy with "regular" values. We can take two integer
+    values and combine them using the + operator to obtain a new integer. Or we
+    can multiply an integer by a floating point number to get a floating point
+    number.” [[https://stackoverflow.com/a/5280719/1787829][StackOverflow:WReach]].
+
+    “In functional programming, we can combine two function values to produce a
+    new function value using operators like ‘compose’ or ‘lift’. Or we can
+    combine a function value and a data value to produce a new data value using
+    operators like ‘map’ or ‘fold’.” [[https://stackoverflow.com/a/5280719/1787829][StackOverflow:WReach]].
+
+    “Functional and procedural programming are both, in that sense, structured
+    paradigms. Functional programming is also declarative programming -- the
+    structure given to your code corresponds to its meaning -- a program is a
+    function that changes the state of the world. […idiot]” [[https://stackoverflow.com/a/4401429/1787829][sclv]].
+
+    Programação Funcional usa funções como elementos/entidades de primeira
+    classe. Faz uso de funções de ordem superior para obter composicionalidade.
+    Há também o aspecto da ‘puresa’ de expressões, a fim de obter ‘transparência
+    referêncial’.
+
+**** Efeitos Colaterais
+     “I also see avoiding side effects as essentially abstracting a bit away
+     from the load/store machine level instructions.” [[https://stackoverflow.com/a/4401503/1787829][AshleyF]].
+
+**** Contraste com Programação Procedural (com exemplos concretos).
+     [[https://stackoverflow.com/a/5280719/1787829][StackOverflow:WReach]].
+
+     “You can see from these examples that procedural programming is very
+     concerned with moving values around in variables and explicitly describing
+     the operations needed to produce the final result. In contrast, the
+     functional style emphasizes the combination of functions required to
+     transform the initial input to the final output.”
+
+     “The example also shows the typical relative sizes of procedural versus
+     functional code.”
+
+**** Motivations for Functional Programming
+     “John Backus' Turing award lecture spells out the motivations for
+     functional programming in great detail:” [[https://stackoverflow.com/a/5280719/1787829][StackOverflow:WReach]].
+     
+     [[http://www.stanford.edu/class/cs242/readings/backus.pdf][Can Programming Be Liberated from the von Neumann Style?]]
+
+     Paper: Why Functional Programming Matters — JHughes1990
+
+     Paper: The essence of functional programming Wadler1992
+
+     Paper: Out of the Tar Pit — BMoseley2006
+
+     Paper & Talk: Propositions as types — PWadler2015
+
+     Paper: Is Functional Programming Better for Modularity? — IFigueroa2015
+
+*** Programação Orientada a Objetos
+**** Papers
+     Reactive behavior in object-oriented applications - an analysis and a
+     research roadmap — Salvaneschi2013
+
+     REScala - bridging between object-oriented and functional style in reactive
+     applications — Salvaneschi2014
+
+     Object-oriented Reactive Programming is Not Reactive Object-oriented
+     Programming — Boix2013
+
+*** Programação Oriendada a Eventos
+
+    “O importante é que o programa não pode saber, ou prever, a ordem na qual ocorrerão
+    os diferentes eventos ou o número de vezes que cada um será repetido; ele tem de estar
+    preparado para todas as possibilidades. Essa é a essência da programação orientada a
+    eventos.” (Tucker, 1986)
+**** Main Loop and Events
+     [[https://developer.gnome.org/gtk4/stable/gtk4-General.html][GTK+]] sits in the ‘main loop’ and waits for input.
+
+     Events ‘wakes up’ the main loop, which delivers events to GTK+.
+
+     “GTK+ forwards the event to one or more widgets.”
+
+     When widgets receive an event, they frequently emit one or more “signals”.
+
+     Signals notify that "something interesting happened" by invoking functions.
+     
+     Functions connected to a signal are often termed “callbacks”.
+
+     A ‘callback’ would typically take some action: like showing a dialog for
+     choosing files.
+
+     After a callback finishes, GTK+ will return to the main loop and await more
+     user input.
+
+**** Observer Pattern
+     “Observer/Observable pattern is mostly implemented in a synchronous way,
+     i.e. the observable calls the appropriate method of all its observers when
+     some event occurs.” — [[https://stackoverflow.com/a/15596131/1787829][Param]]
+
+     Manipuladores de Eventos -> Manipulação de Eventos
+     “[…]diretivas ‘import’ que possibilitam acesso às bibliotecas de classes
+     Java tanto para os elementos gráficos quanto para os manipuladores de
+     eventos.” (Tucker, 1986)
+
+     “The Java programming language class library provides a user interface
+     toolkit called the [[http://www.javaworld.com/article/2077188/core-java/introduction-to-the-awt.html][Abstract Windowing Toolkit]], or the AWT.”
+
+     Other Toolkits: [[http://www.leepoint.net/JavaBasics/gui/gui-commentary/guicom-25-swingawtswtxul.html][Swing, SWT]]
+
+     “Outra diferença importante é a de que o programador escreve cada método para
+     executar sua tarefa e sair. O laço que espera pelos eventos e os despacha faz parte dos
+     recursos fornecidos por Java.” (Tucker, 1986)
+     Isso constrasta com a Programação Estruturada utilizando o ‘main loop’
+
+**** Papers
+     Deprecating the Observer Pattern — Maier2010
+
+     Observations on the Observer Pattern — Koppe2010
+
+     Subject-Observer is Dual to Iterator — Meijer2010
+
+     Your Mouse is a Database — Meijer2012
+
+     Modelo-Visualização-Controle — Tucker1986
+
+
+*** Programação Reativa
+*** Programação Funcional Reativa
+**** Motivations for FRP
+     An Empirical Study on Program Comprehension with Reactive Programming —
+     Salvaneschi2014
+
+     Programming with Managed Time — McDirmid2014
+
+
+** Interfaces Gráficas do Usuário (GUIs)
+
+

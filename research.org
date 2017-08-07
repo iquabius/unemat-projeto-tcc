@@ -1,0 +1,345 @@
+# -*- ispell-local-dictionary: "portugues"; -*-
+#+TITLE: Revisão da Literatura
+
+* Fundamentos Teóricos de Computação
+  “The phenomenon of computation on which Computer Science is founded has its
+  roots in the theory of computability which studies the formalisms in which
+  one can express algorithms and their limits.” (Gabbrielli2010, pg. 63)
+
+** Automata Theory
+   “Automata theory is an excellent place to begin the study of the theory of
+   computation. The theories of computability and complexity require a precise
+   definition of a computer. Automata theory allows practice with formal
+   definitions of computation as it introduces concepts relevant to other
+   nontheoretical areas of computer science.” (Sipser, 2006)
+
+** Teoria da Computabilidade
+*** The Halting Problem (O Problema da Parada)
+    Indecibilidade (Undecidability)
+**** Problema indecidível
+*** Modelos de Computação
+    Computabilidade (Computability)
+
+    “[…]it is possible in each of these formalisms to write and interpreter for
+    any of the others.”
+
+    Turing-completude (Turing Completeness)
+    “In principle, therefore, every algorithm is expressible in any programming
+    language. This is frequently expressed by saying that all programming
+    languages are Turing complete (or Turing equivalent).”
+
+    “If all languages are equivalent with respect to the functions they
+    compute, it is clear that they are not equivalent as far as their
+    flexibility of use, pragmatics, abstraction principles and so on, are
+    concerned. And often this complex of properties is referred to as the
+    expressiveness of a language.”
+
+**** Turing Machines
+**** Gerenal Recursive Functions of Church-Godel and Kleene
+     “[…]which make no reference to programming languages[…]”
+**** Lambda Calculus
+*** Abstract Machines
+    Machine language: “Given an abstract machine, M, the language L ‘understood’
+    by M’s interpreter is called the machine language of M.” (Gabbrielli2010)
+
+** Teoria da Complexidade
+
+
+* Paradigmas de Programação
+  “A programming paradigm is an approach to programming a computer based on a
+  mathematical theory or a coherent set of principles.” — VanRoy2009, pg. 10
+
+  A resolução de diferentes tipos de problemas de programação requerem
+  conceitos distintos para serem resolvidos claramente, ou, terem soluções
+  claras (VanRoy2009, pg. 10).
+
+  “You can think of your application as constantly folding, or reducing, over
+  incoming events through this update function, using the initial model as the
+  initial state.” — [[https://www.youtube.com/watch?v=0OTPTNJji1I][Collaborative Music with Elm and Phoenix - Josh Adams]]
+
+  update :: Msg -> Model -> Model
+
+* Estrutura de Controle
+  “Programming Languages: Principles and Paradigms” (Gabbrielli2010)
+
+** Expressões
+
+   #+BEGIN_SRC elm
+   5 * 3 + 2       -- 15 + 2 = 17 (multiplication is done before addition)
+   5 * (3 + 2)     -- 5 * 5 = 25 (thanks to the parentheses)
+   area 5 * 3      -- (area 5) * 3
+   area (5 * 3)    -- area 15
+   #+END_SRC
+
+
+*** Expressões com Efeitos-colaterais
+** O Conceito de Comando
+*** A Variável
+*** Atribuição (Assignment)
+** Comandos de Controle de Sequência
+   “Assignment is the basic command in imperative languages (and in ‘impure’
+   declarative languages); it expresses the elementary computation step.”
+
+   “The remaining commands serve to define sequence control, or rather serve
+   to specify the order in which state modifications produced by assignments,
+   are to be performed.”
+
+*** Comandos para Controle Explícito de Sequência
+**** Comando Sequencial
+     C1 ; C2 ; … ; Cn
+**** Comando Composto
+     “É possível agrupar uma sequência de comandos em um Comando Composto, ou
+     /bloco/, usando delimitadores apropriados como os usados pelo Algol:
+       
+     begin
+     …
+     end
+
+     ou os usados em C:
+
+     {
+     …
+     }”
+**** Goto
+     - Included in the first programming languages;
+     - “…directly inspired by jump instructions in assembler languages and
+       therefor by the sequence control of the hardware machine.”
+     - “…goto is not essential to the expressiveness of a programming language.”
+**** Outros Comandos de Controle de Sequência
+     - break
+     - continue
+     - return
+     - excessões (controle de sequência mais elaborado)
+*** Comandos Condicionais
+**** If
+**** Case
+     “[…]whatever can be done using a case can certainly be expressed using a
+       nested series of ifs.”
+
+     “[…]improves readability of the code[…]”.
+
+     “[…]it is possible to compile a case much more efficiently than a long
+       series of nested ifs.”
+
+     C, C++, Java:
+
+     #+BEGIN_SRC c
+     switch (Exp) {
+       case 1: C1 break;
+       case 2: C2 break;
+       ...
+       case n: Cn break;
+       default: Cn+1 break;
+     }
+     #+END_SRC
+*** Comandos Iterativos
+**** Unbounded Iteration
+     while (Bexp) do C
+
+     do C while (Bexp)
+
+     “The while construct is simple to implement, given that it corresponds
+     directly to a loop that is implemented on the physical machine using a
+     conditional jump instruction.”
+
+     “Its addition to a programming language which contains only assignment
+     and conditional commands immediately makes the language Turing Complete.”
+
+     “Our mili-language from Chap. 2 is therefore Turing Complete (or: it
+     allows the implementation of all computable functions). The same is not
+     the case with bounded iteration[…]”.
+**** Bounded Iteration (numerically controlled iteration)
+***** For
+      for I = start to end by step do
+        body
+
+      “implemented by linguistic constructs that are more complex than those
+      used for unbounded iteration; their semantics is also more elaborate.”
+
+      “[…]we can express the repetition of a command for n times, where n it is
+      an arbitrary value not known when the program is written, but is fixed at
+      when the iteration starts.”
+
+      “Despite this increase in expressive power, bounded iteration on its own
+      is insufficient to make a programming language Turing complete.”
+
+      “[…]every for command can easily be translated into a while.”
+
+      #+BEGIN_SRC c
+      for (i = initial; i <= final; i += step) {
+        // body…
+      }
+      #+END_SRC
+
+      #+BEGIN_SRC c
+      i = initial;
+      while (i <= final) {
+        // body…
+        i += step;
+      }
+      #+END_SRC
+
+      “The use of a for instead of a while can therefore be an important way to
+      improve understanding and, therefore testing and maintenance of a
+      program.”
+
+***** For-each
+      “One of the most common iterative constructions performs the sequential
+      scanning of all the elements of the data structure.”
+
+      “A typical example is the following which contains a function which
+      computes the sum of the values in an array of integers:”
+
+      #+BEGIN_SRC c
+      // with for loop
+      int sum(int[] A){
+        int acc = 0;
+        for(int i=0; i<length(A); i++) {
+          acc += A[i];
+        }
+        return acc;
+      }
+      #+END_SRC
+
+      "This function is full of details that the compiler knows: the first and
+      last index of A, the specific check for i reaching its limit. The more
+      detail that has to be added in a construct, the easier it is to make an
+      error and much more difficult to understand at a glance what the
+      construct does."
+
+      "In the case of sum, what we want to express is simply the application of
+      the body to every element of A."
+
+      #+BEGIN_SRC c
+      // with for-each
+      int sum(int[] A) {
+        int acc = 0;
+        foreach (int e : A) {
+          acc += e;
+        }
+        return acc;
+      }
+      #+END_SRC
+        
+      "The vector index, together with all of the vector's limits, is hidden
+      in a more synthetic and elegant construct."
+
+      "The use of the for-each construct is not limited to vectors, but can
+      also be applied to all collections over which the notion of iteration
+      can be defined in a natural way."
+
+      "In addition to enumerations and sets (which we will see in Chap. 8),
+      let us mention the particularly important case of languages which allow
+      the user to define types which are 'iterable'."
+** Programação Estruturada
+   Sobre Programação Não-estruturada: “Galanter says ‘BASIC lets you write
+   programs the way that Mozart wrote music, by improvising as you go along’
+   (1983, p. 147).” (Cobern, 1986)
+
+   “The rejection of the goto command of the 1970s was not an isolated
+   phenomenon. The goto's rejection was due to its properties, yet it was only
+   one issue among many that contributed to a much wider debate which brought
+   so-called structured programming to the fore.”
+
+   “This can be considered as the antecedent of modern programming
+   methodology. As the name itself suggests, it consists of a series of
+   prescriptions aimed at allowing the development of software that has a
+   certain structure in code and, correspondingly, in the flow of control.”
+
+   “These prescriptions have both a methodological nature, providing precise
+   development methods for programs, and a linguistic component, indicating
+   appropriate typologies for the commands used (in substance, all those seen
+   here so far, with the exception of goto).”
+
+*** Top-down or hierarchical design of programs
+*** Code modularisation
+*** Use of meaningful names
+*** Extensive use of comments
+*** Use of structured data types
+*** Use of structured control constructs
+    “This, from a linguistic viewpoint, is the essential aspect. To implement
+    structured programming, it is necessary to use structured control
+    constructs, or rather constructs which, typically, have a single entry and
+    a single exit point.”
+
+    “This property, which is fundamental for the understanding of code, is
+    violated in the presence of a command such as goto which allows jumps
+    forward and backwards in the program.”
+
+    “From a theoretical position, they allow programs for all computable
+    functions to be written, as we have already observed.”
+
+    “Let us finally recall that structured programming constituted a first
+    replay to the demands of so-called programming in the large, given that it
+    requires the decomposition of a system of vast dimensions into different
+    components, each of which is assigned a certain level of independence.”
+    ‘programming in the large’ = ‘programação em larga escala’
+** Recursão
+   “Recursion is another mechanism, an alternative to iteration, for obtaining
+   Turing- equivalent programming languages.” (Gabbrielli2010)
+*** Tail Recursion
+
+
+* The Importance of Abstractions
+  “The use of names implements a first, elementary, data abstraction
+  mechanism. For example, when, in an imperative language, we define a name
+  using a variable, we are introducing a symbolic identifier for a memory
+  location; therefore we are abstracting from the low-level details of memory
+  addresses.” (Gabbrielli2010)
+
+** Levels
+*** Computer (Physical Machine)
+*** Machine Languages
+    - first-generation programming language (1GL)
+*** Abstract Machines
+*** Assembly Languages
+    - second-generation programming languages (2GL).
+    - closely tied to the instruction set architecture of the specific computer.
+    - served to make the program much more human-readable and relieved the
+      programmer of tedious and error-prone address calculations.
+    - very strong correspondence between the language and the machine instructions.
+    - assembling of language into executable machine code.
+    - imperative, unstructured.
+
+
+* Recomendações de Leitura
+  Melo (2003), pg. 13
+
+
+* Research and Aplication of Functional & Reactive Programming
+
+** Reactive Pragramming in Industry
+   Netflix, Microsoft
+
+** Reactive Programming in Free Software
+
+** FRP in Academia
+
+
+* Creative Extension Principle
+  creative extension principle: add concepts to overcome limitations in
+  expressiveness. cite:vanroy2004
+
+* Teaching
+  - [[http://dl.acm.org/citation.cfm?doid=299359.299365][Teaching programming paradigms and languages for qualitative learning]];
+
+
+* Linguagem Natural
+** Uso da palavra ‘construtos’
+   “Dos construtos teóricos para as aplicações: o professor como um dos
+   mediadores” [[http://ler.letras.up.pt/uploads/ficheiros/9915.pdf][CastroPinto2011]]
+
+   “Como lhes passar essas ‘nuances’, que fazem afinal a diferença e que são do
+   domínio de construtos teóricos com um grau de abstracção bastante elevado em
+   muitos casos?” [[http://ler.letras.up.pt/uploads/ficheiros/9915.pdf][CastroPinto2011]]
+
+   “Posteriormente, procuramos utilizar os constructos teóricos oferecidos por
+   tais teorias para analisar um texto e verificar como elas podem auxiliar no
+   processo de compreensão dos possíveis sentidos do texto.” [[http://periodicos.unitau.br/ojs-2.2/index.php/caminhoslinguistica/article/viewFile/1224/955][STUMPF2012]]
+
+** Uso de ‘expressões’ em vez de ‘objetos/entidades’
+   Names and Denotable Objects
+   Names and Denotable Expressions
+
+* Why Functional Programming Matters
+  [[http://filimanjaro.com/blog/2014/introducing-lazy-evaluation/][How to Speed Up Lo-Dash ×100? Introducing Lazy Evaluation.]]

@@ -1,0 +1,202 @@
+* Titles
+  Estudo Sobre o Declarativo e o Imperativo nos Modelos de Programação para
+  Interfaces Gráficas do Usuário
+
+  Estudo Sobre o Declarativo e o Imperativo em Linguagens de Programação
+
+  Estudo Sobre o Declarativo e o Imperativo em Linguagens e Modelos de
+  Programação
+
+  Análise comparativa entre conceitos de programação declarativa e imperativa
+
+  # Modelos de Programação para Interfaces Gráficas do Usuário: Um Estudo Sobre
+  # Programação Funcional e Reativa
+
+* Chapters
+** Capítulo 1: Fundamentação Teórica
+*** A Máquina de Turing
+*** O Cálculo Lambda
+*** Máquinas Abstratas
+    - Programas como máquinas abstratas
+*** Linguagens de Programação
+*** Trabalhos Relacionados
+** Capítulo 2: Paradigmas de Programação
+*** Programação Estruturada
+**** Construtos Estruturados
+*** Programação Procedural
+**** Construtos Procedurais
+*** Programação Orientada a Objetos*
+**** Construtos Oriendados a Objetos
+*** Programação Funcional
+**** Construtos Funcionais
+*** Programação Orientada a Eventos
+**** Observer Pattern
+*** Programação Reativa
+**** Estruturas de Dados Reativas
+*** Programação Funcional e Reativa
+**** Duality in Observer & Iterator Patterns
+**** Fluxos de Eventos Composicionais (RxJS)
+** Capítulo ?: Abstrações
+   [[https://www.khanacademy.org/math/in-in-class-6th-math-cbse/in-in-6th-algebra/in-in-6th-algebra-overview/v/abstract-ness][Abstract-ness]] — Khan Academy
+   [[https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/][The Law of Leaky Abstractions]] — Joel Spolsky, 2002
+   [[http://www.lispcast.com/what-is-abstraction][What is an abstraction?]] — LispCast, 2017
+
+   “What is neat about Algebra is that we can focus and manipulate the abstract,
+   and what we discover from these manipulations can then be applied to all
+   application domains.” — Khan
+
+   “The human mind has never invented a labor-saving device equal to algebra.” —
+   J. Willard Gibbs.
+
+   “Algebra creates abstractions which apply to tens, hundreds, or even
+   thousands of scenarios. In other words by solving ONE algebra problem, you
+   are solving hundreds of "regular" problems, all at once.” — [[https://www.khanacademy.org/video/the-beauty-of-algebra?qa_expand_key=kaencrypted_68fa46cd8e9a0ef6a3faa747ff7f1478_794008f23386090f990708d8f11f0644792437ed0bd6e1cf9c0dad15711e54f7bb17ba97830ca58e042bd8fbd7386809ffe073283ac896a40a1adcf94ffd5ba3125b946748e88a577afce4db992039d6bc783bca48e35acd25316ce32840ee10][James Tharpe]]
+
+   “When doing research we often ask ourselves fundamental abstract questions
+   that try to get at the heart of the matter” — *Meet the dazzling flying
+   machines of the future*, [[https://www.youtube.com/watch?v=RCXGpEmFbOw][Raffaello D'Andrea]]
+
+*** Legibilidade de Código
+    “Cognitive science professor Douglas Hofstadter has compared machine code to
+    genetic code, saying that ‘Looking at a program written in machine language
+    is vaguely comparable to looking at a DNA molecule atom by atom.’[7]”
+    ([[https://en.wikipedia.org/wiki/Machine_code][Machine Code, Wikipedia]]).
+
+** Capítulo 3: Manipulação de Coleções
+*** Estudos de Caso
+*** Análise das Abstrações
+** Capítulo 4: Coordenação de Eventos
+*** Estudos de Caso
+*** Análise das Abstrações
+** Modelos para Sistemas Distribuídos
+   Message-passing Programming -> Erlang
+** Capítulo 5: Resultados
+   Não é necessário, já que é uma pesquisa exploratória?
+
+   Uma linguagem de programação por si só jamais poderá expressar
+   vocabulário/abstrações de alto nível sem o uso adequado dos conceitos
+   essênciais. July 11, 02:38.
+
+   O uso adequado dos conceitos essênciais nos permite expressar novas camadas
+   de vocabulário, isso cria novas camadas de abstração no código fonte.
+
+** Capítulo 6: Considerações Finais
+*** Aspectos Relevantes
+**** Na Academia / Acadêmicas / Teóricas
+     “John Backus offered us a gift and a blessing in his 1977 Turing Award
+     lecture, Can Programming Be Liberated from the von Neumann Style? A
+     functional style and its algebra of programs. He told us how the
+     sequential/imperative model enslaves us in weak thoughts, inhibiting
+     manageable scaling (sections 1 through 5.1).” *Can functional programming
+     be liberated from the von Neumann paradigm?*, [[http://conal.net/blog/posts/can-functional-programming-be-liberated-from-the-von-neumann-paradigm][Conal Elliott, 2010]].
+
+**** No Mercado / Práticas
+*** Trabalhos Futuros
+    Ensino de programação com foco em /abstração/ de dados e de operações,
+    através de construtos linguísticos de alto nível.
+*** Possibilidades
+    Criar toolkit de componentes gráficos (GUI toolkit) utilizando a tecnologia
+    WebGL e o Canvas do HTML5. Veja [[http://www.zebkit.com/][Zebra]], [[https://dmitrybaranovskiy.github.io/raphael/][Raphaël]] (SVG).
+*** Conclusão
+    Programação funcional impõem restrições que auxiliam a aprendizagem.
+
+    As operações de baixo nível dispostas na maioria das linguagens fornecem
+    flexibilidade em relação ao controle da máquina física. Porém tal
+    flexibilidade tem um custo, que talvez não seja necessária para aprender
+    lógica de programação e resolver problemas do cotidiano.
+* Estudos de Caso
+  Mais demonstrações das funções ~map~, ~filter~, etc, aplicacadas a problemas
+  diferentes.
+
+** Selecionando propriedades dos objetos de uma coleção
+   No trexo de código em \ref{code:projection}, é mostrado a projeção de uma
+   coleção em outra. Os itens da coleção original estão declarados em
+   \ref{data:musicCollection}, e são objetos com a estrutura
+   ~{faixa,titulo,artista,disco}~[fn:jsObjetcs]. O resultado da projeção da
+   coleção ~musicas~ é uma nova coleção com pares ~{titulo,artista}~.
+
+   #+label: data:musicCollection
+   #+caption: Coleção a ser projetada em pares ~{titulo,artista}~
+   #+BEGIN_SRC js
+   let musicas = [
+     {faixa: 1, titulo: "66", artista: "O Terno", album: "66"},
+     {faixa: 1, titulo: "Echoes", artista: "Pink Floyd", album: "Meddle"},
+     {faixa: 7, titulo: "Null", artista: "The Algorithm", album: "Polymorphic Code"},
+     {faixa: 6, titulo: "Color Theory", artista: "Pomegranate Tiger", album: "Boundless"},
+   ]
+   #+END_SRC
+
+   #+caption: Projeção da coleção de músicas
+   #+label: code:projection
+   #+BEGIN_SRC js
+   let musicas = [/*...*/] let paresArtistaTitulo = []
+
+   musicas.forEach(function(musica) {
+     var par = {
+       titulo: musica.titulo,
+       artista: musica.artista
+     }
+
+     paresArtistaTitulo.push(par)
+   })
+
+   // [{titulo: "66", artista: "O Terno"},
+   // {titulo: "Echoes", artista: "Pink Floyd"},
+   // {titulo: "Null", artista: "The Algorithm"},
+   // {titulo: "Color Theory", artista: "Pomegranate Tiger"}]
+   #+END_SRC
+
+   Todas projeções de coleções partilham duas operações em comum:
+   - percorrer a coleção original;
+   - adicionar o valor projetado de cada item numa nova coleção.
+
+
+** Selecionando propriedades com ~map()~
+   Pode-se abstrair /como/ essas operações são realizadas, através de uma
+   função. Em \ref{code:mapImplementation} é mostrado uma implementação que
+   aceita como parâmetros uma função de projeção e uma coleção. Após todos os
+   itens da coleção original passarem pela função de projeção, uma nova
+   coleção é retornada com os resultados.
+
+   #+caption: Implementação da operação /map/
+   #+label: code:mapImplementation
+   #+BEGIN_SRC js
+   function map (projectionFunction, collection) {
+     let results = [];
+     collection.forEach(function(itemInArray) {
+       results.push(projectionFunction(itemInArray));
+     });
+
+     return results;
+   };
+   #+END_SRC
+
+   #+caption: Projeção da coleção de músicas com ~map()~
+   #+BEGIN_SRC js
+   var musicas = [/*...*/];
+   var projectionFn = function (musica) {
+     return {
+       id: musica.id,
+       title: musica.title
+     }
+   };
+   var paresArtistaTitulo = map(projectionFn, musicas);
+   #+END_SRC
+
+   Nota-se que a função ~map~ permite a especificação de qual projeção
+   aplicar a uma coleção, mas oculta /como/ a operação acontece. Com essa
+   função, os mecanismos de (1) iteração da coleção e (2) criação da nova
+   coleção, são completamente abstraídos. MERDA
+* Possible Articles
+** Aspectos Cognitivos da Compreensão de Programas de Computador
+   Cognição e Compreensão de Programas de Computador: Análise Comparativa entre
+   Programação Declarativa e Imperativa
+** Plume: An 100% declarative (stateless) program
+* Inspirations from Nature
+  - [[https://www.youtube.com/watch?v=rMtSc2MJLcw][Building Without Nails The Genius of Japanese Carpentry]]
+
+* Footnotes
+
+[fn:jsObjetcs] Em Javascript as chaves ~{/*…*/}~ denotam um objeto literal. Um
+objeto é uma coleção de propriedades, e uma propriedade é uma associação entre
+um /nome/ e um /valor/.

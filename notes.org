@@ -1,0 +1,1101 @@
+# -*- ispell-local-dictionary: "portugues"; -*-
+* Delimitação
+  "Dotado necessariamente de um sujeito e de um objeto, o tema passa por
+   um processo de especificação." (LAKATOS e MARCONI)
+
+  Enfatizar o foco do assunto escolhido para a pesquisa.
+  Deve-se restringir o objeto de pesquisa ao máximo e o apresentar em forma de título.
+  Coordenação de eventos em interfaces gráficas de aplicações web
+
+  Critérios para delimitação do tema:
+   - objeto de estudo (tema não delimitado): FRP ou GUIs?
+   - populacional: GUIs
+   - qualitativo (aspecto, atributo, condição, ou propriedade da população):
+     - coordenação de eventos
+   - quantitativo: X
+   - espacial (região): X
+   - temporal: X
+
+  Abstrações da FRP para coordenação de eventos na programação de GUIs
+  Programação Funcional Reativa na coordenação de eventos em GUIs.
+
+  Coordenação de eventos\footnote{
+  % A interação de uma aplicação com o ambiente externo se dá através
+  % da reação a eventos imprevisíveis. A nível de programação, tais
+  % eventos são coordenados para atualizar o estado interno do programa
+  % e produzir resultados.
+  %
+  % Aplicações interativas precisam reagir a eventos do ambiente
+  % externo, e tais eventos precisam ser coordenados para atualizar
+  % o estado interno da aplicação e produzir resultados.
+  % Interações com o ambiente externo em aplicações reativas
+  %
+  % Aplicações interagem com o ambiente externo reagindo a eventos
+  % imprevisíveis, originados de dispositivos de entrada manipulados
+  % pelo usuário (e.g. cliques do \emph{mouse},
+  % pressionamento de teclas, gestos multitoque), sinais de sensores (e.g. acelerômetro, giroscópio)
+  % e mensagens de computadores remotos.
+  %
+  % http://www.computerhope.com/jargon/e/event.htm
+  Um evento é uma ação ou ocorrência identificada por um
+  programa, que pode ser tratado programaticamente.
+  Eventos podem ser internos, provindos de dentro do próprio programa,
+  ou externos, como os que originam-se de dispositivos de entrada manipulados
+  pelo usuário (e.g. mouse, teclado, \emph{touchscreen}),
+  sensores (e.g. acelerômetro, giroscópio),
+  computadores remotos, ou outros programas/\emph{threads}.
+  %
+  % Para interagir com o ambiente externo, programas \emph{reativos}
+  % atualizam seus estados internos e produzem resultados em reação a eventos, como os provenientes de
+  % % precisam reagir a vários eventos, como os provenientes de
+  % dispositivos de entrada manipulados
+  % pelo usuário (e.g. mouse, teclado, \emph{touchscreen}),
+  % sensores (e.g. acelerômetro, giroscópio),
+  % computadores remotos, ou outros programas/\emph{threads}.
+  % Tais eventos precisam ser coordenados a fim de atualizar o
+  % estado interno do programa e produzir resultados.
+  % que no caso de GUIs, são apresentados na tela.
+  %
+  % Aplicações reativas interagem com o ambiente externo reagindo a eventos,
+  % como os dispositivos de entrada manipulados
+  % pelo usuário (e.g. \emph{mouse}, teclado, \emph{touchscreen}),
+  % sensores (e.g. acelerômetro, giroscópio)
+  % ou computadores remotos.
+  %
+  % Devido a isso, essas aplicações são denominadas \emph{reativas}.
+  % Em aplicações interativas, o gerenciamento de interações
+  % como o ambiente externo se da coordenação de eventos
+  } na programação de Interfaces Gráficas do Usuário (GUIs)\footnote{
+  % Interfaces gráficas são consideradas \emph{reativas} ou
+  % \emph{orientadas a eventos} porque precisam reagir a eventos
+  % do ambiente externo, como comandos do usuário e mensagens de
+  % servidores remotos.
+  %
+  % Para interagir com o ambiente externo, GUIs
+  % % atualizam seus estados internos e produzem resultados em reação a eventos, como os provenientes de
+  % % precisam reagir a vários eventos, que são coordenados
+  % precisam reagir a vários eventos, e coordená-los
+  % % reagem a eventos, que precisam ser coordenados
+  % a fim de atualizar o estado interno do programa e produzir resultados.
+  % Por esse motivo, GUIs são consideradas \emph{orientadas a eventos
+  % (event-driven)} ou \emph{reativas.}
+  %
+  % Para interagir com o ambiente externo, GUIs
+  % alteram seus comportamentos em reação a eventos,
+  % e por isso são consideradas \emph{orientadas a eventos
+  % (event-driven)} ou \emph{reativas.}
+  % GUIs mantêm interação contínua com o ambiente externo,
+  %
+  % Para interagir com agentes do ambiente externo, como o usuário, GUIs
+  Para manter interação com o ambiente externo, GUIs
+  precisam continuamente reagir a eventos, que são processados para
+  % executar uma tarefa correspondentemente predeterminada, como atualizar o estado interno
+  executar uma tarefa correspondente, como atualizar o estado interno
+  ou exibir dados.
+  % Devido a isso, uma GUI é considerada um sistema \emph{reativo}
+  % peculiaridades, propriedades
+  Devido a essas propriedades, uma GUI é considerada um sistema
+  \emph{reativo} ou \emph{orientado a eventos.}
+  }.
+  % com \emph{Programação Funcional Reativa}.
+
+  % Coordenação de eventos na programação de aplicações web reativas.
+
+* Problema
+  \section{Formulação do problema}\label{lproblema}
+
+  % O quê a \emph{Programação Funcional Reativa (FRP)} tem a oferecer
+  % para coordenar eventos na programação de GUIs,
+  % em comparação com o \emph{Observer Pattern},
+  % modelo tradicionalmente predominante?
+
+  %%%%%%%%%%%%%%%%%%
+  % Em comparação ao \emph{Observer Pattern}, modelo atualmente predominante,
+  % o quê o paradigma de \emph{Programação Funcional Reativa (FRP)}
+  % tem a oferecer para lidar com a coordenação de eventos em GUIs?
+  %
+  % Em comparação ao \emph{Observer Pattern}, modelo tradicionalmente predominante,
+  % o quê o paradigma de \emph{Programação Funcional Reativa (FRP)}
+  % tem a oferecer para lidar com a coordenação de eventos em GUIs?
+  %
+  % Em comparação ao \emph{Observer Pattern}, modelo de programação tradicionalmente predominante,
+  % o quê o paradigma de \emph{Programação Funcional Reativa (FRP)}
+  % tem a oferecer para lidar com a coordenação de eventos em GUIs?
+  %
+  Em comparação ao \emph{Observer Pattern}, modelo tradicionalmente predominante,
+  o quê o paradigma de \emph{Programação Funcional Reativa (FRP)}
+  tem a oferecer para lidar com a complexidade de se coordenar eventos
+  na programação de GUIs?
+
+  %%%%%%%%%%%%%%%%%%%
+  % Por quê o paradigma de \emph{Programação Funcional Reativa (FRP)}
+  % deve ser considerado para se coordenar eventos na programação de
+  % aplicações reativas?
+
+  %%%%%%%%%%%%%%%%%%%
+  % Como os conceitos de \emph{Programação Funcional Reativa (FRP)} se
+  % comparam com modelos atualmente mais utilizados na coordenação de
+  % eventos, que são baseados em \emph{callbacks}?
+  %
+  % Como a \emph{Programação Funcional Reativa (FRP)} se
+  % compara com modelos baseados em \emph{callbacks}, que atualmente, e por muito tempo, têm sido os mais utilizados
+  % para coordenar eventos na programação de aplicações reativas?
+  %
+  % Como a \emph{Programação Funcional Reativa (FRP)} se compara com
+  % modelos de programação baseados em \emph{callbacks},
+  % que foram e ainda são os mais utilizados
+  % para coordenar eventos na programação de interfaces gráficas?
+  %
+  % Como a \emph{Programação Funcional Reativa (FRP)} se compara a
+  % modelos tradicionais de programação, baseados em \emph{callbacks}, na coordenação
+  % de eventos em interfaces gráficas?
+  %
+  % Como a \emph{Programação Funcional Reativa (FRP)} se compara ao
+  % \emph{Observer Pattern}, modelo atualmente predominante para se
+  % coordenar eventos na programação de GUIs?
+  %
+  % Como o paradigma de \emph{Programação Funcional Reativa (FRP)}
+  % se compara ao \emph{Observer Pattern} para
+  % coordenar eventos na programação de GUIs?
+  %
+  % Como o paradigma de \emph{Programação Funcional Reativa (FRP)}
+  % se compara ao \emph{Observer Pattern} em relação a
+  % coordenação de eventos na programação de GUIs?
+  %
+  % Como o paradigma de \emph{Programação Funcional Reativa (FRP)}
+  % pode simplificar a coordenação de eventos na programação de GUIs?
+  %
+  % modelo atualmente predominante, como a Programação Orientada a Eventos
+  % (EDP – Event-driven Programming) o \emph{Observer Pattern}
+  %
+  % Como o paradigma de \emph{Programação Funcional Reativa (FRP)}
+  % se compara ao \emph{Observer Pattern} -- modelo tradicionalmente
+  % predominante -- para coordenar eventos na programação de GUIs?
+
+  %%%%%%%%%%%%%%%%%%%%%%%%
+  % Modelos de programação baseados em \emph{callbacks}
+  % foram e ainda são os mais utilizados na
+  % coordenação de eventos em aplicacões reativas.
+  % No entanto, muitos os consideram formas muito complexas de se
+  % programar.
+  % Posto isso, como os conceitos de \emph{Programação Funcional
+  % Reativa (FRP)} se comparam para
+  % lidar com a coordenação de eventos em interfaces gráficas?
+  % % lidar com a complexidade de se coordenar eventos
+  % % na programação de interfaces gráficas?
+  Modelos de programação baseados em \emph{callbacks}
+  foram e ainda são os mais utilizados na
+  coordenação de eventos em aplicacões reativas.
+  No entanto, muitos os consideram formas muito complexas de se
+  programar.
+  Posto isso, como os conceitos de \emph{Programação Funcional
+  Reativa (FRP)} se comparam para
+  lidar com a coordenação de eventos em interfaces gráficas?
+
+  %%%%%%%%%%%%%%%%%%%%%%%%
+  % O \emph{Observer Pattern} e a \emph{Programação Orientada a
+  % Eventos} são os modelos tradicionalmente
+  % predominantes na programação de GUIs.
+  % % Ambos utilizam \emph{callbacks} para coordenar eventos em GUIs.
+  % % Em ambas abordagens a coordenação de eventos é centrada
+  % % em \emph{callbacks}.
+  % % Ambas abordagens utilizam \emph{callbacks} como principal
+  % % mecanismo na coordenação de eventos em GUIs.
+  % \emph{Callbacks} são o cerne de ambas abordagens quanto
+  % a coordenação de eventos em GUIs.
+  % No entanto, modelos baseados em \emph{callbacks} são consideradas
+  % formas muito complexas de se programar.
+  % Em ambas abordagens o principal mecanismo utilizado na
+  % coordenação de eventos em GUIs são as \emph{callbacks},
+
+  Modelos de programação centrados em \emph{callbacks}, como o
+  \emph{Observer Pattern} e a \emph{Programação Orientada a Eventos},
+  são tradicionalmente predominantes na coordenação de eventos
+  em GUIs.
+  % No entanto, muitos autores os consideram
+  % formas muito complexas de se programar.
+  % No entanto, modelos baseados em \emph{callbacks} são consideradas
+  % formas muito complexas de se programar.
+  % No entanto, tais abordagens são consideradas
+  % formas muito complexas de se programar.
+  No entanto, tais abordagens são consideradas
+  formas muito complexas de se programar, como é notado por
+  \citeonline{edwards2009coherent},
+  \citeonline{fischer2007tasks},
+  \citeonline{maier2010deprecating},
+  e \citeonline{reppy1992higher}.
+  Recentemente o paradigma de \emph{Programação Funcional Reativa (FRP)}
+  tem sido explorado como uma alternativa promissora para a programação
+  de GUIs.
+  % Posto isso, como os conceitos de \emph{Programação Funcional
+  % Reativa (FRP)} se comparam para
+  % lidar com a coordenação de eventos em interfaces gráficas?
+  Posto isso, como os conceitos de FRP se comparam quanto
+  a coordenação de eventos na programação de GUIs?
+
+  %%%%%%%%%%%%%%%%%%%%%%%%
+  % "[...] the first empirical study that evaluates the effect
+  % of reactive programming on comprehensibility compared to the tra-
+  % ditional object-oriented style with the Observer design pattern."
+  % O modelo de \emph{Programação Orientada a Objetos (OOP)}, com o padrão de
+  % projeto de software \emph{Observer}, é tradicionalmente
+  % comum na programação de sistemas orientados a eventos.
+  O \emph{Observer Pattern}, usado na \emph{Programação Orientada
+  a Objetos (POO)}, é o modelo tradicionalmente predominante
+  na programação de GUIs.
+  No entanto, tal abordagem configura uma das
+  formas mais complexas de se programar, como é notado por
+  \citeonline{edwards2009coherent},
+  \citeonline{fischer2007tasks},
+  \citeonline{maier2010deprecating},
+  e \citeonline{reppy1992higher}.
+  Recentemente o paradigma de \emph{Programação Funcional Reativa (PFR)},
+  que tem raízes na \emph{Programação Funcional (PF)},
+  tem sido explorado como uma alternativa promissora.
+  % Citar Flapjax, Elm
+  % Posto isso, como as abstrações fornecidas pela FRP se comparam
+  % para programar coordenação de eventos em GUIs?
+  Posto isso, o que a PFR tem a oferecer, e como ela se compara ao
+  \emph{Observer Pattern} quanto ao nível de abstração fornecido para
+  coordenação de eventos na programação de GUIs?
+  % Posto isso, o quê a FRP tem a oferecer para lidar com a
+  % coordenação de eventos na programação de GUIs?
+  % Como as abstrações fornecidas pela FRP se comparam com as
+  % do modelo tradicional orientado a objetos com o \emph{Observer Pattern},
+  % quanto a coordenação de eventos em GUIs?
+  % Como a FRP se compara ao \emph{Observer Pattern}, modelo
+  % utilizado na \emph{Programação Orientada a Objetos (OOP)}?
+  % Como a FRP se compara ao
+  % modelo tradicional orientado a objetos com o \emph{Observer Pattern},
+
+  %%%%%%%%%%%%%%%%%%%%%%%%
+  % Variáveis
+  % - produtividade no desenvolvimento
+  % - coesão da base de código
+  % - expressividade do código
+  % - composicionalidade (compositionality)
+  % - previsibilidade do sistema
+  % - testabilidade
+  % - easier to reason about
+  % - testes de software
+  % - raciocínio informal (informal reasoning)
+  % - efeitos colaterais (side effects)
+
+* Objetivos
+  \section{Objetivos}\label{lobjetivos}
+
+  % Os objetivos do trabalho devem ser expressos na forma de uma
+  % condição não trivial cujo sucesso possa vir a ser verificado
+  % ao final do trabalho. ~ Wazlawick
+
+  % Se o objetivo geral consiste em provar uma determinada hipótese,
+  % os objetivos específicos podem estabelecer a prova de uma
+  % série de condições associadas a tal hipótese. ~ Wazlawick
+
+  % "Tem-se como objetivo da pesquisa confirmar ou refutar essa(s)
+  % hipótese(s) levantada(s)."
+
+  \subsection{Objetivo Geral}
+  % Apresentar a \emph{FRP} e demonstrar sua aplicação
+  % em interfaces gráficas através da implementação de estudos de caso que serão
+  % análisados qualitativamente.
+  %
+  % Demonstrar os conceitos de \emph{FRP} no domínio de interfaces
+  % gráficas do usuário (GUIs) e compara-los com abordagens imperativas.
+  %
+  % Demonstrar e analisar o modelo \emph{declarativo} da FRP para coordenar eventos na
+  % programação de GUIs e compará-los com os modelos \emph{imperativos} baseados
+  % em \emph{callbacks.}
+  %
+  % Demonstrar como coordenar eventos com FRP de forma \emph{declarativa}
+  % na programação de GUIs, e compará-la a modelos \emph{imperativos}
+  % baseados em \emph{callbacks.}
+  %
+  % Demonstrar como coordenar eventos com FRP de forma \emph{declarativa}
+  % na programação de GUIs, como alternativa a modelos \emph{imperativos}
+  % baseados em \emph{callbacks.}
+  %
+  % Demonstrar, analizar e comparar o modelo \emph{declarativo} de programação
+  % da FRP e dos modelos \emph{imperativos} baseados em \emph{callbacks.}
+  %
+  % Demonstrar a coordenação de eventos na programação de GUIs utilizando
+  % FRP e modelos \emph{imperativos} baseados em \emph{callbacks.}
+  %
+  % Demonstrar e analisar como a coordenação de eventos em GUIs
+  % pode ser programada de forma \emph{declarativa} com FRP,
+  % em contraste com modelos \emph{imperativos}
+  % baseados em \emph{callbacks.}
+  %
+  % Apresentar o FRP e demonstrar sua aplicação na coordenação
+  % de eventos em GUIs em comparação aos outros modelos.
+  %
+  % Demonstrar a FRP aplicada à coordenação de eventos na
+  % programação de GUIs, e compará-la ao \emph{Observer Pattern}
+  % quanto a compreensibilidade do programa.
+  %
+  % Demonstrar a FRP aplicada à coordenação de eventos na
+  % programação de GUIs, e compará-la ao \emph{Observer Pattern}
+  % quanto as abstrações fornecidas para tal.
+  %
+  % Demonstrar e analisar a FRP em comparação ao \emph{Observer Pattern}
+  % quanto as abstrações fornecidas para a coordenação de
+  % eventos na programação de GUIs.
+  % Demonstrar e analisar a PF e PFR
+  % em comparação a POO e ao \emph{Observer Pattern}, respectivamente,
+  % no que concerne o nível de abstração fornecido para transformação
+  % de sequências (e.g. \emph{arrays}, listas) e coordenação de
+  % eventos na programação de GUIs.
+  Demonstrar e analisar a PFR
+  em comparação a POO com o \emph{Observer Pattern},
+  quanto ao nível de abstração fornecido à coordenação de
+  eventos na programação de GUIs.
+  % Demonstrar e analisar a abordagem \emph{declarativa} da PF e PFR
+  % em comparação a \emph{imperativa} da POO e do \emph{Observer Pattern},
+  % no que concerne o nível de abstração fornecido para se coordenar
+  % eventos na programação de GUIs.
+  %
+  % Demonstrar a FRP aplicada à coordenação de eventos na
+  % programação de GUIs, e analisa-la quanto a compreensibilidade
+  % do código fonte.
+  %
+  % Demonstrar, analizar e comparar os modelos de programação
+  % \emph{declarativa} e \emph{sequêncial}, aplicados na
+  % transformação de dados e na coordenação de eventos em GUIs.
+  %
+  % Demonstrar como os conceitos do paradigma de FRP podem ser usados
+  % para coordenar eventos na programação de GUIs.
+
+  % "[...] são detalhamentos ou subprodutos do objetivo geral." ~ Wazlawick
+  \subsection{Objetivos Específicos}
+  \begin{itemize}[noitemsep]
+    % \item Explicar o conceito de programação \emph{declarativa}
+    %       em comparação com programação sequêncial \emph{imperativa;}
+    % \item Conceituar FRP como a intersecção entre os paradigmas de
+    %       \emph{Programação Funcional} e \emph{Programação Reativa;}
+    % \item Demonstrar a essência da \emph{Programação Funcional} para
+    %       manipulação de dados;
+    % In na página do tutorial de Reactive Programming do site do rx (Transf. de dados)
+    % \item Demonstrar como transformações de dados podem ser programadas
+    %       de forma declarativa com conceitos de \emph{Programação Funcional};
+    % \item Demonstrar como sequências de dados podem ser transformadas
+    %       de forma declarativa com conceitos de \emph{Programação Funcional};
+    % \item Demonstrar como sequências de dados (e.g. \emph{arrays}, listas)
+    %       podem ser transformadas de forma \emph{declarativa} com conceitos de
+    %       % \emph{Programação Funcional}, em contraste com a forma imperativa
+    %       % do \emph{Observer Pattern};
+    %       \emph{Programação Funcional}, e de forma \emph{imperativa} com
+    %       \emph{Programação Orientada a Objetos;}
+    % \item Demonstrar transformações de sequências de dados
+    %       (e.g. \emph{arrays}, listas) implementadas de forma
+    %       \emph{declarativa} com conceitos de \emph{Programação
+    %       % Funcional} e de forma \emph{imperativa} com o modelo
+    %       % tradicional de \emph{Programação Procedural;}
+    %       Funcional} em contraste com o modelo
+    %       tradicional \emph{imperativo;}
+    % \item Demonstrar o modelo de programação \emph{declarativa}, com
+    %       conceitos de \emph{Programação Funcional}, em contraste com
+    %       o modelo tradicional \emph{imperativo}, aplicados na
+    %       transformação de sequências de dados (e.g. \emph{arrays}, listas);
+    % \item Demonstrar a manipulação \emph{declarativa} de sequências
+    %       (e.g. \emph{arrays}, listas), em contraste com o modelo
+    %       tradicional \emph{imperativo;}
+    \item Demonstrar o modelo \emph{declarativo} da
+          \emph{Progração Funcional}, e o modelo tradicional \emph{imperativo},
+          aplicados na manipulação de sequências (e.g. \emph{arrays}, listas);
+    % \item Demonstrar a influência da \emph{Programação Funcional} no
+    %       leiaute gráfico e no gerênciamento de estado;
+    % \item Demonstrar os conceitos de FRP aplicados na coordenação
+    %       de eventos na programação de GUIs;
+    % \item Demonstrar como as interações de uma GUI podem ser
+    %       modeladas como um fluxo \emph{(stream)} de eventos, que podem
+    %       ser manipulados declarativamente, de maneira similar as sequências de dados.
+    % \item Demonstrar como os conceitos de \emph{FRP} permitem que
+    %       interações possam ser modeladas como
+    %       fluxos \emph{(streams)} de eventos, que podem ser coordenados
+    %       declarativamente, de maneira similar as sequências de dados;
+    % \item Demonstrar como os conceitos de PFR permitem que
+    %       interações possam ser modeladas como
+    %       fluxos \emph{(streams)} de eventos, que podem ser coordenados
+    %       \emph{declarativamente} -- de maneira similar as sequências --
+    %       e \emph{imperativamente} com o \emph{Observer Pattern;}
+    % \item Demonstrar a coordenação de eventos em GUIs com o
+    %       modelo de programação \emph{declarativo} da PFR, em contraste com o
+    %       modelo tradicional \emph{imperativo} da POO com o \emph{Observer Pattern;}
+    % \item Demonstrar a coordenação \emph{declarativa} de eventos
+    %       em GUIs com PFR, em comparação ao
+    %       modelo tradicional \emph{imperativo} da POO com o \emph{Observer Pattern;}
+    \item Demonstrar o modelo \emph{declarativo} da PFR,
+          e o modelo tradicional \emph{imperativo} da POO
+          com o \emph{Observer Pattern}, aplicados na coordenação
+          de eventos em GUIs;
+          % utilizando \emph{callbacks;}
+          % e correspondentemente compará-las
+          % em contraste com a forma imperativa
+          % do \emph{Observer Pattern};
+    % \item Analisar e comparar as soluções imperativas e declarativas
+    %       quanto a ergonomia da linguagem/framework;
+    % \item Analisar as implementações declarativas em constraste
+    %       com suas respectivas imperativas. Tanto as de
+    %       transformação de sequências com PF e POO, quanto as de coordenação de
+    %       eventos com FRP e o \emph{Observer Pattern;}
+    % \item Analisar as implementações declarativas e imperativas -- tanto as de
+    %       transformações de sequências, quanto de coordenações de
+    %       fluxos de eventos --
+    %       em relação ao nível de abstração fornecido
+    %       pela PF/PFR e POO/\emph{Observer Pattern};
+    % \item Analisar os modelos declarativos e imperativos
+    %       quanto ao nível de abstração fornecido
+    %       para implementar as transformações de sequências,
+    %       e as coordenações de eventos;
+    \item Analisar os modelos declarativo e imperativo
+          no que concerne o nível de abstração fornecido
+          à manipulação de sequências,
+          e à coordenação de eventos;
+    % \item Analisar os modelos declarativos e imperativos
+    %       quanto ao nível de abstração fornecido
+    %       para as aplicações em ambos os domínios;
+    % \item Verificar ambas abordagens -- declarativa e imperativa --
+    %       quanto suas implicações na
+    %       compreensibilidade de programas;
+    % \item Analisar e comparar as soluções implementadas com os conceitos
+    %       \emph{declarativos} da FRP, e \emph{imperativos} do modelo
+    %       basedo em \emph{callbacks};
+  \end{itemize}
+  % \begin{itemize}[noitemsep]
+  %   \item Destacar recursos da linguagem de programação
+  %         \emph{JavaScript} que dão suporte à
+  %         \emph{Programação Funcional};
+  %   % essência
+  %   \item Explanar os principais conceitos de \emph{Programação Funcional};
+  %   \item Conceituar \emph{Programação Funcional Reativa (FRP)};
+  %   \item Apresentar bibliotecas \emph{FRP};
+  %   \item Implementar os estudos de caso utilizando bibliotecas \emph{FRP};
+  %   \item Realizar análise qualitativa dos estudos de caso;
+  % \end{itemize}
+
+* Justificativa
+  \section{Justificativa}\label{ljustificativa}
+
+  % "Um boa hipótese precisa ser justificável."
+  % "Em uma monografia, pode-se justificar o 'tema' de pesquisa,
+  % mas mais importante ainda é justificar a escolha do objetivo
+  % e da 'hipótese'." -- (Wazlawick, 2013)
+
+  % Por exemplo, se o tema de pesquisa é “compactação de texto”,
+  % o objetivo de pesquisa é obter um algoritmo com maior grau de
+  % compactação do que os algoritmos comerciais, e a hipótese de
+  % pesquisa pode consistir em utilizar um determinado modelo de
+  % rede neural para realizar essa compactação, então a justificativa
+  % do tema deverá se concentrar em mostrar que é necessário obter
+  % algoritmos de compactação melhores. Adicionalmente, a justificativa
+  % da hipótese deverá se concentrar em apresentar evidências de que o
+  % modelo de rede neural escolhido poderá produzir resultados melhores
+  % do que os algoritmos comerciais.
+
+  % Por exemplo, o objetivo do trabalho poderá ser definir um método de
+  % cálculo de esforço para desenvolvimento de software mais preciso do
+  % que os métodos do estado da arte. O autor da pesquisa deverá ter uma
+  % boa hipótese para fundamentar esse objetivo em primeiro lugar.
+  % Depois, ele deverá realizar um conjunto de experimentos que, juntamente
+  % com uma base teórica, demonstrarão a validade ou não da hipótese.
+
+  % Dentro do tema, o pesquisador deverá estabelecer um objetivo a ser buscado.
+  % Esse objetivo deverá estar baseado em uma hipótese de trabalho, que deve
+  % ter uma boa justificativa para ter sido escolhida.
+
+  % - Enfatizar a importância e dificuldades de GUIs
+  % - Descrever o modelo atual de programação de GUIs e suas limitações
+  % - Apresentar alternativa promissora (FRP)
+  % - Proposta do trabalho
+  %
+  % A quantidade de dispositivos de entrada com a qual uma
+  % GUI precisa interagir tem aumentado ao longo da história.
+  % Em 1970, quando Fulano inventou a GUI, os dispositivos de
+  % entrada eram limitados ao mouse e ao teclado.
+  % Atualmente, qualquer smartphone disponibiliza vários
+  % dispositivos, como touchscreen...
+
+  % - websockets, push notifications, AppCache, service workers, web workers
+  %   - http://bit.ly/serviceworkers_webworkers_websockets
+  
+  Interatividade em páginas web se deu com a introdução do JavaScript nos
+  navegadores, e desde o advento do Ajax[fn:ajax], elas têm se tornado cada vez
+  mais interativas, dando origem a uma nova gama de aplicações web com
+  interfaces ricas[fn:webApps] e responsivas que oferecem ao usuário uma
+  experiência similar as aplicações mobile ou desktop. Assim como em qualquer
+  interface gráfica, interfaces web precisam reagir a vários eventos
+  imprevisíveis do ambiente externo, provindos tanto dos usuários (e.g. clicks
+  do mouse, pressionamento de teclas, gestos multitoque, etc.) quanto de outros
+  sistemas (e.g. mensagens do servidor, sinais de sensores, etc.). Devido a
+  esses aspectos, interfaces gráficas são caracterizadas como /reativas/.
+
+  # O avanço da tecnologia requer aplicações cada vez mais % sofisticadas..
+
+  %  in a timely fashion = em tempo hábil
+  O \emph{Observer Pattern}, usado na \emph{Programação Orientada
+  a Objetos (POO)}, é o modelo tradicionalmente predominante
+  na programação de GUIs.
+  Inerentemente \emph{imperativo}, ele utiliza \emph{callbacks}
+  como principal mecanismo de coordenação de eventos.
+  %%%%%%%%%
+  No entanto, abordagens baseadas em \emph{callbacks} são
+  consideradas muito complexas
+  % Essa abordagem configura uma das formas mais complexas de se
+  % programar aplicações interativas \cite{
+  % programar \cite{
+  \cite{
+  edwards2009coherent,
+  fischer2007tasks,
+  maier2010deprecating,
+  reppy1992higher},
+  devido a forma desconcertante com que \emph{callbacks}
+  % coordenam alterações no estado da aplicação, instigando‐a a
+  % ser conhecida na literatura como \emph{Callback Hell}
+  % coordenam alterações no estado da aplicação,
+  coordenam alterações no estado do programa.
+  % sendo referida na literatura como \emph{Callback Hell}
+  % sendo conhecida infamemente na literatura como \enquote{\emph{Callback Hell}}
+  % sendo conhecida torpemente na literatura como \emph{Callback Hell}
+  % \cite[p.~2]{edwards2009coherent}.
+  %%%%%%%%%
+  %
+  % Programas que utilizam o \emph{Observer Pattern} se tornam difícil
+  % Porém a forma desconcertante com a qual \emph{callbacks}
+  % coordenão eventos faz com que o programa se torne difícil
+  O programa se torna difícil
+  de compreender e dar manutenção, podendo ainda ser
+  descrito coloquialmente como \enquote{\emph{Callback Hell}}
+  % culminar no infame \enquote{\emph{Callback Hell}}
+  \cite[p.~2]{edwards2009coherent}, como é costumeiro na literatura.
+  % Devido ao emaranhado de \emph{callbacks}, o programa se torna difícil
+  % de compreender e dar manutenção, podendo ainda ser
+  % descrito coloquialmente como \enquote{\emph{Callback Hell}}
+  % \cite[p.~2]{edwards2009coherent}, como é costumeiro na literatura.
+  %
+  Na literatura, é costumeiro chamá-los de Callback Hell,
+  devido ao emaranhado de \emph{callbacks} que os compoêm.
+
+  % bainomugisha2013survey, muller2015practical
+  % inversão de controle
+
+  Vale ressaltar que de acordo com \citeonline{moseley06out}
+  o mau gerenciamento de estado é considerada uma das principais
+  causas de complexidade em sistemas contemporâneos, pois impactam
+  a compreensibilidade do programa, e os testes de software.
+  Uma análise das aplicações \emph{desktop} da Adobe apontou
+  que a lógica de coordenação de eventos residia em um terço
+  do código e contia metade dos \emph{bugs} reportados
+  \cite{jarvi2008property}.
+  Interfaces gráficas inerentemente dispõem de um alto
+  grau de interativade, tornando seu desenvolvimento e
+  manutenção um desafio.
+  % Isso indica que, para um domínio tão complexo, as tecnicas
+  % atuais são de muito baixo nível, já a quantidade de código
+  % a se escrever parece ser maior do que o necessário.
+
+  %   - observer pattern
+
+  % declarative vs imperative
+  %   - specification (what) vs. execution (how)
+  %     - Declarative Interaction Design for Data Visualization
+  %   - modeling vs presentation
+  %     - Elm
+  %     - FR Animation
+  %
+  % FRP
+  %  - Outros tipos de software podem ser considerados reativos, como um sistema
+  %    embarcado que reage a sinais de sensores, ou um sistema distribuído que
+  %    precisa reagir a mensagens na rede.
+
+  \emph{Programação Funcional Reativa (FRP)} é uma
+  alternativa promissora para a programação de aplicações
+  orientadas a eventos, como interfaces gráficas,
+  e também é explorada em uma variedade de outros domínios
+  de característica reativa, tal como robótica,
+  síntese de música, animações e \emph{video games}.
+  Conceitos de \emph{FRP} podêm ser adotados em
+  sistemas reativos para se coordenar eventos de forma declarativa
+  em um nível mais elevado de abstração, resultando em
+  código fonte que expressa melhor a solução implementada.
+
+  % it replaces listeners (also known as callbacks) in the widely-used
+  % observer pattern, making your code cleaner, clearer, more robust
+  % and more maintainable – in a word – simpler. (FRP, 2016)
+
+  % FRP is a specific programming technique to improve your code in
+  % an area that just happens to be a common source of complexity (and
+  % therefore bugs): event propagation. (FRP, 2016)
+
+  % This yields the advantage that programmers need not to worry about
+  % the order of events and computation dependencies. Hence, reactive
+  % programming languages abstract over time management, just as garbage
+  % collectors abstract over memory management. (A Survery on RP)
+
+
+  % Devido a ser uma área nova...
+  % Devido ao paradigm shifting (Why FP Matters)
+  % Diante do exposto, este trabalho visa...
+  Este trabalho pretende contextualizar a situação atual
+  de como interfaces orientadas a eventos são implementadas,
+  apresentar os conceitos das abordagens alternativas, e
+  fornecer implementações de alguns componentes comuns em
+  interfaces gráficas, com a finalidade de testar e comparar
+  tais abordagens através do uso de algumas ferramentas
+  (linguagens e/ou \emph{frameworks}). Atenção especial será
+  dada ao ambiente \emph{web}, ou seja, interfaces de
+  aplicações utilizadas nos navegadores, e dependendo do
+  levantamento feito, alguns exemplos poderão ser dados
+  com alguma ferramenta \emph{FRP} para o ambiente
+  \emph{mobile} e/ou \emph{desktop}.
+
+  % Fomentar maior discussão e interesse dos programadores
+  % da comunidade acadêmica e da industria.
+
+  % "To reduce the burden faced by the programmers, there is a need for
+  % dedicated language abstractions to take care of the event handling
+  % logic as well as the management of state changes." ~ Survey on RP
+
+* Metodologia
+  % O método consiste na sequência de passos necessários para
+  % demonstrar que o objetivo foi atingido, [...]
+  %
+  % "O estudo de casos múltiplos – denominado, em algumas áreas, como administração
+  % pública e ciência política, de método de caso comparativo – é preferido quando há
+  % possibilidade de comparar semelhanças e de contrastar diferenças entre os casos
+  % selecionados." ~ UNIVALI, Produção Acadêmico-ciêntífica: A Pesquisa e o Ensaio
+  %
+  % O método vai esclarecer como a hipótese será comprovada pelo autor do
+  % trabalho, e as limitações deixarão claros quais aspectos não serão abordados.
+  %
+  % Dialética é arte do diálogo, onde é possível demonstrar uma tese
+  % através de uma argumentação forte, que consiga distinguir,
+  % com clareza, os conceitos da discussão. É contrapor ideias e delas
+  % tirar novas ideias que comprovem o que está sendo dito.
+  %
+  % - Pesquisa quantitativa testa hipóteses, enquanto a qualitativa
+  %   gera ideias e questões para pesquisa.
+  % - O raciocínio é dialético e indutivo, ao invés de lógico e dedutivo.
+  % - Utiliza comunicação e observação, ao invés de instrumentos específicos.
+  % - É subjetiva ao invés de objetiva. ~ Algum slide na internets
+  %
+  % Ler sobre os tipos de observação direta (LAKATOS, p. 190-195)
+  % Ler capítulo 4.6 de Lakatos: Método dialético
+  % Pesquisa documental vs. pesquisa bibliográfica
+  % Olhar: https://github.com/rlazoti/monografia-posgraduacao/blob/master/documento/Monografia.pdf
+
+  % "uma pesquisa explicativa, começa pelos verbos analisar, avaliar,
+  % verificar, explicar, etc.’" ~ Gerhardt, 2009
+
+  % Case Study is exploratory in nature (HOLZ, 2006 apud ALAVI, 1992)
+  % Concrete programs / exemplos concretos
+
+  % JavaScript é pervasivo/ubíquo (Flapjax)
+
+* Fundamentação Teórica
+  % History: [[https://www.youtube.com/watch?v%3Deis11j_iGMs][Lambda Calculus vs Turing Machine]]
+
+  % Combinators
+  % "A combinator is a particular type of higher-order function that may be used
+  % in defining functions without using variables. The combinators may be combined
+  % to direct values to their correct places in the expression without ever naming
+  % them as variables." -- Fixed-point combinator (Wikipedia)
+
+  % 7.1 Teoria de Base
+  % 7.2 Revisão da Bibliografia
+  % 7.3 Definição dos Termos
+  %
+  % - JavaScript
+  %   - prototype inheritance
+  %   - ECMAScript 6
+  %   - JavaScript imperativo vs. declarativo
+  % - Event-driven programming
+  %   - Continuation-passing Style (CPS)
+  % - Async and Concurrent programming in JS
+  %
+  % Imperativo vs declarativo
+  %   Concepts, Techniques, and Models of Computer Programming
+  %   Chapter 3 → Declarative Programming Techniques
+  %   imperativo: como o computador deve fazer
+  %   declarativo: o que o computador deve fazer
+  %     contra: mais abstrato
+  %
+  % WEB
+  %   HTML5 para aplicações web ricas
+  %   DOM
+  %   Rendering
+  %
+  %
+  % - Related Works
+  %   - http://c2.com/cgi/wiki?EsterelLanguage
+  %   - Reactive Demand Programming
+  %     - http://c2.com/cgi/wiki?ReactiveDemandProgramming
+
+
+  % Cognitive Dimensions of Notations
+
+  % basic exemple of imperative vs functional https://youtu.be/e-5obm1G_FY?t=5m37s
+
+* Conclusão
+  A correspondência encontrada entre duas coisas inventadas, /Iterator Pattern/
+  e /Observer Pattern/, sugere/reforça que há conceitos fundamentais de
+  programação de computadores aguardando serem descobertos. Philip Wadler
+  convida acadêmicos e praticantes a usar linguagens de programação
+  /descobertas/, ao invés de /inventadas/ (Propositions as types). -> PF
+
+  Toda interface gráfica — nativa ou web — é mostrada na tela do computador.
+  Portanto questiona-se o por quê dos modelos de programação serem tão
+  diferentes.
+
+  Academia e Educação..
+
+  No estilo declarativo é possível notar o uso de funções para modelar vários
+  tipos de problemas, um framework de PR propõem modelar até o usuário como uma
+  função: Cycle.js. Veja sua arquitetura na [[https://discventionstech.wordpress.com/2016/09/20/cyclejs-what-if-the-user-was-a-function/][figura]].
+
+  # pode ser um dos artigos a se publicar antes (ou depois?) de citar no TCC
+  Can programming be liberated from the stored-program computer?
+  Dana S. Scott says the Lambda Calculus can be seen as a stored-computer
+  program — *Lambda Calculus Then and Now*, Turing Award 2012.
+
+  Muitas empresas possuem equipes diferentes para desenvolver aplicações para
+  cada plataforma. Isso prejudica o compartilhamento de conhecimento e
+  experiência, a produtividade e o poder criativo, e no final das contas,
+  dinheiro, tempo, e mão de obra.
+
+  Abstrações
+
+  Talvez devêssemos ‘descobrir’ conceitos de programação e ‘criar/inventar’
+  soluções/aplicações.
+
+  Na academia o conceito de abstração de ser melhor entendido, e suas relações
+  com áreas afins também: matemática…. 
+
+  # Abstração da tela
+  Toda interface gráfica é mostrada em tela de computadores — de mesa, móveis,
+  eletrodomésticos (IoT), meios de transporte (IoT), ou até mesmo aparelhos
+  vestíveis. Portanto questina-se o por quê dos modelos de programação serem tão
+  diferentes…
+
+  Há uma necessidade urgente de se criar uma abstração da tela do computador.
+
+  # IDEIA para a aplicação ORG (Abstração das formas de interação com GUIs, ou
+  # com espaços virtuais??)
+  # Usuário pode criar artefatos digitais com base em um contexto, com
+  # gerenciamento de projeto apropriado para cada contexto. Exemplos de contexto:
+  # desenho livre, texto, modelagem 3D, programação.
+
+  - [[https://www.youtube.com/watch?v=Stbc1E5t5E4][Este vídeo]] mostra representações gráficas para explicar integrais, um
+    conceito difícil de cálculo. Isso é um exemplo do uso de representações
+    gráficas para conceitos abstratos.
+  - [[https://www.youtube.com/watch?v=fppgImt8F70][Este (Porta do Fundos - Aplicativos)]] demostra porque devemos ter cuidado
+    para não abstrair demais as coisas.
+
+* Rascunhos
+  % TÍTULO
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Programação declarativa de interfaces gráficas com FRP
+
+  Um Estudo da Aplicação de Programação Funcional Reativa
+  na Programação de Interfaces Gráficas do Usuário (GUIs)
+
+  O Imperativo e o Declarativo na Programação de Leiaute Gráfico
+  e Gerenciamento de Interações de Interfaces Gráficas do Usuário (GUIs)
+
+  O Imperativo e o Declarativo do Leiaute Gráfico
+  e do Gerenciamento de Interações na Programação
+  de Interfaces Gráficas do Usuário (GUIs)
+
+  O imperativo e o declarativo da coordenação de eventos
+  na programação de Interfaces Gráficas do Usuário (GUIs):
+  Um estudo de comparação entre FRP e EDP
+
+  Coordenação de eventos na programação de Interfaces Gráficas
+  do Usuário (GUIs): uma comparação entre abordagens declarativas
+  e imperativas
+
+  % TEMA
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  Programação de sistemas \emph{reativos}\footnote{
+  % Sistemas considerados reativos são assim denominados
+  Sistemas \emph{reativos} são assim denominados
+  porque precisam reagir a eventos do ambiente externo,
+  % como \emph{clicks} do \emph{mouse}, sinais de sensores
+  % ou mensagens de uma rede de computadores.
+  % provindos de dispositivos como \emph{mouse}, teclado,
+  % sensores ou de outros computadores numa rede.
+  como ações do usuário (e.g. \emph{clicks} do \emph{mouse},
+  pressionamento de teclas, gestos multitoque),
+  sinais de sensores (e.g. acelerômetro, giroscópio),
+  ou mensagens de outros computadores, programas ou \emph{threads}.
+  Na literatura, costuma-se também referir-se a eles como
+  \emph{orientados a eventos (event-driven).}
+  % Esses sistemas também são muito referidos como
+  % \emph{orientados a eventos}.
+  % A literatura também costuma chamar esses sistemas...
+
+  "Sistemas reativos são definidos como sistemas de mantêm
+  interação contínua com o ambiente externo." ~ Pucella (1998)
+
+  }.
+
+  % Ao estudar programação de interfaces gráficas,
+  % em especial as de aplicações web, deparei-me
+  % com o paradigma de \emph{Programação Funcional},
+  % \emph{Programação Funcional Reativa (FRP)}
+  % pode ser definido de maneira simplificada
+  % como a intersecção dos paradigmas de
+  % \emph{Programação Funcional}\footnote{
+  %   \emph{Programação Funcional} é um modelo de
+  %   programação que enfatiza a composição de funções,
+  %   no sentido matemático, ao invés de objetos.
+  % } e \emph{Programação Reativa}\footnote{
+  %   \textcquote[p.~5, tradução nossa]{blackheath2016frp}
+  %   {\emph{Programação Reativa} -- é um termo amplo que
+  %    significa que um programa 1. é orientado a eventos,
+  %    2. age em resposta a entradas, e 3. é visto como um
+  %    fluxo de dados, ao invés do tradicional fluxo de controle.}.
+  % }.
+
+  % Intro to FRP with Cycle.js
+
+  % DELIMITAÇÃO DO TEMA
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  % Os desafios do programador no desenvolvimento de interfaces gráficas
+
+  % Em GUIs o gerenciamento de interações se dá de forma reativa...
+  % Em GUIs o gerenciamento de interações se dá atráves da reação a
+
+  % Domínios afins...
+  % "áreas afins" ~ UNIVALI (Produção Acadêmico-ciêntífica: A Pesquisa e o Ensaio, p. 17)
+
+  % Fundamentação Teórica
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  % minted or listings package for source code
+
+  % "Callbacks, observers and listeners all represent essentially the same concept." (KISS, 2014)
+
+  % Funcional Programming operators/concepts are used to coordinate
+  % events comming through
+
+* Music Quotes
+  “We're not nameless, we're note faceless, we were born for greatness.” — *Born
+  for Greatness*, Papa Roach. #lambdas
+
+  “Do you even care if I die baby?” — *Last Resort*, Papa Roach. #state
+  #assignment #mutable_variables
+
+  “Let the body set the flow.” — ????. #closures? #let #defn #functions
+
+  “I'm gonna send you outer space, to find another race.” — *Out of Space*,
+  Prodigy. #imperative #state #sequence #callbacks
+
+  *Concrete Jungle*, Black Label Society
+
+  I've got little games I play when it goes really hard. When I'm working in the
+  factory... and the machines, they make these... rhythms... and i just start
+  dreaming and it all becomes music. *Machines in Heaven*, Hi Profile. Lyrics on
+  [[https://twitter.com/bassnectarlyric/status/525309726490640384?lang=en][-:> Twitter]]
+
+  “Creation is a process.” *Gene Machine*, Space Tribe, Laughing Budda
+
+  *Time Simulation*, Talamasca #frp #continuousTime
+
+* Quotes
+* Courses
+** SICP: Structure and Interpretation of Computer Programs
+*** Lecture 01: Overview and Introduction to Lisp
+    “It's very easy to confuse the essence of what you are doing with the tools
+    that you use.” — [[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/1a-overview-and-introduction-to-lisp/][Hal Abelson, Overview and Introduction to Lisp]]
+
+    O trabalho de um cientista da computação é estudar a essência do controle de
+    complexidade. O trabalho de um engenheiro de software é criar e manter
+    programas de computadores. Engenharia de computação estuda formas de
+    implementar máquinas de computação, *computadores*, a partir de materiais
+    físicos…. Engenharia eletrônica. Engenharia elétrica.
+
+    “The constraints imposed in building large software systems are the
+    limitations of our own minds. So in that sense, computer science is like an
+    abstract form of engineering. It's a kind of engineering where you ignore the
+    constraints that are imposed by reality.” — Abelson
+
+    “So I'd like to express not only the imperative how-to knowledge of a
+    particular thing like square root, but I'd like to express the imperative
+    knowledge of how to do a general thing like how to find fixed point.”
+
+    “Procedures are ways of talking about imperative knowledge.”
+
+    Put black boxes around them (combinations of primitive data and functions),
+    so you can use them as components in more complex things. That's done by
+    defining functions and a technique for dealing with compound data called
+    ‘data abstraction’.
+
+    “Further, as we become more abstract, the line between we consider to be data
+    and the line between what we consider to be procedures is going to blur at an
+    incredible rate.” 19m50s
+*** Lecture 02:
+    2m30s -> ex. da soma dos quadrados de x e y
+
+    “The substitution model is the simplest model that we have for understanding
+    how  procedures  work   and  how  processes  work.   How  procedures  yields
+    processes.”
+
+    “That substitution model will be accurate for most of the things […]. But
+    eventually, it will become impossible to sustain the illusion that that's
+    the way the machine works, and we'll go to other specific and particular
+    models that will show more detail.”
+
+    “understand what's going on in the evolution of a process by the execution
+    of a program”
+
+    “the shape of a process as a consequence of the programa”
+* Talks
+  RxJS -> NetFlix -> Stream Movies From Any Device
+
+  -> 1/3 of US Broadband Traffic -> The History of How Netflix, Microsoft and
+  orthers [[https://www.youtube.com/watch?v=yEeDbHvg1vQ][solved BIG async problems]]:
+  - *memory leaks*: takeUntil
+  - *race conditions*: concatAll, mergeAll, switchLatest
+  - callback hell: declarative expressions/queries
+  - complex state machines: e.g., an autocomplete search box 25m
+  - error handling
+
+  Top-rated Movies Collection vs. Mouse Drags Collection
+  Observable: a collection over time
+  Array.forEach blocks (operação síncrona) 16m10s
+  Observable.forEach (operação assíncrona)
+  “Observable.forEach has some more tricks up its sleave. This is where we see
+  that we closed the gap between what the Iterator can do, and what the Observer
+  pattern can do. In the Observer, when you call forEach, you can pass 2 more
+  optional callbacks:
+  - error callback: if during that query or expression that you've written, an
+    error occurs anywhere, it gets fowarded up to where you've forEached over
+    it, and you can catch it. And the effect is essentially like a try…catch.
+    Only when you forEach over it that you have to catch it;
+  - done callback: by the way, no more data.”
+
+  “Observer pattern back then is the precursor to what we know as callbacks,
+  pub-sub, event emitter.”
+
+  21m: concatAll, mergeAll, switchLatest 
+
+  23m30s: “takeUntil is the reason that I have not unsubscribed from an event in
+  the last five years. And my code is not full of memory leaks. I don't
+  unsubscribe from events anymore, I declaratively descrive the conditions under
+  which I want my event source /(data producer)/ to just end.”
+
+  24m: “The thing about an Observable that can tell you that no more data is
+  comming: it can free your event handler for you. This is what document.onload
+  should do, as soon as it fires that event handler it knows it's never gona
+  fire it again, so it should just free your handler.”
+
+  30m: takeUntil + concatAll = switchLatest
+
+  30m40s: The Netflix Player, with *callback hell* and with *Observable*
+
+  Não há necessidade do conceito de estado/memória em expressões que
+  transformam/processam dados, elas precisam apenas expressar relações
+  (matematicamente?) entre valores, ou mapeamento entre valores, ou seja a
+  expressão precisa apenas ser um função, no sentido matemático.
+
+  “Netflix had five of six different languages, where they where going about and
+  trying to solve asynchronous problems in different ways. It wasn't until they
+  discovered something like the reactive extentions, that it suddently it poped
+  a light for them, that they realized that they could write their entire set of
+  applications using one kind of language as it where.”
+
+  “Arrays are collections in memory, events are collections over time.”
+
+  Arranjos são coleções na memória, eventos são coleções ao longo do tempo.
+
+  Iterator Pattern with ES2015:
+
+  #+BEGIN_SRC js
+     iterator.next() // { value: 1, done: false } pulling data/values
+     iterator.next() // { value: 2, done: false }
+     iterator.next() // { value: 3, done: true }
+  #+END_SRC
+
+  Subject/Observer Pattern with the DOM:
+
+  #+BEGIN_SRC js
+     document.addEventListener(
+       'mousemove',
+       e => console.log(e))          // pushing data/values
+
+     // { clientX: 425, clientY: 580 }
+     // { clientX: 450, clientY: 577 }
+     // { clientX: 475, clientY: 570 }
+  #+END_SRC
+
+  #+caption: Observable is Subject/Observer done right
+  #+BEGIN_SRC js
+     interface Observable<T> {
+       subscribe(o: Observer<T>) => Subscription;
+     }
+
+     interface Subscription {
+       unsubscribe() : void;
+     }
+
+     interface Observer<T> {
+       next: (value: T) => void;
+       error: (err: any) => void;
+       complete: () => void;
+     }
+  #+END_SRC
+
+  First-Class Asynchronous Values
+
+  The General Theory of Reactivity
+
+** Understanding FRP With Plumbing, [[https://www.youtube.com/watch?v=Y0bN7WmMGmg][N1, & Email]]
+   “it's a bunch of twitts, of emails, of events coming in”
+
+   “Thinking declaratively turns coding into a plumbing problem. At this point
+   you're worried in wiring things up correctly so you get your data going to
+   where it needs to be accessed, instead of worrying about where the stated is
+   at all times.”
+
+   “Thinking functionally keeps unwanted side effects at bay. It's about keeping
+   these pipes from leaking. It's about keeping the inputs and outputs
+   consistent. Which really helps building systems like these.”
+
+   “Thinking reactively forces you to build for changing data
+
+** Luke Westby – Putting the Elm Platform in the Browser | OsloElmDay 2017
+   SEPTEMBER 2017: [[https://www.youtube.com/watch?v=GwmVELtQnOI&t=1213s][Ellie]] Release
+* Apresentação
+  Usar [[https://github.com/abingham/jupyter-elm-kernel][Elm]] e [[http://jupyter.org/][Jupyter]] para fazer os slides da apresentação. É possível incluir
+  [[https://www.youtube.com/watch?v=p8cHarclNnc][execução de programas ao vivo]] e visualizações interativas.
+
+  ‘Code can produce *rich output* such as images, videos, LaTeX, and JavaScript.
+  *Interactive widgets* can be used to *manipulate and visualize data* in
+  realtime.’
+
+* Thesis First Thoughts
+** Manual de Programação de Computadores
+*** Problemas Computacionais
+    Complexidade Computacional
+*** Abstraindo Complexidade
+**** Generalização de problemas
+**** Parametrização de partes
+*** Programação Síncrona
+**** Ferramentas de Abstração
+*** Programação Assíncrona
+
+* Footnotes
+
+[fn:webApps] Alguns exemplos de aplicações ricas são: calendários (\emph{Google
+  Calendar}), clientes de email (\emph{Gmail} e \emph{Outlook}), \emph{chats}
+  (\emph{Facebook Messenger}), editores de texto (\emph{Google Docs}), mapas
+  (\emph{Google Maps}, \emph{Waze}) e planilhas (\emph{Google Sheets}). Leia
+  mais no TCC de \citeonline{kuntze2008aplicacoesricas}: \emph{Aplicações Ricas
+  com Ajax}.
+
+[fn:ajax]  /Ajax (Asynchronous JavaScript + XML)/ é uma abordagem que abrange
+  várias técnicas e tecnologias que permitem a criação de páginas web dinâmicas
+  onde a troca de conteúdo entre cliente e servidor ocorre de forma assíncrona,
+  sem a necessidade de recarregar a página toda \cite{garrett2005ajax}.
