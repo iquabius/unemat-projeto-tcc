@@ -141,414 +141,1487 @@
     | Assembly Langs.   |   |   |   |   |
     | Lambda Calculus   |   |   |   |   |
 
+** Programação de Computadores
+   # programa de computador
+   # linguagem de programação
+   # -> modelo de computação
+   Um programa de computador é expresso por um conjunto de sentenças em alguma
+   linguagem de programação.[fn:statement] A forma como as sentenças de uma
+   linguagem são executadas pelo computador é definida por um /modelo de
+   computação/ cite:roy2004.
 
-** Paradigmas de Programação
-   Melo (2003, pg. 10) fala sobre as diferentes formas de solucionar problemas.
-   Os elementos a serem representados, e os mecanismos que as linguagens devem
-   prover para permitir a representação e a manipulação naturais dos elementos
-   básicos.
+   # Um programa de computador constitui de um conjunto de sentenças em alguma
+   # linguagem de programação que são executadas pelo computador.[fn:statement]
+   # Uma linguagem, assim como a forma em que suas sentenças são executadas, é
+   # definida por um /modelo de computação/ cite:roy2004.
+
+   # O código fonte de programas são tradicionalmente escritos como uma série de
+   # instruções que expressam uma sequencia de comandos a se seguir durante o
+   # /tempo de execução/ — /runtime/ em inglês.
+
+   # As instruções de um programa tradicionalmente expressão uma sequência de
+   # comandos a se seguir durante o /tempo de execução/ — /runtime/ em inglês.
+
+   # Programas são tradicionalmente escritos de forma que suas instruções no
+   # código fonte expressam uma sequência de comandos a se seguir durante a
+   # execução — esse período é conhecido como /tempo de execução/, do inglês
+   # /runtime/.
+
+   # sequência
+   # tradicionalmente explícita
+   # -> tempo de execução
+   # -> linguagem imperativa
+   O código fonte de um programa consiste de uma série de instruções que
+   expressam uma sequência de comandos a se seguir durante a execução — esse
+   período é conhecido como /tempo de execução/, do inglês /runtime/.
+   Tradicionalmente, as sentenças de uma linguagem de programação denotam essa
+   sequência de forma explícita. Tais linguagens são baseadas no modelo
+   /imperativo/ de computação, e são denominadas /linguagens imperativas/.
+
+   # Na
+   # Seção [[sec:langs]] é discutida a influência do modelo imperativo na maioria
+   # das linguagens de programação utilizadas atualmente.
+   # denota, indica, revela, exprimi,
+
+   # Tais linguagens são baseadas no modelo /imperativo/ de computação, e ao
+   # longo dos anos elas têm sido muito influenciadas pelo modelo imperativo.
+
+   # Expressar explicitamente uma sequência de instruções é uma característica
+   # muito comum de linguagens que utilizam o modelo /imperativo/ de computação.
+   # Nesse modelo as sentenças da linguagem denota uma sequência explícita de
+   # instruções.
+
+   # Durante sua execução[fn:runtime] o programa segue um caminho de acordo com
+   # seu /estado/ interno — ou /memória/, o que um programa se lembra enquanto
+   # está ‘rodando’. Programas com estado interno, ou /statefull/ em inglês, são
+   # projetados para lembrar de eventos anteriores ou de interações com o usuário.
+   # A informação recordada é denominada o estado do programa cite:rouse2005.
+
+   # A programação de um computador é um processo que engloba conceitos e técnicas
+   # para criação de programas. Antes de discutir conceitos e técnicas de
+   # programação, é importante entender algumas propriedades e o comportamento do
+   # que se procura construir: o programa de computador.
+
+   # Tal comportamento é definido em termos do que o programa se lembra, sua
+   # /memória/ ou /estado/, e do caminho a se seguir em tempo de execução —
+   # /‘runtime’/ em inglês.
+
+   # O comportamento de um programa muda de acordo com seu /estado/ interno — ou
+   # /memória/, o que um programa se lembra enquanto está ‘rodando’. Seu estado
+   # interno define o caminho a se seguir em tempo de execução — /‘runtime’/ em
+   # inglês.
+
+   # “Declarative programming is a non-imperative style of programming in which
+   # programs describe their desired results without explicitly listing commands
+   # or steps that must be performed.”
+
+   # deixar isso para o final da seção sobre programação imperativa
+   # Há também o modelo /declarativo/ de computação, em que programas descrevem os
+   # resultados desejados sem listar explicitamente os comandos ou passos a serem
+   # realizados.
+
+   # O modelo imperativo de computação é o mais utilizado em livros acadêmicos e
+   # manuais de programação. Portanto, explicações detalhadas desse modelo são
+   # omitidas, e uma breve revisão histórica é dada na seção XXX. O modelo
+   # declarativo é descrito na seção XXX, e as principais diferenças do modelo
+   # imperativo são ressaltadas.
+
+   # A maioria das linguagens de programação utilizam o modelo /imperativo/…
+
+   # O programador escreve uma sequência de passos ou instruções a serem
+   # executadas pelo computador.
+
+   # O programador escreve uma /sequência/ de passos que expressão /como/ o programa
+   # se comportará durante a execução.
+
+   # deixar a relação entre programação imperativa e a arquitetura de von newman
+   # para fim
+   # Turing machine, von Newman machine
+   # Desde o formalismo da /Máquina de Turing/ em citeyear:turing1937, 
+
+*** Linguagens de Programação
+    <<sec:langs>>
+
+    Linguagens de programação são mais simples que linguagens naturais, no
+    entanto, elas ainda podem conter uma sintaxe surpreendentemente rica, um
+    conjunto de abstrações, e bibliotecas auxiliares. Esse é essencialmente o
+    caso de linguagens usadas para resolver problemas reais do dia-a-dia.
+    \citeauthoronline{roy2004} as chamam de linguagens /práticas/, que são
+    “\textelp{} como a caixa de ferramentas de um mecânico experiente: há várias
+    ferramentas diferentes para finalidades diferentes e todas estão lá por uma
+    razão.” (citeyear:roy2004, p. 33; tradução nossa).
+
+    # A maioria das linguagens utilizadas atualmente possuem várias ferramentas
+    # influênciadas pelo modelo imperativo de computação.
+    # Para entender o por que, é preciso entender exatamente o que o modelo
+    # imperativo.
+    # imperativo -> com estado
+    # computador com programa armazenado -> máquina de Turing.
+
+    # Linguagens de programação imperativas incluem sentenças para manipulação
+    # de memória/estado, e para controlar o caminho que o programa deve seguir.
+
+    Todas as linguagens de programação possuem elementos primitivos para a
+    descrição de dados e das transformações, ou processos, aplicados à eles —
+    como a adição de dois números ou a seleção de um item de uma coleção. Essas
+    primitivas são definidas por regras de sintaxe — a gramática — e pela
+    semântica — o significado.
+
+    # dados
+    # processos
+    # -> sintaxe
+    # -> semântica
+    Linguagens imperativas geralmente oferecem comandos para lidar com estado em
+    tempo de execução, como declaração e atribuição de variáveis, e comandos
+    para controlar o caminho que o programa deve seguir, como os que decidem a
+    ordem de execução das sentenças — na literatura essa ordem é chamada de
+    /fluxo de controle/ de um programa.
+    # linguagens de programação onipresentes no desenvolvimento de software em
+    # larga escala.
+
+    # -> estado
+    # Começar com programas com estado /stateful/ e sem estado /stateless/.
+    Durante sua execução o programa segue um caminho de acordo com seu /estado/
+    interno — ou /memória/, o que um programa se lembra enquanto está ‘rodando’.
+    Programas com estado interno, ou /statefull/ em inglês, são projetados para
+    lembrar de eventos anteriores ou de interações com o usuário. A informação
+    recordada é denominada o estado do programa cite:rouse2005.
+    # Terminar com tempo de execução
+
+    # O /estado/ da qual \citeauthoronline{edwards2009} se refere consiste das
+    # informações que o programa se lembra — sua memória interna.
+
+    # state + control flow => complexity
+    # 
+    # A especificação desnecessária da sequência de execução — a ordem em que as
+    # coisas acontecem, e o uso indiscriminado de estado já formam apontadas
+    # como algumas das principais causas de complexidade em sistemas
+    # contemporâneos cite:moseley2006. Expressar explicitamente uma ordem é
+    # típico do modelo /imperativo/ de programação, comum em linguagens
+    # procedurais e orientadas a objetos.
+
+    # “All programming languages have some primitive building blocks for the
+    # description of data and the processes or transformations applied to them
+    # (like the addition of two numbers or the selection of an item from a
+    # collection). These primitives are defined by syntactic and semantic rules
+    # which describe their structure and meaning respectively.” - Wikipedia:
+    # [[https://en.wikipedia.org/wiki/Programming_language#Elements][Programming Languages]]
+
+    # “This section sets the stage for the rest of the book by explaining how we
+    # will present the syntax (‘grammar’) and semantics (‘meaning’) of practical
+    # pro- gramming languages. With this foundation we will be ready to present
+    # the first computation model of the book, namely the declarative computation
+    # model.” cite:roy2004 p. 33.
+
+**** COMMENT Modelo Imperativo de Programação
+   # A execução em série delas caracteriza o modelo /imperativo/ de computação,
+   # em que as sentenças de uma linguagem expressam uma sequência de instruções.
+   # que podem acarretar na alteração do estado interno de um programa em
+   # execução. troquei ‘operações’ por ‘comandos’
+
+     # Passos -> comandos, atribuição
+     Em linguagens de programação imperativas um programa é descrito em termos de
+     comandos a serem efetuados pelo computador, de maneira semelhante ao que o
+     modo imperativo em linguagens naturais expressão comandos.
+
+     Um programador, ao utilizar uma linguagem de programação imperativa, escreve
+     uma sentença que expressa um comando a ser efetuado pelo computador. Um
+     interlocutor, ao utilizar uma linguagem natural, escreve uma sentença que
+     expressa um comando a ser seguido pelo recipiente???
+
+  # imperativas, onde os problemas de sequência imprevisível é inerente, como é
+  # observado por \citeauthoronline{edwards2009} (citeyear:edwards2009).
+
+     # estruturas de controle, fluxo de controle,
+     # comandos, fluxo  -> programação imperativa
+     /Declaração/ de variáveis e /atribuição/ de valores são dois comandos
+     típicos de linguagens imperativas. Outros comandos incluem:
+
+    - comandos de controle explícito: que decidem o caminho de execução do
+      programa, dentre os vários possíveis:
+      1. comando /goto/;
+      2. comandos compostos (blocos /begin...end/, /.../, etc)
+      3. e outros, como /break/, /continue/, /return/, e exceções (comandos
+         mais elaborados para controle de sequência).
+    - comandos condicionais: /if...else/, /switch...case/;
+    - comandos iterativos: unbounded (/while/, /do...while/) and bounded
+      iteration (/for/, /foreach/, /for...in/).
+
+    # Linguagem natural imperativa, receita de Blackheath2016
+
+    # abstração de comandos em procedimentos -> programação procedural
+    # procedimento: constitui em uma série de passos computacionais a serem
+    # efetuados.
+
+    Motivações e Fundamentos da Programação Imperativa:
+
+    # “Since the basic ideas of imperative programming are both conceptually
+    # familiar and directly embodied in the hardware, most computer languages are
+    # in the imperative style.” [[https://en.wikipedia.org/wiki/Imperative_programming][Wikipedia: Imperative Programming]]
+
+    # A ideia de um programa representado como uma sequência de comandos remete a
+    # arquitetura de von Neumman, que descreve o primeiro computador eletrônico…
+
+    Há também o modelo /declarativo/ de computação, em que programas descrevem
+    os resultados desejados sem listar explicitamente os comandos ou passos a
+    serem realizados.
+
+*** COMMENT Estilo Declarativo de Programação
+    # “Why declarative programming is important” cite:roy2004 p. 113-114
+
+    # “Stateless and stateful programming are often called declarative and
+    # imperative programming, respectively. The latter terms are not quite right,
+    # but tradition has kept their use.” cite:roy2004 p. 415.
+
+    # “Stateless and stateful programming are often called declarative and
+    # imperative programming, respectively. The latter terms are not quite right,
+    # but tradition has kept their use.” cite:roy2004 p. 415.
+
+   # “The real problem is that ‘declarative’ is not an absolute property, but a
+   # matter of degree.” \cite[p. 415]{roy2004}. Fortran é declarativo, já que
+   # permite o uso de expressões aritméticas… “linguagens têm se tornadas mais
+   # declarativas ao longo dos anos”.
+
+   # A principal diferença entre o modelo declarativo e o imperativo é que nesse o
+   # controle da ordem de computações é explícito na linguagem.
+
+   # A enfase no controle explícito da ordem de computações distingue uma
+   # linguagem imperativa de uma linguagem declarativa de programação.
+
+   # “The emphasis on explicit control flow distinguishes an imperative
+   # programming language from a declarative programming language.” — Wikipedia:
+   # [[https://en.wikipedia.org/wiki/Control_flow][Control Flow]].
+
+   # “The language Fortran, developed in the late 1950's, was the
+   # first mainstream language that allowed writing arithmetic expressions in a
+   # syntax that resembles mathematical notation [13]. Compared to assembly
+   # language this is definitely declarative!”
+
+*** Paradigmas de Programação
+    # rejeição do goto -> programação estruturada.
+    # surgimento da ideia de ‘paradigmas de programação’ fonte??
+
+    # programação orientada a objetos.   
+
+   Programação é uma disciplina extensa, e linguagens práticas de programação
+   geralmente são bastante complicadas. Felizmente, as ideias importantes de
+   linguagens de programação são simples cite:roy2009. Um /paradigma de
+   programação/:
 
    #+BEGIN_EXPORT latex
    \begin{citacao}
-     Linguagens de programação orientadas a objetos podem ser vistas como
-     ferramentas para construir soluções de problemas orientadas \emph{por}
-     objetos, linguagens imperativas podem ser vistas como ferramentas para
-     construir soluções de problemas orientadas \emph{por} dados, e linguagens
-     declarativas podem ser vistas como ferramentas para construir soluções de
-     problemas orientadas \emph{por} relações entre declarações. (pg. 10)
+     \textelp{} é uma abordagem para a programação de um computador baseada em uma
+     teoria matemática ou um conjunto coerente de princípios. \cite[p.~10; tradução
+     nossa]{roy2009}
    \end{citacao}
    #+END_EXPORT
 
-*** Programação Estruturada
+   #   Um paradigma é um conjunto de conceitos de programação…
+   #
+   #   Um modelo de programação compreende um conjunto de conceitos organizados de
+   #   forma integrada.
+   #
+   #   “Each paradigm supports a set of concepts that makes it the best for a
+   #   certain kind of problem.”
 
-*** Programação Procedural
+   É mais interessante focar em paradigmas de programação do que em linguagens,
+   porque há muito menos paradigmas que linguagens, como pode-se notar na Figura
+   \ref{img:LangsParadigmsConcepts} cite:roy2009. Segundo
+   \citeauthoronline{roy2009}:
 
-*** Programação Orientada a Objetos
+   #+BEGIN_EXPORT latex
+   \begin{citacao}
+     Os conceitos são os elementos primitivos básicos usados para construir os
+     paradigmas. Muitas vezes dois paradigmas que parecem muitos diferentes (por
+     exemplo, programação funcional e programação orientada a objetos) diferem por
+     apenas um conceito. \cite[p.~13; tradução nossa]{roy2009}
+   \end{citacao}
+   #+END_EXPORT
 
-*** Programação Orientada a Eventos
-   - Design Patterns :: /Observer Pattern/
-   - /Callbacks/ ::
-
-*** Programação Funcional
-    #+BEGIN_EXPORT latex
-    \enquote{A base do $\lambda$-cálculo é o conceito de avaliação de funções
-      matemáticas, sendo esse o fundamento essencial da \emph{programação
-        funcional.}} (Melo, 2003, pg. 130).
-    #+END_EXPORT
-
-    “Esse processo se dá por meio de transformações sucessivas do programa, que
-    devem convergir para o resultado desejado. Essas transformações recebem o
-    nome de /reduções/.” (Melo, 2003, pg. 130).
-
-    “A execução de um programa funcional consiste na aplicação exaustiva das
-    regras de redução.” (Melo, 2003, pg. 133).
-
-    #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
-    - Cálculo lambda não tipado :: Inspiração original, em particular do /Lisp/,
-         umas das primeiras linguagens a ter suporte para programação funcional;
-    - Programação declarativa ::
-    - Expressões :: (1) Variáveis imutáveis (variáveis vinculadas a expressões,
-                    que mantém um único valor durante todo o tempo de vida
-                    útil). (2) Expressões puras e efeitos colaterais na redução
-                    de expressões;
-    - Funções :: (1) PF é baseada na aplicação de funções. (2) Faz amplo uso de
-                 expressões /lambda/ (funções anônimas). (3) Também desencoraja
-                 o uso de funções impuras (que contém efeitos colaterais);
-    - Funções de primeira classe :: /first-class functions/
-    - Funções de Ordem Superior :: /(Higher-order Functions)/, Funções como
-         argumentos, Funções como valores retornados;
-    - Composição de funções :: Combinação de funções;
-    - Aplicação Parcial de Funções :: /Currying/
-    - Primitivas Básicas de PF :: /map/, /filter/, /fold/, /reduce/, /scan/, e
-         /zip/;
-
-**** Manipulação de coleções
-     Uma coleção é um agrupamento de um número variável de itens, que (1)
-     compartilham algum significado ao problema a se resolver e (2) precisam ser
-     manipulados juntos de forma controlada.
-
-     O único tipo de coleção no JavaScript é o arranjo (/array/), que pode ser
-     construído através do objeto[fn:prototypes] global ~Array~, ou da notação
-     de arranjos literais com colchetes:
-
-     #+BEGIN_SRC js
-     var collection1 = new Array()
-     var collection2 = []
-     #+END_SRC
-
-     Uma tarefa muito comum na programação é a iteração[fn:iteration] de
-     coleções. Um mecanismo muito utilizado para tal é o comando ~for~. Em
-     \ref{code:forLoopTraverse} é demonstrado o uso do comando ~for~ para
-     percorrer os itens da coleção ~people~ e mostrar cada um no console de
-     depuração.
-
-     #+caption: Percorrendo uma coleção com o laço ~for~
-     #+label: code:forLoopTraverse
-     #+BEGIN_SRC js
-     var people = ["Alan Turing", "Alonzo Church", "Kurt Gödel"]
-     var count
-
-     for (count = 0; count < people.length; count++) {
-       console.log(people[count])
+   #+BEGIN_EXPORT latex
+   \begin{figure}[htb]
+     \centering
+     \caption{
+       \label{img:LangsParadigmsConcepts}
+       Linguagens, paradigmas, e conceitos de programação.
      }
-     #+END_SRC
+     \includegraphics[width=12cm]{./img/VanRoy2009_languages_paradigms_and_concepts.jpeg}
+     \legend{Fonte: \citeauthor{roy2009}, \citeyear{roy2009}, p.~12.}
+   \end{figure}
+   #+END_EXPORT
 
-     Em \ref{code:forLoopDoubleNumbers} é demonstrada a tarefa de dobrar os
-     valores de uma coleção de números, que utiliza a instrução ~for~ para
-     percorrer os itens. Cada valor é multiplicado por 2, e o resultado é
-     adicionado a outra coleção.
+   # “Just as software engineering (as a process) is defined by differing
+   # methodologies, so the programming languages (as models of computation) are
+   # defined by differing paradigms.” ([[https://en.wikipedia.org/wiki/Programming_paradigm][Wikipedia]]).
 
-     #+label: code:forLoopDoubleNumbers
-     #+caption: Dobrando os valores de uma coleção com ~for~
-     #+BEGIN_SRC js
-     var numbers = [1, 2, 3, 4]      // coleção original
-     var doubled = []                // coleção de resultados
-     var i                           // contador
+   Da mesma forma que em engenharia de software (como um processo) pode-se
+   adotar diferentes metodologias de desenvolvimento, em linguagens de
+   programação (como modelos de computação) é desejável utilizar diferentes
+   paradigmas de programação. Linguagens tradicionais como Java e C++ dão
+   suporte a um ou dois paradigmas diferentes. “Isso é lamentável, pois
+   problemas de programação diferentes precisam de conceitos diferentes de
+   programação para serem resolvidos claramente.” \cite[p. 10]{roy2009}.
+   \citeauthoronline{roy2009} defende o uso de um modelo de programação
+   /multiparadigma/, porque:
 
-     for (i = 0; i < numbers.length; i++) {
-       var dobro = numbers[i] * 2    // dobra o valor
-       doubled.push(dobro)           // adiciona aos resultados
+   #+BEGIN_EXPORT latex
+   \begin{citacao}
+     Idealmente, uma linguagem deveria dar suporte a vários conceitos de forma bem
+     integrada, para que o programador possa escolher os conceitos certos sempre
+     que forem necessários, sem que um complique o outro. (\citeyear{roy2009},
+     p.~10; tradução nossa)
+   \end{citacao}
+   #+END_EXPORT
+
+   Apesar de linguagens tradicionais não dar suporte a esse modelo, entender os
+   conceitos certos pode melhorar a forma de programação, mesmo em linguagens
+   que não dê suporte direto a eles, assim como programação orientada a objetos
+   é possível em C com a atitude adequada cite:roy2009.
+
+   \citeauthoronline{roy2009} (citeyear:roy2009) apresenta quatro modelos
+   importantes que simplificam programação concorrente em relação à linguagens
+   convencionais: /concorrência declarativa/, /programação funcional reativa/,
+   /programação síncrona discreta/, e /programação com restrições/.
+
+   No modelo declarativo de concorrência o resultado de um programa pode ser
+   calculado incrementalmente. “Se a entrada de um programa concorrente é dada
+   incrementalmente, então o programa também irá calcular o resultado de saída
+   incrementalmente.” \cite[p.~238; tradução nossa]{roy2004}. Esses paradigmas
+   não possuem condições de corrida, /‘race conditions’/ em inglês.
+
+#   \citeonline{roy2009} apresenta quatro paradigmas importantes de programação
+#   concorrente (que não possuem não-determinismo observável).
+
+#   Comentar mudança de paradigma (/paradigm shifting/).
+
+ #  \citeonline{roy2009} mostra duas propriedades importantes dos paradigmas: se
+ #  eles possuem ou não /não-determinismo observável/ e o quanto eles dão suporte
+ #  a /estado/.
+
+*** Programação de Interfaces Gráficas
+    # Programação Concorrente
+    # “The real world is concurrent: it consists of activities that evolve
+    # independently.” \cite[p.~25; tradução nossa]{roy2009}
+
+    # “We would like our program to have several independent activities, each of
+    # which executes at its own pace. This is called concurrency. There should be
+    # no interference between the activities, unless the programmer decides that
+    # they need to communicate. This is how the real world works outside of the
+    # system. We would like to be able to do this inside the system as well.”
+    # \cite[p. 16-17]{roy2004}.
+
+    # “What happens if an operation tries to use a variable that is not yet bound?
+    # From a purely aesthetic point of view, it would be nice if the operation
+    # would simply wait. Perhaps some other thread will bind the variable, and
+    # then the operation can continue. This civilized behavior is known as
+    # /dataflow/.” \cite[p. 17]{roy2004}.
+
+    # “Concurrency is essential for programs that interact with their environment,
+    # e.g., for agents, GUI programming, OS interaction, and so forth.”
+    # cite:roy2009.
+
+    # “Concurrency also lets a program be organized into parts that execute
+    # independently and interact only when needed, i.e., client/server and
+    # producer/consumer programs. This is an important software engineering
+    # property.” \cite[p.~237; tradução nossa]{roy2004}
+
+    # “Concurrent programming is much easier with the declarative concurrent
+    # paradigm, in which all programs are deterministic.”
+    # \cite[p.~14; tradução nossa]{roy2009}
+
+    # “Discrete synchronous programming is best for reactive problems, i.e.,
+    # problems that consist of reactions to sequences of external events.”
+    # \cite[p.~10; tradução nossa]{roy2009}
+
+    # Paradigm summaries ([[https://en.wikipedia.org/wiki/Comparison_of_multi-paradigm_programming_languages][Wikipedia]]):
+    # - /Concurrent Programming/: have language constructs for concurrency, these
+    #   may involve multi-threading, support for distributed computing, message
+    #   passing, shared resources (including shared memory), or futures;
+    #   - /Actor Programming/: concurrent computation with actors that make local
+    #     decisions in response to the environment (capable of selfish or
+    #     competitive behavior);
+    # - /Dataflow Programming/: forced recalculation of formulas when data values
+    #   change (e.g. spreadsheets);
+    # - /Declarative programming/: describes actions (e.g. HTML describes a page
+    #   but not how to actually display it);
+    # - /Functional programming/: uses evaluation of mathematical functions and
+    #   avoids state and mutable data;
+    # - /Imperative programming/: explicit statements that change a program state;
+
+    Conforme é notado por \citeonline{blackheath2016}, a maioria das aplicações
+    que interagem com o ambiente externo são arquitetadas em torno de dois
+    modelos de programaçao, ou uma mistura dos dois:
+
+    - /Threads/ :: modelam transições de estado como um fluxo de controle.
+                   Adequadas para operações de I/O ou qualquer situação onde as
+                   transições de estado se enquadram em uma sequência claramente
+                   definida.
+    - Eventos :: são mensagens discretas e assíncronas que são propagadas pela
+                 aplicação. Formam um modelo adequado para sequências menos
+                 óbvias, principalmente onde as interações entre componentes são
+                 mais complexas. Algumas aplicações incluem /GUIs/ e video
+                 games.
+
+    Alguns problemas de computação são melhor resolvidos com o modelo baseado
+    em /threads/. No entanto \citeonline{blackheath2016} afirmam que a
+    abordagem com eventos geralmente é a melhor escolha.
+
+    # “Threads allow you to express sequence; events allow you to express
+    # dependency. In different situations, both are needed. A lot of problems come
+    # from trying to express dependency with threads, or sequences with events.”
+    # \cite[p. 16]{blackheath2016}
+
+    #  Destacamos (entre eles, destacam-se o) /gerenciamento de partes
+    #  independentes/ (concorrência) e controle de estado em programas de
+    #  computador. Em interfaces gráficas a coordenação apropriada das partes — por
+    #  exemplo, usuário e tela do computador —
+    #
+
+     # - memory leaks: forgot to unregister from event, ops;
+     # - race conditions;
+     # - callback hell;
+     # - complex state machines: where does my code goes next?
+     # - disjointed error handling: error handling on five difference places;
+
+     # evento é um momento em que uma interação acontece
+
+  # Uma das dificuldades no desenvolvimento de interfaces gráficas é o /design/ de
+  # interações, um dos objetos de pesquisa da área interdisciplinar de Interação
+  # Humano-computador — IHC, que estuda fatores humanos, ciência cognitiva, e
+  # ergonomia de interfaces cite:myers1994. Embora sejam aspectos muito
+  # importantes, eles não nos concernem.
+
+  # O avanço da tecnologia permite formas inovadores de interação — p. ex.,
+  # /Kinect/. Consequentemente, as aplicações modernas estão cada vez mais
+  # interativas e complexas.
+
+    # A criação de objetos na maioria das linguagens se dão através de classes
+    # construtoras. Em JavaScript a criação de objetos se dá através da extensão
+    # de protótipos.
+
+*** COMMENT Programação Orientada a Eventos
+    “When designing a software system, it is common to encounter the same
+    problems over and over again. The design pattern approach explicitly
+    recognizes this and proposes solutions to these problems. A design pattern
+    is a technique that solves one of these common problems.” cite:roy2004 p. 540.
+
+    \citeonline{blackheath2016} relatam que antes da descrição do /Observer
+    Pattern/ cite:gamma1995, caso fosse desejado propagar um valor de uma parte
+    do código a outra, era necessário chamar todos os lugares onde tal valor ia
+    ser usado. Os autores explicam que os /produtores/ — partes que propagam
+    valores — tinham uma dependência em seus /consumidores/ — partes que
+    precisam dos valores. Como pode ser observado em
+    \ref{code:producerDependsOnConsumer}, a caixa de verificação
+    ~AcordoDeTermos~ possui uma dependência no ~botaoCadastrar~, que precisa ser
+    desabilitado se a caixa de verificação não estiver marcada.
+
+    #+label: code:producerDependsOnConsumer
+    #+caption: Produtor de dados que depende do consumidor
+    #+BEGIN_SRC js
+    class AcordoDeTermos {                       // produtor de dados
+      propagarEstado() {
+        var termoAceito = this.estaMarcado()
+        botaoCadastrar.setEnabled(termoAceito)   // consumidor
+      }
+    }
+    #+END_SRC
+
+    Caso seja necessário adicionar um novo consumidor ao evento, também é
+    preciso fazer o produtor chamar o consumidor, como pode ser notado em
+    \ref{code:addingConsumer}. Reutilizar uma parte do código que produz eventos
+    é um pouco trabalhoso, por estar interligada ao resto do programa — como
+    acontece com a caixa de verificação ~AcordoDeTermos~.
+    \citeauthoronline{blackheath2016} ressaltam que “a ideia de uma caixa de
+    listagem como um componente de software reutilizável não funciona muito bem
+    se ela precisa saber com antecedência quais são seus consumidores”
+    (\citeyear{blackheath2016}, pg. 7, tradução nossa).
+
+    #+label: code:addingConsumer
+    #+caption: Adicionando um novo consumidor
+    #+BEGIN_SRC js
+    class AcordoDeTermos {                       // produtor de dados
+      propagarEstado() {
+        var termoAceito = this.estaMarcado()
+        botaoCadastrar.setEnabled(termoAceito)
+        formCadastro.setValid(termoAceito)       // novo consumidor
+      }
+    }
+    #+END_SRC
+ 
+    O /Observer Pattern/ permite que algum evento de interesse possa ser
+    /observado/. Um consumidor pode ser registrado com o produtor, e a partir de
+    então passa a ser chamado de volta[fn:callbackOrigin] sempre que um evento
+    ocorrer. Para interromper a observação, o registro do consumidor com o
+    produtor pode ser removido cite:blackheath2016.
+
+    # descrever correspondência entre os padrões Observer e Iterator
+    # https://www.youtube.com/watch?v=dwP1TNXE6fc
+    # https://www.youtube.com/watch?v=yEeDbHvg1vQ
+
+**** Anotações                                                     :noexport:
+   #+caption: Consumidor verifica produtor periodicamente
+   #+BEGIN_SRC js
+   class FormPesquisarPassagem {
+     constructor() {
+       this.form = document.getElementById("formPesquisarPassagem")
+       this.campoDataPartida = this.form.elements["dataPartida"]
+       this.campoDataRetorno = this.form.elements["dataRetorno"]
+       this.botaoPesquisar   = this.form.elements["pesquisar"]
+
+       // periodicamente o consumidor verifica os produtores por valores
+       // atualizados
+       window.setInterval(this.atualizar, 1000)
      }
-     // doubled == [2, 4, 6, 8]
-     #+END_SRC
 
-     Outro construto usado para iterar coleções é o ~forEach~, implementado no
-     JavaScript como método do objeto ~Array~. Dada uma função, o ~forEach~ a
-     aplica a cada item da coleção. A tarefa de dobrar os valores de uma coleção
-     é demonstrada em \ref{code:forEachDoubleNumbers}, onde é passada uma função
-     /lambda/[fn:lambda] ao método ~forEach~, que é aplica a cada item da
-     coleção.
+     atualizar() {
+       // pega os valores atuais para as datas
+       var dataDePartida = this.campoDataPartida.value
+       var dataDeRetorno = this.campoDataRetorno.value
 
-     #+label: code:forEachDoubleNumbers
-     #+caption: Dobrando os valores de uma coleção com ~forEach()~
+       // se a data de partida for posterior a data de retorno
+       if (dataDePartida > dataDeRetorno) {
+         this.botaoPesquisar.disabled = true // desabilita o botão de pesquisar
+       }
+     }
+   }
+   #+END_SRC
+
+   #+BEGIN_SRC js
+   class FormCadastro {
+     constructor() {
+       this.form = document.getElementById("cadastro")
+       this.campoDataNascimento = this.form.elements["dataNascimento"]
+       this.botaoCadastrar      = this.form.elements["cadastrar"]
+
+       // periodicamente o consumidor verifica o produtor por valores atualizados
+       window.setInterval(this.atualizar, 1000)
+     }
+
+     atualizar() {
+       // pega o valor atual para a data de nascimento
+       var dataNascimento = this.campoDataNascimento.value
+
+       // se idade for menor de 18 anos
+       if (this.maiorDe18(dataNascimento)) {
+         this.botaoCadastrar.disabled = true // desabilita o botão de cadastrar
+       }
+     }
+
+     maiorDe18(dataNascimento) {/*...*/}
+   }
+   #+END_SRC
+
+   #+caption: Adicionando 
+   #+BEGIN_SRC js
+   class FormCadastro {
+     constructor() {
+       this.campoEmail     = new TextField("email")
+       this.mensagemDeErro = new FormFieldError()
+
+       // periodicamente atualiza o formulário
+       window.setInterval(this.atualizar, 1000)
+     }
+
+     atualizar() {
+       var email = this.campoEmail.value // pega o valor do campo de email
+
+       if (this.validarEmail(email) === false) { // caso o email seja inválido
+         showFormFieldError(email) // propaga o valor de 'email' para o componente
+                                   // que mostra o erro na tela
+       }
+     }
+
+     validarEmail(email) {/*...*/}
+   }
+
+   showFormFieldError(value) {
+     window.alert("O valor " + value + " é inválido.")
+   }
+
+   #+END_SRC
+
+*** COMMENT Anotações
+   # Apresentar a definição de “paradigma de programação”.
+   # Falar sobre o trabalho do Peter Van Roy, Paradigms for Dummies de 2009.
+   # FAZER: enumerar os conceitos necessários para programação de IGdU.
+   # Explicar os conceitos básicos de programação, como apresentados por Van Roy.
+   # FAZER: decidir onde trocar o termo “paradigma” por “modelo”
+   # Apresentar os paradigmas que incorporam os conceitos explicados.
+   # TALVEZ eu devesse explicar tudo da forma comum, e deixar esta linha de
+   # raciocínio para as considerações finais. Isso vai permitir que o texto
+   # fique coeso, com referencial teórico enchugado. Vou precisar apenas citar
+   # os trabalhos que apontam para os paradigmas de interesse.
+
+    “Note que todos esses aspectos relacionados à avaliação das expressões devem
+    ser conhecidos pelo programador para o uso adequado da linguagem.” (Melo,
+    2003, pg. 90).
+
+    “Abstração é o princípio pelo qual nos concentramos nos aspectos essenciais
+    de um problema em vez de seus detalhes.” (Melo, 2003, pg. 103).
+
+    “[…] encapsulamento foi inicialmente definido por D. Parnas [30]. […]
+    reutilização pode ser vista em [47].” (Melo, 2003, pg. 124).
+
+    “[…] parametrização Goguen em [21].” (Melo, 2003, pg. 124).
+
+    “We could say that all programs are fundamentally state machines. But code
+    written in a traditional state-machine style tends to be unreadable and
+    brittle. […]. It also tends to be extremely efficient, which is the usual
+    excuse for using this style.” — cite:blackheath2016
+
+    “We argue that all programs are state machines, and state machines are
+    inherently difficult to reason about, and this is why programming is
+    difficult.” — cite:blackheath2016
+
+**** Quotes
+     “More is not better (or worse) than less, just different.” — The paradigm
+     paradox (Van Roy, 2009). Probably talking about expressiveness.
+
+**** Imperative Programming
+***** Procedures
+      “Procedural abstraction. Any statement can be made into a procedure by
+      putting it inside a procedure declaration. This is called procedural
+      abstrac- tion. We also say that the statement is abstracted into a
+      procedure.” — cite:roy2004 pg. 61
+      “free identifiers” + “static scoping”.
+
+      “Procedural abstraction and static scoping together form one of the most
+      powerful tools presented in this book.” — cite:roy2004 pg. 
+
+** Programação Funcional
+   Programação Funcional (PF) é assim chamada porque sua operação básica é a
+   aplicação de funções à argumentos cite:hughes1990. Lisp foi a primeira
+   linguagem de programação funcional. Criada em 1958 originalmente como uma
+   notação matemática para programas de computador, influenciada pela do
+   /cálculo lambda/ de Alonzo Church.
+
+   Na matemática a ideia de /quadrado de um número/ pode ser expressa
+   algebricamente como uma função $f(x)=x*x$. Em Elm, a ideia de quadrado
+   pode ser expressada como \mintinline{elm}{quadrado x = x * x}. A expressão
+   pode ser lida em português da seguinte forma: “O quadrado de algo é ele
+   multiplicado por ele mesmo.”
+
+   A expressão algébrica denota uma função $f$ que relaciona um número $x$ com
+   seu quadrado, ou transforma $x$ em seu quadrado. A expressão em Elm define
+   uma função ~quadrado~ que transforma o argumento ~x~ em seu quadrado.
+   \citeauthoronline{roy2009} descreve um função no contexto da PF:
+
+   #+BEGIN_EXPORT latex
+   \begin{citacao}
+     Functions are mathematical functions: when called with the same arguments,
+     they always give the same results. Functions do not change. In the real world,
+     things are different. There are few real-world entities that have the timeless
+     behavior of functions. Organisms grow and learn. When the same stimulus is
+     given to an organism at different times, the reaction will usually be
+     different. \cite[p. 26]{roy2009}
+   \end{citacao}
+   #+END_EXPORT
+
+   Um programa funcional é uma expressão a ser avaliada, no contexto de um
+   conjunto de definições — principalmente definições de funções. Por exemplo,
+   dada as definições de funções em \ref{code:programfnDefinitions}, um programa
+   pode consistir da expressão ~dobrar (somar 2 3)~ e o resultado do programa
+   então seria ~10~ cite:noble1994.
+
+   #+BEGIN_EXPORT latex
+   \begin{listing}[H]
+     \centering
+     \caption{\label{code:programfnDefinitions}Definição das funções \texttt{somar}
+       e \texttt{dobrar}.}
+     \begin{minted}[
+       baselinestretch=1.2,
+       linenos=false,
+       mathescape]
+       {elm}
+       somar x y = x + y
+       dobrar z = 2 * z
+     \end{minted}
+     \legend{Fonte: Adaptado de \citeauthoronline{noble1994} (\citeyear{noble1994}).}
+   \end{listing}
+   #+END_EXPORT
+
+   Funções são consideradas /cidadãs de primeira classe — do inglês ‘first-class
+   citizens’/, e podem ser passadas como argumentos da mesma forma que qualquer
+   outro tipo de dado. Uma função é definida para ter um certo número de
+   argumentos (sua /aridade/), mas se for calculada com menos argumentos o
+   resultado é outra função. Isso permite funções como as definidas em
+   \ref{code:currying}, onde ~inc~ recebe um número e adiciona ~1~ a ele, e
+   ~tres~ aplica ~f~, uma dada função, três vezes à qualquer argumento em que
+   ~f~ normalmente aceitaria, por exemplo: a expressão ~tres inc 2~ resulta no
+   valor ~5~ cite:noble1994.
+
+   #+BEGIN_EXPORT latex
+   \begin{listing}[H]
+     \centering
+     \caption{\label{code:currying}\emph{Currying}.}
+     \begin{minted}[
+       linenos=false]
+       {elm}
+       inc = somar 1
+       tres f = f >> f >> f >>
+     \end{minted}
+     \legend{Fonte: Adaptado de \citeauthoronline{noble1994} (\citeyear{noble1994}).}
+   \end{listing}
+   #+END_EXPORT
+
+   # Noble investiga soluções de entrada e saída (I/O) para linguagens funcionais
+   # usando estudos de caso.
+#   “Historically, functional languages have been viewed as slow to execute and
+#   memory-hungry. In recent years they have begun to catch up with imperative
+#   languages in terms of execution speed and memory usage and it is hoped that
+#   we will continue to see improvement.” cite:noble1994 pg. 3.
+#
+#   “Graphical user interfaces have been in use for many years now and are
+#   considered normal or even expected in computer systems from home micros to
+#   workstations. If the benefits of func- tional languages are to be used in the
+#   \real world" then it must be possible for the programmer to provide the user
+#   with the interface that he or she would best be able to use.” cite:noble1994
+#   pg. 3.
+#
+#   Escrever sobre /funções de ordem superior/
+   # “Higher-order programming is the collection of programming techniques that
+   # be- come available when using procedure values in programs. Procedure values
+   # are also known as lexically-scoped closures. The term higher-order comes from
+   # the concept of order of a procedure. A procedure all of whose arguments are
+   # not pro- cedures is of order zero.” cite:roy2004 180.
+#
+#   Escrever sobre funções /lambda/
+
+*** Funções entre Listas
+    Uma coleção é um agrupamento de um número variável de itens, que (1)
+    compartilham algum significado ao problema a se resolver e (2) precisam ser
+    manipulados juntos de forma controlada.
+
+    O único tipo de coleção no JavaScript é o arranjo (/array/), que pode ser
+    construído através do objeto[fn:prototypes] global ~Array~, ou da notação
+    de arranjos literais com colchetes:
+
+    #+caption: Criando coleções
+    #+BEGIN_SRC js
+    var collection1 = new Array()
+    var collection2 = []
+    #+END_SRC
+
+    Uma tarefa muito comum na programação é a iteração[fn:iteration] de
+    coleções. Um mecanismo muito utilizado para tal é o comando ~for~. Em
+    \ref{code:forLoopTraverse} é demonstrado o uso do comando ~for~ para
+    percorrer os itens da coleção ~people~ e mostrar cada um no console de
+    depuração.
+
+    #+caption: Percorrendo uma coleção com o laço ~for~
+    #+label: code:forLoopTraverse
+    #+BEGIN_SRC js
+    var people = ["Alan Turing", "Alonzo Church", "Kurt Gödel"]
+    var count
+
+    for (count = 0; count < people.length; count++) {
+      console.log(people[count])
+    }
+    #+END_SRC
+
+    Em \ref{code:forLoopDoubleNumbers} é demonstrada a tarefa de dobrar os
+    valores de uma coleção de números, que utiliza a instrução ~for~ para
+    percorrer os itens. Cada valor é multiplicado por 2, e o resultado é
+    adicionado a outra coleção.
+
+    #+label: code:forLoopDoubleNumbers
+    #+caption: Dobrando os valores de uma coleção com ~for~
+    #+BEGIN_SRC js
+    var numbers = [1, 2, 3, 4]      // coleção original
+    var doubled = []                // coleção de resultados
+    var i                           // contador
+
+    for (i = 0; i < numbers.length; i++) {
+      var dobro = numbers[i] * 2    // dobra o valor
+      doubled.push(dobro)           // adiciona aos resultados
+    }
+    // doubled == [2, 4, 6, 8]
+    #+END_SRC
+
+    Outro construto usado para iterar coleções é o ~forEach~, implementado no
+    JavaScript como método do objeto ~Array~. Dada uma função, o ~forEach~ a
+    aplica a cada item da coleção. A tarefa de dobrar os valores de uma coleção
+    é demonstrada em \ref{code:forEachDoubleNumbers}, onde é passada uma função
+    /lambda/ ao método ~forEach~, que é aplica a cada item da
+    coleção.
+
+    #+label: code:forEachDoubleNumbers
+    #+caption: Dobrando os valores de uma coleção com ~forEach()~
+    #+BEGIN_SRC js
+    var numbers = [1, 2, 3, 4]
+    var doubled = []
+
+    numbers.forEach(function (number) {
+      var dobro = number * 2
+      doubled.push(dobro)
+    })
+    // doubled == [2, 4, 6, 8]
+    #+END_SRC
+
+    Na linha 4 do trecho de código \ref{code:forEachDoubleNumbers}, a expressão
+    ~numbers.forEach~ pode ser lida como: “Dada a coleção ~numbers~, aplique a
+    seguinte função para cada um de seus itens”. O ~forEach~ permite
+    especificar /o que/ acontece para cada item na coleção, porém esconde
+    /como/ a coleção é percorrida. Nota-se que não há um contador explícito,
+    como no caso do comando ~for~ em \ref{code:forLoopDoubleNumbers}.
+
+    A chave para entender PR é ter um bom fundamento sobre o uso de programação
+    funcional para manipular coleções. Programação funcional oferece ferramentas
+    para abstrair operações comuns de coleções em blocos reutilizáveis e de
+    fácil composição. A maioria das operações de manipulação de coleções podem
+    ser realizadas com cinco funções básicas — ~map~, ~filter~, ~concatAll~,
+    ~reduce~, e ~zip~ — consideradas ferramentas fundamentais no paradigma de
+    programação funcional.
+
+**** Projeção de coleções com ~map()~
+     A aplicação de uma função a um valor, afim de criar um novo valor, define
+     uma /projeção/. Uma função de projeção pode ser definida como $f(x)=x*2$,
+     a aplicação dessa projeção ao valor $2$, resulta no valor $4$:
+     $f(2)=2*2=4$.
+
+     Para projetar uma coleção em outra, deve-se aplicar uma
+     função a cada item da coleção e coletar os resultados em uma nova coleção.
+     Projeções são muito utilizadas para transformar os valores de uma lista —
+     e.g. multiplica-los por 2 para obter o dobro, como demonstrado em
+     \ref{code:forEachDoubleNumbers} com o ~forEach()~.
+
+     Além do ~forEach~, outro mecanismo para projeção de coleções é a função
+     ~map~, muito comum na programação funcional. No JavaScript ela também é
+     implementada como um método do objeto ~Array~. Dada uma função, o método
+     ~map()~ a aplica a cada item da coleção e coleta os resultados em uma nova
+     coleção, que é retornada no final da operação. Em
+     \ref{code:mapDoubleNumbers} o método ~map()~ é usado para demonstrar a
+     projeção de uma coleção de números inteiros — a mesma projeção feita em
+     \ref{code:forEachDoubleNumbers} com o método ~forEach~.
+
+     #+label: code:mapDoubleNumbers
+     #+caption: Dobrando os valores de uma coleção com ~map()~
      #+BEGIN_SRC js
      var numbers = [1, 2, 3, 4]
      var doubled = []
 
-     numbers.forEach(function (number) {
-       var dobro = number * 2
-       doubled.push(dobro)
+     doubled = numbers.map(function (numbers) {
+       return number * 2
      })
      // doubled == [2, 4, 6, 8]
      #+END_SRC
 
-     Na linha 4 do trecho de código \ref{code:forEachDoubleNumbers}, a expressão
-     ~numbers.forEach~ pode ser lida como: “Dada a coleção ~numbers~, aplique a
-     seguinte função para cada um de seus itens”. O ~forEach~ permite
-     especificar /o que/ acontece para cada item na coleção, porém esconde
-     /como/ a coleção é percorrida. Nota-se que não há um contador explícito,
-     como no caso do comando ~for~ em \ref{code:forLoopDoubleNumbers}.
+     Nota-se que a função ~map~ permite especificar /que/ projeção aplicar a
+     uma coleção, mas oculta /como/ a operação acontece.
 
-     A chave para entender PFR é ter um bom fundamento sobre o uso de
-     programação funcional para manipular coleções (/sequências/ nos
-     *Objetivos*). Programação funcional oferece ferramentas para abstrair
-     operações comuns de coleções em blocos reutilizáveis e de fácil
-     composição[fn:composition].
+***** Notas                                                        :noexport:
+      [[http://www.pontov.com.br/site/arquitetura/54-matematica-e-fisica/238-matrizes-e-transformacoes-parte-1][Transformação de matrizes]].
+****** How -> What
+       Trocar sentenças que explicam /como/ as operações de transformação
+       funcionam por sentenças que definem /o que/ elas são. E talvez
+       esclarecer os objetivos da aplicação delas a coleções.
 
-     A maioria das operações de manipulação de coleções podem ser realizadas com
-     cinco funções básicas — ~map~, ~filter~, ~concatAll~, ~reduce~, e ~zip~ —
-     consideradas ferramentas fundamentais no paradigma de programação
-     funcional.
+**** Seleção de itens de coleções com ~filter()~
+     Assim como projetar coleções, filtrar coleções é uma operação muito comum.
+     Para filtrar uma coleção, aplica-se um teste para cada item da coleção, e
+     os que passam no teste são coletados em uma nova coleção.
 
-***** Projeção de coleções com ~map()~
-      A aplicação de uma função a um valor, afim de criar um novo valor, define
-      uma /projeção/. Uma função de projeção pode ser definida como $f(x)=x*2$,
-      a aplicação dessa projeção ao valor $2$, resulta no valor $4$:
-      $f(2)=2*2=4$.
+     #+caption: Filtrando uma coleção
+     #+label: code:filterEvenOdd
+     #+BEGIN_SRC js
+     var numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-      Para projetar uma coleção em outra, deve-se aplicar uma
-      função a cada item da coleção e coletar os resultados em uma nova coleção.
-      Projeções são muito utilizadas para transformar os valores de uma lista —
-      e.g. multiplica-los por 2 para obter o dobro, como demonstrado em
-      \ref{code:forEachDoubleNumbers} com o ~forEach()~.
+     var pares   = numeros.filter(num => num % 2 == 0) // filtra os números pares
+     var impares = numeros.filter(num => num % 2 != 0) // filtra os números ímpares
 
-      Além do ~forEach~, outro mecanismo para projeção de coleções é a função
-      ~map~, muito comum na programação funcional. No JavaScript ela também é
-      implementada como um método do objeto ~Array~. Dada uma função, o método
-      ~map()~ a aplica a cada item da coleção e coleta os resultados em uma nova
-      coleção, que é retornada no final da operação. Em
-      \ref{code:mapDoubleNumbers} o método ~map()~ é usado para demonstrar a
-      projeção de uma coleção de números inteiros — a mesma projeção feita em
-      \ref{code:forEachDoubleNumbers} com o método ~forEach~.
+     // pares   = [0, 2, 4, 6, 8]
+     // impares = [1, 3, 5, 7, 9]
+     #+END_SRC
 
-      #+label: code:mapDoubleNumbers
-      #+caption: Dobrando os valores de uma coleção com ~map()~
+     Da mesma forma que ~map()~, ~filter()~ permite expressar /que/ valores são
+     desejados, sem exigir que se especifique /como/ coletá-los.
+
+**** Nivelamento de coleções com ~concatAll()~
+     Concatena várias listas em uma única lista, ou seja, transforma uma
+     coleção de coleções em uma única coleção.
+
+     #+caption: Nivelando uma coleção
+     #+BEGIN_SRC js
+     var lista = [[1, 3, 5, 7], [2, 4]]
+
+     var listaNivelada = lista.concatAll()
+
+     // listaNivelada = [1, 3, 5, 7, 2, 4]
+     #+END_SRC
+
+     Vale observar que a função ~contatAll()~ espera que cada item da coleção
+     também seja uma coleção.
+
+***** Anotações                                                    :noexport:
+      Other names for ~concatAll~:
+      - flattenDeep ([[https://lodash.com/docs/4.17.4#flattenDeep][lodash]]);
+      - concat ([[http://package.elm-lang.org/packages/elm-lang/core/5.1.1/List#concat][elm]]);
+
+**** Redução de coleções com ~reduce()~
+     Reduz uma lista a um valor
+
+     #+caption: Somar uma lista de números com ~reduce()~
+     #+BEGIN_SRC js
+     function somar (total, valor) {
+       return total + valor
+     }
+
+     let nums = [1, 2, 3]
+
+     let resultado = nums.reduce(somar, 0)
+
+     /* 0: segundo argumento de reduce
+        1: primeiro item da coleção
+        somar(0, 1) -> 1
+                 somar(1, 2) -> 3
+                          somar(3, 3) -> 6️
+     */
+     #+END_SRC
+
+
+     #+caption: Procurar o maior número com ~reduce()~
+     #+BEGIN_SRC js
+     let numeros = [2, 3, 1, 4, 5]
+
+     let qualEhMaior = (maior, atual) => {
+       if (maior > atual) {
+         return maior
+       } else {
+         return atual
+       }
+     }
+
+     let resultado = numeros.reduce(qualEhMaior)
+
+     // resultado == 5
+     #+END_SRC
+
+     #+caption: Aplicações de ~qualEhMaior()~ com pela função ~reduce()~
+     #+BEGIN_SRC js
+     /*
+      qualEhMaior(2, 3) -> 3
+               qualEhMaior(3, 1) -> 3
+                        qualEhMaior(3, 4) -> 4
+                                 qualEhMaior(4, 5) -> 5
+     */
+     #+END_SRC
+
+***** Notas                                                        :noexport:
       #+BEGIN_SRC js
-      var numbers = [1, 2, 3, 4]
-      var doubled = []
-
-      doubled = numbers.map(function (numbers) {
-        return number * 2
-      })
-      // doubled == [2, 4, 6, 8]
-      #+END_SRC
-
-      Nota-se que a função ~map~ permite especificar /que/ projeção aplicar a
-      uma coleção, mas oculta /como/ a operação acontece.
-
-****** Notas                                                       :noexport:
-       [[http://www.pontov.com.br/site/arquitetura/54-matematica-e-fisica/238-matrizes-e-transformacoes-parte-1][Transformação de matrizes]].
-******* How -> What
-        Trocar sentenças que explicam /como/ as operações de transformação
-        funcionam por sentenças que definem /o que/ elas são. E talvez
-        esclarecer os objetivos da aplicação delas a coleções.
-
-***** Filtrando coleções com ~filter()~
-      Assim como projetar coleções, filtrar coleções é uma operação muito comum.
-      Para filtrar uma coleção, aplica-se um teste para cada item da coleção, e
-      os que passam no teste são coletados em uma nova coleção.
-
-      #+label: code:filterEvenOdd
-      #+BEGIN_SRC js
-      var numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-      var pares   = numeros.filter(num => num % 2 == 0) // filtra os números pares
-      var impares = numeros.filter(num => num % 2 != 0) // filtra os números ímpares
-
-      // pares   = [0, 2, 4, 6, 8]
-      // impares = [1, 3, 5, 7, 9]
-      #+END_SRC
-
-      Da mesma forma que ~map()~, ~filter()~ permite expressar /que/ valores são
-      desejados, sem exigir que se especifique /como/ coletá-los.
-
-***** Nivelamento de coleções com ~concatAll()~
-      Concatena várias listas em uma única lista, ou seja, transforma uma
-      coleção de coleções em uma única coleção.
-
-      #+BEGIN_SRC js
-      var lista = [[1, 3, 5, 7], [2, 4]]
-
-      var listaNivelada = lista.concatAll()
-
-      // listaNivelada = [1, 3, 5, 7, 2, 4]
-      #+END_SRC
-
-      Vale observar que a função ~contatAll()~ espera que cada item da coleção
-      também seja uma coleção.
-
-****** Anotações                                                   :noexport:
-       Other names for ~concatAll~:
-       - flattenDeep ([[https://lodash.com/docs/4.17.4#flattenDeep][lodash]]);
-       - concat ([[http://package.elm-lang.org/packages/elm-lang/core/5.1.1/List#concat][elm]]);
-
-***** Redução de coleções com ~reduce()~
-      Reduz uma lista a um valor
-
-      #+caption: Somar uma lista de números com ~reduce()~
-      #+BEGIN_SRC js
-      function somar (total, valor) {
-        return total + valor
-      }
-
-      let nums = [1, 2, 3]
-
-      let resultado = nums.reduce(somar, 0)
-
-      /* 0: segundo argumento de reduce
-         1: primeiro item da coleção
-         somar(0, 1) -> 1
-                  somar(1, 2) -> 3
-                           somar(3, 3) -> 6️
-      */
-      #+END_SRC
-
-
-      #+caption: Procurar o maior número com ~reduce()~
-      #+BEGIN_SRC js
-      let numeros = [2, 3, 1, 4, 5]
-
-      let qualEhMaior = (maior, atual) => {
-        if (maior > atual) {
-          return maior
+      // abstraindo o comando if...else em uma função 'se'
+      function se (teste, v, f) {
+        if (teste()) {
+          return v;
         } else {
-          return atual
+          return f;
         }
       }
 
-      let resultado = numeros.reduce(qualEhMaior)
+      var maior = numeros.reduce((acum, atual) => {
+        se(acum > )
+      })
 
-      // resultado == 5
       #+END_SRC
 
-      #+caption: Aplicações de ~qualEhMaior()~ com pela função ~reduce()~
-      #+BEGIN_SRC js
-      /*
-       qualEhMaior(2, 3) -> 3
-                qualEhMaior(3, 1) -> 3
-                         qualEhMaior(3, 4) -> 4
-                                  qualEhMaior(4, 5) -> 5
-      */
-      #+END_SRC
+**** Agrupando os itens de uma coleção com ~zip()~
+     Combina os itens de várias listas, um a um.
 
-***** Agrupando os itens de uma coleção com ~zip()~
-      Combina os itens de várias listas, um a um.
+     #+caption: ~zip()~
+     #+BEGIN_SRC js
+     var listas = [[1, 4],
+                   [2, 5],
+                   [3, 6]]
 
-      #+caption: ~zip()~
-      #+BEGIN_SRC js
-      var listas = [[1, 4],
-                    [2, 5],
-                    [3, 6]]
+     var l2 = zip(listas)
 
-      var l2 = zip(listas)
+     // l2 = [[1, 2, 3],
+     //       [4, 5, 6]]
+     #+END_SRC
 
-      // l2 = [[1, 2, 3],
-      //       [4, 5, 6]]
-      #+END_SRC
+     #+caption: ~zip()~
+     #+BEGIN_SRC js
+     var listas = [['we', 'are'],
+                   [1111, 22222],
+                   [true, false]]
 
-      #+caption: ~zip()~
-      #+BEGIN_SRC js
-      var listas = [['we', 'are'],
-                    [1111, 22222],
-                    [true, false]]
+     var ls = zip(listas)
 
-      var ls = zip(listas)
-
-      // ls = [[ 'we',  1111,  true],
-      //       ['are', 22222, false]]
-      #+END_SRC
+     // ls = [[ 'we',  1111,  true],
+     //       ['are', 22222, false]]
+     #+END_SRC
 
 
-**** Notes                                                         :noexport:
-     "Functional Programming (enabled by lambdas with closure)".
+*** COMMENT Funções /Lambda/
 
-     Contextualização Histórica.
+**** Notas                                                         :noexport:
+     “Some like it, others hate it and many are afraid of the lambda operator.
+     The lambda operator or lambda function is a way to create small anonymous
+     functions, i.e. functions without a name. These functions are throw-away
+     functions, i.e. they are just needed where they have been created. Lambda
+     functions are mainly used in combination with the functions filter(), map()
+     and reduce(). The lambda feature was added to Python due to the demand from
+     Lisp programmers.” — [[http://www.python-course.eu/python3_lambda.php][Python 3: Lambda, filter, reduce and map]]
 
-     Renascença da Programação Funcional.
+     Functional programming : practice and theory, Bruce J MacLennan 1990
 
-     - [[  % https://www.youtube.com/watch?v=qJgff2spvzM&t=666s][Composition - Nik Graf at ReactEurope2017]]
-     - [[https://www.youtube.com/watch?v=yYze0gCBtvY&t=45s][Functional && Reactive - Preethi at ReactEurope2017]]
-       - imutability enables /referencial transparency/
+*** Composição de Funções
+    Em \ref{code:compositionEven} é demonstrado como problemas podem ser
+    abstraídos em funções. Nota-se também a composição de funções,
+    ~nao(ehPar(num))~, que pode ser usada para escrever código mais expressivo
+    e legível.
 
-***** Leitura Recomendada                                          :noexport:
-****** Melo, 2004, pg. 141
-       “Os aspectos teóricos da programação funcional, principalmente relativos
-       ao $\lambda$-cálculo, são apresentados de forma resumida em [10]. Uma
-       representação bastante mais extensa pode ser encontrada em [9]. Em [28]
-       encontramos outra exposição dos fundamentos de processos computacionais
-       com base no $\lambda$-cálculo.”
+    #+label: code:compositionEven
+    #+caption: Abstração dos testes como funções
+    #+BEGIN_SRC js
+     function ehPar(x) {
+       return (x % 2 == 0)
+     }
 
-       “Em [44] encontramos uma apresentação mais ‘leve’ da programação
-       funcional, que exige menos maturidade matemática do leitor.”
+     var pares   = numeros.filter(ehPar)                    // filtra os que são pares
+     var impares = numeros.filter(x => !ehPar(x))           // filtra os que NÃO são pares
+    #+END_SRC
 
-       - [9] H.P. BARENDREGT. /The Lambda Calculus, its Syntax e Semantics/.
-         North-Holle, 1984.
-       - [10] H.P. BARENDREGT. Functional programming e lambda calculus.
-         Elsevier, 1990.
-       - [28] J.C. MITCHEL. Foundations of Programming Languages, MIT
-         Press, 1996.
-       - [44] D.A. WATT. Programming Language Concepts e Paradigms. 1990.
+    #+caption: Definição de ~ehImpar()~ em termos de ~ehPar~
+    #+BEGIN_SRC js
+    function ehImpar (x) {                 // definida em termos de 'ehPar'
+      return !ehPar(x)                     // se não é par é impar
+    }
 
-*** Programação Reativa
+    var pares   = numeros.filter(ehPar)
+    var impares = numeros.filter(ehImpar)
+    #+END_SRC
 
-*** Programação Funcional Reativa
+    #+caption: /Currying/ de funções
+    #+BEGIN_SRC js
+    function ehPar(n) {
+      return n % 2 == 0
+    }
+    // Talvez explicar conceito de 'currying' de funções!?
+    // Função que nega um valor
+    // true -> false
+    // false -> true
+    function naoFn(fn) {
+      return num => !fn(num)
+    }
 
-    Em relação a evolução das metodologias de desenvolvimento, Melo (2003)
-    comenta:
+    numeros.filter(nao(ehPar))
+    #+END_SRC
+
+    Linguagens que interligam comportamento e dados geralmente não oferecem
+    mecanismos para facilitar a composição de funções.
+
+*** Porque Programação Funcional é Relevante
+    Muitas das vezes as características e vantagens da programação funcional são
+    resumidas com declarações do tipo ‘programas funcionais não contêm
+    atribuições’, ‘não contêm efeitos colaterais’, e ‘não necessitam preescrever
+    o fluxo de controle’. Programação estruturada também já foi abordada de
+    forma similar: ‘programas estruturados não possuem \texttt{goto}’, ‘blocos
+    não possuem múltiplos pontos de entrada e saída’. Essa analogia é feita por
+    \citeauthoronline{hughes1990} em /Why Functinal Programming Matters/
+    (\citeyear{hughes1990}).
+
+    \citeauthoronline{hughes1990} comenta que “essas ‘vantagens’ da programação
+    estruturada são muito semelhantes em espírito as ‘vantagens’ da programação
+    funcional” (citeyear:hughes1990, p. 3). O autor afirma que embora essas
+    propriedades de programas estruturados sejam úteis, elas não vão ao cerne da
+    questão. Segundo o autor, “a diferença mais importante entre programas
+    estruturados e não-estruturados é que programas estruturados são projetados
+    de maneira modular”.
+
+    Modularidade é a chave para programação eficaz, no entanto ela é mais do
+    que separar um programa em módulos. \citeauthoronline{hughes1990} argumenta
+    que “a capacidade de se decompor um problema em partes depende diretamente
+    da capacidade de unir soluções” (citeyear:hughes1990, pg. 22). Hughes
+    apresenta dois mecanismos fornecidos por linguagens funcionais: /funções de
+    ordem superior/ e /avaliação preguiçosa/. Estas /ligas/, como são chamadas
+    pelo autor, podem contribuir significativamente para a modularização de
+    programas:
 
     #+BEGIN_EXPORT latex
     \begin{citacao}
-      Novos elementos são permanentemente incorporados às linguagens visando suprir
-      as características emergentes dessas metodologias de desenvolvimento, e/ou
-      novas formas de implementação de elementos das linguagens surgem junto com as
-      mudanças nas metodologias. (pg. 10)
+      Usando estas ligas pode-se modularizar programas de formas novas e úteis, e
+      nós mostramos vários exemplos disso. Módulos menores e mais genéricos podem
+      ser reutilizados mais largamente, aliviando programação posterior. Isso
+      explica porque programas funcionais são menores e mais fáceis de escrever do
+      que os convencionais. \cite[p.~22; tradução nossa]{hughes1990}
     \end{citacao}
-   #+END_EXPORT
+    #+END_EXPORT
+    # Original em inglês: “Using these glues one can modularize programs in new
+    # and useful ways, and we’ve shown several examples of this. Smaller and
+    # more general modules can be reused more widely, easing subsequent
+    # programming. This explains why functional programs are so much smaller
+    # and easier to write than conventional ones.”
 
-    #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
-    - As 10 Primitivas Básicas :: /map/, /merge/, /hold/, /snapshot/, /filter/,
-         /lift/, /never/, /constant/, /sample/, /switch/;
-    - Combinação de Primitivas ::
-    - Arcabouços /(Frameworks)/ :: /Rx.JS/, /Bacon.js/.
+*** COMMENT Motivações
+    Fluxo de controle e estado compartilhado são fontes de complexidade
+    cite:moseley2006.
 
-**** Notes                                                         :noexport:
-     % "FRP permits the modeling of systems that must respond to input over time in a
-     % simple and declarative manner." ~ Amsden (2011), Survey on FRP
+    Imperativo vs declarativo.
 
-     % "A program in an FRP language generally corresponds quite closely to a
-     % mathematical model of the system being implemented." ~ Amsden (2011), Survey
-     % on FRP
-     %   - Programação Reativa
-     %     - “[…] is programming with asynchronous data streams” – André Staltz
-     %   - merge, replay, retry, skip, start, startWith
+    Transparência referencial.
 
-     % Ferramentas
-     %   Bibliotecas & Frameworks
-     %   Bacon.js
-     %   Cycle.js → Model-View-Intent
-     %   Elm → Model-Update-View
-     %   Rx
-     %   Meteor
+    Composicionalidade.
+    Semântica denotacional.
 
-** Interfaces Gráficas do Usuário
-   Interfaces gráficas do usuário (GUIs) mediam a maioria de nossas interações
-   com computadores, seja através de páginas web, aplicativos de celular, ou
-   aplicações desktop cite:czaplicki2012. Um dos principais desafios no
-   desenvolvimento de interfaces gráficas é atender requisitos de usabilidade
-   cite:myers1994. Observar como interagimos com computadores pode motivar
-   maneiras aprimoradas de interação. /Observar/ e /projetar/ novas formas de
-   interação são estudadas pela área de /Interação Humano-computador (IHC)/.
+    “An important tenet of denotational semantics is that semantics should be
+    compositional: the denotation of a program phrase should be built out of the
+    denotations of its subphrases.” - [[https://en.wikipedia.org/wiki/Denotational_semantics][Wikipedia: Denotational semantics]]
 
-   Embora sejam aspectos muito importantes para o desenvolvimento de aplicações,
-   eles não concernem a este trabalho. Estamos interessados no desenvolvimento
-   de interfaces gráficas do ponto de vista da /programação/. A programação de
-   GUIs representa um domínio particularmente difícil. Além dos desafios comuns
-   de programação, analizar e transformar dados, elas precisam responder a ações
-   do usuário, como clicks do mouse, pressionamento de teclas, e gestos
-   multitoque. Devido a isso, interfaces gráficas são designadas /reativas/, ou
-   seja, reagem a eventos desencadeados pela interação com o usuário.
+    “An important aspect of denotational semantics of programming languages is
+    compositionality, by which the denotation of a program is constructed from
+    denotations of its parts. For example, consider the expression ‘7 + 4’.
+    Compositionality in this case is to provide a meaning for ‘7 + 4’ in terms
+    of the meanings of ‘7’, ‘4’ and ‘+’.” - Wikipedia: Denotational semantics
 
-   Um sistema reativo efetua computações em resposta a ocorrência de eventos,
-   que por sua vez pode desencadear novos eventos. Alguns exemplos são (1)
-   interfaces gráficas, que reagem a ações do usuário, (2) sistemas embarcados,
-   que reagem a sinais de hardware, e (3) programas de monitoração e controle,
-   que reagem a mudanças no ambiente externo cite:salvaneschi2015.
+    - /princípio da composicionalidade[fn:compositionality]/ :: é o princípio de
+         que o significa de uma expressão complexa é determinado pelos
+         significados de suas expressões constituintes e das regras usadas para
+         combiná-las.
+
+*** Notes                                                          :noexport:
+    # Programação Denotativa Funcional
+    “Church developed the λ-calculus to provide a rigorous foundation for
+    studying the notions of function and function application. The λ-calculus
+    has become a basic tool for mathematical investigations of the semantics of
+    programming languages.” — cite:abelson1996, pg. 84
+
+    "Functional Programming (enabled by lambdas with closure)".
+
+    Contextualização Histórica.
+
+    Renascença da Programação Funcional.
+
+    - [[  % https://www.youtube.com/watch?v=qJgff2spvzM&t=666s][Composition - Nik Graf at ReactEurope2017]]
+    - [[https://www.youtube.com/watch?v=yYze0gCBtvY&t=45s][Functional && Reactive - Preethi at ReactEurope2017]]
+      - imutability enables /referencial transparency/
+
+   “Esse processo se dá por meio de transformações sucessivas do programa, que
+   devem convergir para o resultado desejado. Essas transformações recebem o
+   nome de /reduções/.” (Melo, 2003, pg. 130).
+
+   “A execução de um programa funcional consiste na aplicação exaustiva das
+   regras de redução.” (Melo, 2003, pg. 133).
+
+   “Using lazy functional languages, we casually program with infinite data on
+   finite machines. We get lovely modularity as a result, as illustrated in
+   John Hughes's classic paper Why Functional Programming Matters.” — [[https://stackoverflow.com/a/5878525/1787829][Conal on
+   Stackoverflow]].
+
+   "A programming language is low level when its programs require attention to
+   the irrelevant." - Alan Perlis
+
+**** Collection Manipulation
+     “Functional programming provides developers with the tools to abstract
+     common collection operations into reusable, composable building blocks.
+     You'll be surprised to learn that most of the operations you perform on
+     collections can be accomplished with five simple functions (some native to
+     JavaScript and some included in the RxJS library), map, filter, concatAll,
+     reduce, zip” — [[http://reactivex.io/learnrx/][FP in Javascript]]
+
+     “A function is a special type of mapping, namely it is a mapping from a
+     set into the set of numbers, i.e. into RR, or CC, or into a field KK.
+     (Serge Lang, Linear Algebra, page: 43)” — [[https://math.stackexchange.com/questions/95741/is-there-any-difference-between-mapping-and-function#comment1987611_95743][StackExchange: Dante (mapping vs
+     function)]]
+
+**** Leitura Recomendada                                           :noexport:
+***** Melo, 2004, pg. 141
+      “Os aspectos teóricos da programação funcional, principalmente relativos
+      ao $\lambda$-cálculo, são apresentados de forma resumida em [10]. Uma
+      representação bastante mais extensa pode ser encontrada em [9]. Em [28]
+      encontramos outra exposição dos fundamentos de processos computacionais
+      com base no $\lambda$-cálculo.”
+
+      “Em [44] encontramos uma apresentação mais ‘leve’ da programação
+      funcional, que exige menos maturidade matemática do leitor.”
+
+      - [9] H.P. BARENDREGT. /The Lambda Calculus, its Syntax e Semantics/.
+        North-Holle, 1984.
+      - [10] H.P. BARENDREGT. Functional programming e lambda calculus.
+        Elsevier, 1990.
+      - [28] J.C. MITCHEL. Foundations of Programming Languages, MIT
+        Press, 1996.
+      - [44] D.A. WATT. Programming Language Concepts e Paradigms. 1990.
+
+**** Overview
+
+     #+ATTR_LATEX: :options [font={\normalfont\itshape},style=nextline]
+     - Cálculo lambda não tipado :: Inspiração original, em particular do /Lisp/,
+          umas das primeiras linguagens a ter suporte para programação funcional;
+     - Programação declarativa ::
+     - Expressões :: (1) Variáveis imutáveis (variáveis vinculadas a expressões,
+                     que mantém um único valor durante todo o tempo de vida
+                     útil). (2) Expressões puras e efeitos colaterais na redução
+                     de expressões;
+     - Funções :: (1) PF é baseada na aplicação de funções. (2) Faz amplo uso de
+                  expressões /lambda/ (funções anônimas). (3) Também desencoraja
+                  o uso de funções impuras (que contém efeitos colaterais);
+     - Funções de primeira classe :: /first-class functions/
+     - Funções de Ordem Superior :: /(Higher-order Functions)/, Funções como
+          argumentos, Funções como valores retornados;
+     - Composição de funções :: Combinação de funções;
+     - Aplicação Parcial de Funções :: /Currying/
+     - Primitivas Básicas de PF :: /map/, /filter/, /fold/, /reduce/, /scan/, e
+          /zip/;
+
+** Programação Reativa
+   # Programação Síncrona Discreta.
+   # Compositinal Event Processing/Streams
+   # ver Salvaneschi pra conferir se Elm, Rx.js, Redux são RP
+
+   #   Com a popularidade de arquiteturas orientadas a eventos, escaláveis e
+   #   interativas, tanto do lado do cliente quanto do servidor, o conceito de
+   #   "reatividade" está ganhando cada vez mais atenção.
+
+   Programação reativa abrange um leque enorme de conceitos de programação. Isso
+   se deve pela escolha da palavra ‘reativa’, que diz mais sobre uma
+   /propriedade do que se programa/ do que sobre um /conceito de programação/.
+   Vários conceitos e paradigmas diferentes podem ser empregados na programação
+   de uma aplicação reativa — ou de qualquer tipo de programa cite:roy2009.
+   Entende-se então o porquê do paradigma abarcar tantos conceitos. Portanto,
+   faz sentido descrever /programas reativos/ e a propriedade /reativa/, antes
+   de discutir os modelos de programação disponíveis para abordá-los. A
+   /priori/, é conveniente distinguir entre três tipos de programas de
+   computador:
+
+   - /programa transacional/: computa resultados a partir de um dados conjunto
+     de dados de entrada. Compiladores e programas de computação numérica são
+     alguns exemplos clássicos;
+   - /programa interativo/: interage, no seu próprio ritmo, com usuários ou com
+     outros programas. Sistemas de tempo compartilhado são interativos, do ponto
+     de vista do usuário;
+   - /programa reativo/: também mantém interação contínua com seu ambiente, mas
+     no ritmo determinado pelo ambiente, não pelo próprio programa. Interfaces
+     gráficas[fn:interactive] e robôs são alguns exemplos muito comuns.
+
+   Programas interativos computam no seu próprio ritmo e tratam, em grande
+   parte, de comunicação. Enquanto programas reativos só computam em resposta a
+   demanda externa e lidam principalmente com eventos ou interrupções de
+   hardware cite:berry1989. /Interfaces gráficas/ reagem a cliques do mouse,
+   pressionamento de teclas, gestos multitoque, etc. /Sistemas embarcados/
+   reagem a sinais de hardware. E /programas de monitoração e controle/ reagem a
+   mudanças no ambiente externo cite:salvaneschi2015.
+
    # De fato, as partes reativas de um programa são acionadas, de forma
    # assíncrona, pela ocorrência de eventos.
 
-   # Nosso objetivo é estudar conceitos de programação aplicados na resolução de
-   # problemas de característica assíncrona, inerentes de sistemas reativos como
-   # as interfaces gráficas.
+#   Reactive Programming (RP) [2] is a recent programming paradigm that supports
+#   the development of reactive applications through dedicated language
+#   abstractions. It is based on concepts like time-varying values (a.k.a.
+#   signals or behaviors), events streams to model discrete updates, automatic
+#   tracking of dependencies, and automated propagation of change.
+#
+   # é recente, bla bla Netflix
+   Programação reativa é um paradigma que dá suporte à programação de aplicações
+   reativas através de alguns conceitos específicos. Alguns deles são:
+
+   # “Programação Reativa (PR) é um paradigma de programação recente que dá
+   # suporte ao desenvolvimento de aplicações reativas através de abstrações
+   # dedicadas de linguagem. É baseada em conceitos como valores que variam ao
+   # longo do tempo (também conhecidos como /signals/ ou /behavious/), fluxos de
+   # eventos (/event streams/) para modelar notificações discretas, rastreamento
+   # automático de dependências, e propagação automática de alterações.”
+   # cite:salvaneschi2015
+   # Valores de tempo contínuo
+   # Valores de tempo discreto
+
+   - /fluxos de eventos[fn:event_streams]/: servem para modelar notificações
+     discretas;
+   # - valores que variam ao longo do tempo: também conhecidos como /signals/ ou
+   #      /behavious/;
+   - /propagação automática de alterações/: o modelo de execução automaticamente
+     repercuti alterações nos dados;
+   # - rastreamento automático de dependências: 
+
+   # A Programação Reativa baseia-se nos conceitos de /propagação de mudanças/ e
+   # /fluxos de dados (data streams)/, onde o modelo de execução repercuti
+   # alterações nos dados de forma automática.
+
+   # Explicar dataflow variables cite:roy2004.
+
+   PR é compartilha muitos conceitos com o paradigma de /Programação Funcional
+   Reativa (PFR)/. Os dois geralmente são confundidos na comunidade de
+   praticantes. PFR possui dois conceitos importantes que o diferencia da PR. O
+   primeiro é o conceito de /tempo contínuo/ — na PR o tempo é discreto. O
+   segundo é o conceito de /semântica denotacional/. PFR é mais indicada para
+   domínios que precisam representar tempo contínuo, como simulações físicas. PR
+   é mais indicada para sistemas reativos, como é explicado por
+   \citeauthoronline{roy2009}:
+
+   #+BEGIN_EXPORT latex
+   \begin{citacao}
+     Usar tempo discreto simplifica enormemente a programação de sistemas
+     reativos. Por exemplo, isso significa que subprogramas podem ser compostos
+     de forma trivial: os eventos de saída de um subcomponente estão
+     instantaneamente disponíveis como eventos de entrada para outros
+     subcomponentes. \cite[pg. 36; tradução nossa]{roy2009} \end{citacao}
+     #+END_EXPORT
+
+*** COMMENT Motivação
+    Arquiteturas orientadas a eventos/reativas, escaláveis e interativas estão
+    sendo cada vez mais adotadas (Netflix e Microsoft) cite:salvaneschi2014.
+
+    # Reactive Manifesto
+
+*** COMMENT Programas Reativos e Tempo Discreto
+
+    “In this paradigm, a program waits for input events, does internal
+    calculations, and emits output events. This is called a reactive system.”
+    cite:roy2009 pg. 35
+
+    “The main difference is that time is discrete instead of continuous: time
+    advances in steps from one input event to the next. Output events are
+    emitted at the same logical time instants *pg.36* as the input events. All
+    calculations done to determine the next output event are considered to be
+    part of the same time instant.” cite:roy2009
+
+    “Using discrete time enormously simplifies programming for reactive systems.
+    For example, it means that subprograms can be trivially composed: output
+    events from one subcomponent are instantaneously available as input events
+    in other subcomponents. Some languages that implement this paradigm are
+    Esterel [7], Lustre [21], and Signal [26].” cite:roy2009 pg. 36
+
+    “Deterministic concurrency is omnipresent in computer music.” cite:roy2009
+    pg. 36
+
+    “Declarative concurrency has the main advantage of functional programming,
+    namely *confluence*, in a concurrent model. This means that all evaluation
+    orders give the same result, or in other words, *it has no race conditions*.
+    It adds two concepts to the functional paradigm: threads and dataflow
+    variables. A thread defines a sequence of instructions, executed
+    independently of other threads. /Threads have one operation/ […]. A
+    *dataflow variable* is a single-assignment variable that is used for
+    /synchronization/. Dataflow variables have /three primitive operations/.”
+    cite:roy2009 pg. 37
+
+    “With the advent of multi-core processors, parallel programming has finally
+    reached the mainstream. A multi-core processor combines two or more
+    processing elements (called cores) in a single package, on a single die or
+    multiple dies. The cores share the interconnect to the rest of the system
+    and often share on-chip cache memory. As transistor density continues to
+    increase according to Moore’s Law (doubling approximately every two years,
+    which is expected to continue at least until 2020) [33], the number of cores
+    will increase as well. To use all this processing power we need to write
+    parallel programs.” cite:roy2009 pg.38-39
+
+    “Decades of research show that parallel programming cannot be completely
+    hidden from the programmer: it is not possible in general to automatically
+    transform an arbitrary program into a parallel program. There is no magic
+    bullet. The best that we can do is to make parallel programming as easy as
+    possible. The programming language and its libraries should help and not
+    hinder the programmer. Traditional languages such as Java or C++ are poorly
+    equipped for this because shared-state concurrency is difficult.”
+    cite:roy2009 pg. 39.
+
+    “Declarative concurrency is a good paradigm for parallel programming [53].
+    This is because it combines concurrency with the good properties of
+    functional programming. Programs are mathematical functions: a correct
+    function stays correct no matter how it is called (which is not true for
+    objects). Programs have no race conditions: any part of a correct program
+    can be executed concurrently without changing the results. Any correct
+    program can be parallelized simply by executing its parts concurrently on
+    different cores.” pg. 39
+
+    “If the set of instructions to execute is not totally ordered, then this can
+    give a speedup. Paradigms that have named state (variable cells) make this
+    harder because each variable cell imposes an order (its sequence of values). A
+    common programming style is to have concurrent agents connected by streams. This
+    kind of program can be parallelized simply by partitioning the agents over the
+    cores, which gives a pipelined execution.” cite:roy2009 pg. 39
+
+    # Abordar todos esses pontos como resultado exploratório, talvez na seção
+    # ‘Trabalhos Relacionados’.
+
+*** COMMENT Anotações
+     MOTIVAÇÕES
+     Sistemas Reativos: Motivações para Programação Reativa
+
+     # stack trace: rastreamento de pilha
+     # rastrear/localizar/encontrar/detectar/identificar/seguir
+     # Colocar isto na seção de trabalhos relacionados
+     # Escrever trabalhos relacionados DEPOIS da análise
+     “Projetar, implementar, e manter sistemas de software é muito difícil, por
+     assim dizer. De fato, partes reativas são acionadas pela ocorrência de
+     eventos. Por causa disso, é difícil rastrear e entender o fluxo de controle
+     de todo o sistema cite:maier2010.” cite:salvaneschi2015.
+
+     # não faz sentido dizer que uma parte do código de um programa irá reagir a
+     # um evento, da mesma forma que
+     # que uma parte do desenho esquemático de um carro (acelerador) vai reagir a
+     # um(a) evento/interação (acelerar).
+
+** COMMENT Programação Funcional Reativa
+   # Programação Síncrona Contínua: provavelmente não é denotativa
+   # Programação Denotativa de Tempo Contínuo
+   # Talves “Prog. Denotativa de Tempo Contínuo” como Connal sugeriu
+
+#    Em relação a evolução das metodologias de desenvolvimento,
+#    \citeonline{melo2003} comentam:
+#
+#    #+BEGIN_EXPORT latex
+#    \begin{citacao}
+#      Novos elementos são permanentemente incorporados às linguagens visando suprir
+#      as características emergentes dessas metodologias de desenvolvimento, e/ou
+#      novas formas de implementação de elementos das linguagens surgem junto com as
+#      mudanças nas metodologias. (pg. 10)
+#    \end{citacao}
+#   #+END_EXPORT
+
+   Em aplicações reativas, a maioria dos /bugs/ são evitáveis
+   cite:blackheath2016.
+
+   PFR oferece uma abstração eficaz e bem generalizada para gerenciar
+   complexidade em máquinas de estado cite:blackheath2016.
+
+    # primitivas: map, merge, hold, snapshot, filter, lift, never, constant,
+    #   sample, switch;
+    # combining primitives: means of combination
+    # arcabouços/farmeiros): Rx.JS, Bacon.js.
+
+*** Notes                                                          :noexport:
+    “There is no such thing as bad weather, only inappropriate clothing.” —
+    [[http://www.adventurestrong.com/hiking/hiking-quotes][Ranulph Fiennes]]
+
+    “[…] there’s no such thing as bad code, only bad infrastructure.” —
+    cite:blackheath2016 pg.~7
+
+    “Sodium has denotative semantics. Sodium doesn't have continuous time baked
+    in but can represent it, and I give an example of how to do this in
+    chapter 8. I don't think this is an important enough subject to make it the
+    focus of the book because it's applicable to certain problem domains only,
+    such as physics simulation.”
+
+    % "FRP permits the modeling of systems that must respond to input over time in a
+    % simple and declarative manner." ~ Amsden (2011), Survey on FRP
+
+    % "A program in an FRP language generally corresponds quite closely to a
+    % mathematical model of the system being implemented." ~ Amsden (2011), Survey
+    % on FRP
+    %   - Programação Reativa
+    %     - “[…] is programming with asynchronous data streams” – André Staltz
+    %   - merge, replay, retry, skip, start, startWith
+
+    % Ferramentas
+    %   Bibliotecas & Frameworks
+    %   Bacon.js
+    %   Cycle.js → Model-View-Intent
+    %   Elm → Model-Update-View
+    %   Rx
+    %   Meteor
+
+** COMMENT Interfaces Gráficas do Usuário
+   # Essa explicação detalhada das interações entre usuários e aplicações
+   # estabelece um vocabulário para entender um conceito muito importante:
+   # /estado/ interno de um programa. Além de importante, é um conceito
+   # delicado EXPLICAR PORQUE…
+
+   Em interfaces gráficas, duas partes essenciais da interação são o /usuário/
+   e a /tela do computador/: o usuário interage com a aplicação através da
+   interface gráfica na tela do computador.
+
+   # O usuário causa um efeito sobre o estado da aplicação ao clicar em um botão
+   # na tela, digitar carácteres em um formulário, ou simplesmente passar o
+   # mouse sobre uma imagem. Em contrapartida, a aplicação causa um efeito no
+   # mundo real ao mostrar 
 
    Interfaces gráficas podem ser divididas em dois grupos: /nativas/ e /web/. As
    nativas são encontradas em aplicações específicas de alguma plataforma, e.g.
@@ -558,25 +1631,12 @@
    Google Docs.
 
    # justificar o foco em aplicações web
-*** Programação de Interfaces Gráficas
-    Conforme é notado por \citeonline{blackheath2016}, a maioria das aplicações
-    que interagem com o ambiente externo são arquitetadas em torno de dois
-    modelos de programaçao, ou uma mistura dos dois:
+   #  /apresentação de dados/ e /gerenciamento de interação/.
+   Devido a grande demanda por aplicações web, este trabalho aborda,
+   prioritariamente, interfaces gráficas de aplicações acessadas por navegadores
+   web.
 
-    - /Threads/ :: modelam transições de estado como um fluxo de controle.
-                   Adequadas para operações de I/O ou qualquer situação onde as
-                   iiiii         transições de estado se enquadram em uma sequência
-                   claramente definida.
-    - Eventos :: são mensagens discretas[fn:discrete] e assíncronas que são propagadas pela
-                 aplicação. Formam um modelo adequado para sequências menos
-                 óbvias, principalmente onde as interações entre componentes
-                 são mais complexas. Algumas aplicações incluem /GUIs/ e video
-                 games.
-
-    Alguns problemas de computação são melhor resolvidos com o modelo baseado
-    em /threads/. No entanto \citeonline{blackheath2016} afirmam que a
-    abordagem com eventos geralmente é a melhor escolha.
-
+*** Aplicações Nativas
     - utilizam toolkits
 
 *** Aplicações Web
@@ -606,3 +1666,141 @@
     # Programação com /Callbacks/
     # Aplicações de Página Única
 
+**** Notas                                                         :noexport:
+***** Palestras
+****** Tomasz Kowal - Elixir and Elm - the perfect couple (Lambda Days 2016)
+       - métodos são mais difíceis de entender que funções (puras)
+       - jQuery é terrível para código frontend
+
+       “If someone says he doesn't like JavaScript, it's usually not because he
+       doesn't like JavaScript per se, it's a cool language actually, and you
+       can do much with it, if you're disciplined.”
+
+       “Everything that is syntactically legal that the compiler will accept
+       will eventually wind up in your codebase.” — John Carmack
+
+       “Graham describes this as the ‘Blub paradox’ and concludes that ‘By
+       induction, the only programmers in a position to see all the differences
+       in power between the various languages are those who understand the most
+       powerful one.’” — [[https://en.wikipedia.org/wiki/Paul_Graham_(computer_programmer)#The_Blub_paradox][Wikipedia]]
+
+*** Aplicações Híbridas
+    Uma aplicação híbrida denomina uma aplicação nativa que é desenvolvida com
+    tecnologia web — p. ex., JavaScript, HTML, CSS — para ser executada em
+    várias plataformas. Essas aplicações multiplataforma…
+
+*** Anotações                                                      :noexport:
+**** Widget toolkit
+     “Most widget toolkits use *event-driven programming* as a model for
+     interaction.[1] The toolkit handles user events, for example when the user
+     clicks on a button. When an event is detected, it is passed on to the
+     application where it is dealt with. The *design of those toolkits has been
+     criticized* for promoting an oversimplified model of event-action, leading
+     programmers to create *error-prone*, *difficult to extend* and *excessively
+     complex* application code.[2] Finite State Machines and Hierarchical State
+     Machines have been proposed as *high-level models???* to represent the
+     interactive state changes for *reactive programs*.” — [[https://en.wikipedia.org/wiki/Widget_toolkit#cite_ref-Samek03b_2-0][Wikipedia]]
+    
+     [1] *[[http://www.cs.cmu.edu/~amulet/papers/futureofhciACM.pdf][Past, Present and Future of User Interface Software Tools]]*.
+     Brad Myers, 2000.
+     [2] *[[http://www.ddj.com/cpp/184401643][Who Moved My State?]]*. Miro Samek, 2003.
+**** Complexity and Cognition
+     # COMERTAR que as formas de interação entre as partes, humano e computador,
+     # estão diretamente ligadas a complexidade de programação.
+
+     # verificar se a teoria da complexidade diz algo sobre a quantidade de
+     # entidades num sistema
+
+     Quanto mais complexa a interação, maior o nível de dificuldade na
+     programação. Mais complexa é relação entre os componentes de uma aplicação.
+     Maiores são os requisitos para modularizar e compor tais componentes de forma
+     coerente e concisa, afim de diminuir a carga cognitiva necessária para
+     entender o código de uma aplicação. Com a carga cognitiva mais baixa, o
+     programador leva menos tempo para escrever e reescrever (refatoração) o
+     código de uma aplicação. Menos /bugs/ também significa menos refatoração.
+     Menos tempo escrevendo código significa MENOS TEMPO TRABALHANDO, MENOS
+     DINHEIRO GASTO, MAIS TEMPO E DINHEIRO PRA MACONHA. EBA! FOGO NA BABILÔNIA.
+     FOGO NA BABILÔNIA.
+
+     Testes empíricos podem analizar as implicações dos diferentes conceitos, ou
+     paradigmas, na produtividade do programador. Pelo menos um estudo empírico
+     demonstrou… em grupos de controle (Salvaneschi, 2014). Testes empíricos são
+     importantes para confirmar se algum paradigma implica ou não na
+     produtividade. Resultados empíricos podem ser usados para guiar na escolha
+     dos conceitos de programação a ser ensinado nos cursos de graduação e
+     especialização. On July 3, 4:20pm.
+
+     Essas escolhas também podem ser testadas quanto suas implicações
+     socieconômicas na produção de software no mercado. Porém qualquer afirmação
+     será apenas especulação, pelo menos até que se tenha testes suficientes, não
+     somente em experimentos controlados, mas também na produção de software em
+     larga escala. On July 3, 4:37pm.
+
+**** Event-driven programming
+     “The design of those programs which rely on event-action model has been
+     criticised, and it has been suggested that event-action model leads
+     programmers to create error prone, difficult to extend and excessively
+     complex application code.[2] Table-driven state machines have been
+     advocated as a viable alternative.[4] On the other hand, table-driven state
+     machines themselves suffer from significant weaknesses including "state
+     explosion" phenomenon.[5]” — [[https://en.wikipedia.org/wiki/Event-driven_programming#Common_uses][Wikipedia: Event-driven Programming]]
+
+**** Frameworks
+     - [[http://www.lispcast.com/why-web-frameworks][Why do we use Web Frameworks?]]
+**** Fluxo de controle
+     porém o foco no fluxo de controle pode tonar a base de código
+     mais complexa — como tratado por \citeonline{moseley2006} no estudo de
+     complexidade em sistemas de software de larga escala.
+
+    # A maioria das aplicações que interagem com o ambiente externo são
+    # arquitetadas em torno do /gerenciamento de mudanças no estado/ em /resposta
+    # à entradas/ cite:blackheath2016.
+
+
+* Footnotes
+
+[fn:statement] Uma sentença (/statement/) pode conter uma ou várias expressões
+ou instruções. Uma única instrução numa linguagem de alto nível pode representar
+múltiplas instruções de máquinas. Programas consistem de instruções e
+expressões. Uma expressão é um grupo de símbolos que representa um valor.
+
+[fn:compositionality] This principle is also called Frege's principle, because
+Gottlob Frege is widely credited for the first modern formulation of it.
+However, the idea appears already among Indian philosophers of grammar such as
+Yāska, and also in Plato's work such as in Theaetetus (Wikipedia). 
+
+[fn:interactive] Este tipo de programa é popularmente conhecido como interativo
+        — nota-se muito o uso da expressão ‘Aplicações interativas’ por exemplo.
+
+[fn:event_streams] Tradução literal de /‘event streams’/, em inglês.
+
+[fn:discrete] *Explicar?*
+
+[fn:callbackOrigin] Por isso é comum chamar um observador de /callback/.
+
+[fn:composition] Pra Fazer: Conceituar /composição/ de funções.
+
+[fn:iteration] O processo de percorrer, um por um, os itens de uma coleção. 
+
+[fn:lambda] Pra Fazer: Explicar o conceito de expressões /lambda/ na introdução
+da PF.
+
+[fn:prototypes] Diferente da maioria das linguagens, em que objetos são
+instâncias de classes, no JavaScript os objetos são extensões de /protótipos/.
+
+# “An instruction written in a high-level language. A statement directs the
+# computer to perform a specified action. A single statement in a high-level
+# language can represent several machine-language instructions. Programs consist
+# of statements and expressions. An expression is a group of symbols that
+# represent a value.” [[http://www.webopedia.com/TERM/S/statement.html][Webopedia: statement]].
+
+[fn:concurrency] Interfaces gráficas, e outros programas, precisam executar
+atividades independentes entre si — p. ex., /baixar arquivos da internet/ de
+forma independente de /responder a cliques ou gestos multitoque/ é uma técnica
+muito comum para evitar que o usuário tenha que esperar uma imagem terminar de
+baixar antes de poder interagir com a interface. Esse tipo de técnica se baseia
+no conceito de programação /concorrente/, assim denominada porque as atividades
+concorrem aos recursos do computador.
+
+# Isso é sensato, já que a ergonomia da interface é melhor, assim como a
+# experiência do usuário.
