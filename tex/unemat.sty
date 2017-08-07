@@ -20,6 +20,7 @@
 %% OUTRAS CUSTOMIZAÇÕES
 %% Universidade do Gama (FGA-UnB): https://github.com/fga-unb/template-latex-tcc
 %% Universidade Estadual do Ceará (UECE): https://github.com/thiagodnf/uecetex2
+%% Puc Minas: https://github.com/abntex/abntex2-contrib/blob/master/customizacoes/pucminas
 
 % ---
 % INICIO DAS CUSTOMIZACOES PARA A UNEMAT
@@ -94,13 +95,13 @@
 
 	\MakeUppercase{\bfseries\normalsize\imprimirautor}
 
-	\vspace*{\fill}\vspace*{\fill}\vspace*{\fill}\vspace{0.5cm}
+	\vspace{5cm}
 
 	\begin{center}
 	\MakeUppercase{\bfseries\normalsize\imprimirtitulo}
 	\end{center}
 
-	\vspace*{3cm}
+	\vspace*{5.5cm}
 
 	\abntex@ifnotempty{\imprimirpreambulo}
 	{
@@ -136,6 +137,14 @@
 %\renewcommand\cftsubsectionaftersnumb{\hspace{1cm}}
 %\renewcommand\cftsubsubsectionaftersnumb{\hspace{1cm}}
 \renewcommand\cftsubsubsectionaftersnumb{\normalfont}
+\renewcommand\cftparagraphaftersnumb{\normalfont\itshape}
+
+% nivel de profundidade (implementa o quinto nivel - subsubsubsection)
+\setsecnumdepth{paragraph}
+\settocdepth{subsubsection}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\maxsecnumdepth{paragraph}
 
 
 % ----------------------------------------------------------
@@ -220,6 +229,8 @@
 \renewcommand{\ABNTEXsectionfont}{\bfseries}       % Tirar TITLE do projeto.tex
 \renewcommand{\ABNTEXsubsectionfont}{\bfseries}    % Está correto
 \renewcommand{\ABNTEXsubsubsectionfont}{\bfseries\itshape} % Negrito e Itálico
+\setparaheadstyle{\bfseries\itshape}
+%\setsubparaheadstyle{\normalsize\itshape}
 
 % ----------------------------------------------------------
 % MUDA O TAMANHO DAS FONTES DE CAPÍTULOS, PARTES, SUBSEÇÕES...
