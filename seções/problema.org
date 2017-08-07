@@ -1,5 +1,5 @@
 # -*- ispell-local-dictionary: "portugues"; -*-
-* Problema e Questões
+* Problema e Questões de Pesquisa
   Quais os conceitos apropriados para programação de interfaces gráficas?
   Conceitos de programação /imperativa/ são bastante comuns em linguagens
   tradicionais, como as orientadas a objetos. Linguagens funcionais e lógicas
