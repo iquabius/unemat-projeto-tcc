@@ -1,12 +1,26 @@
 \usepackage[newfloat]{minted}
 
 \usemintedstyle[js]{manni}
+\usemintedstyle[elm]{manni}
 
-\setminted[js]{frame=lines,
-               framesep=2mm,
-               baselinestretch=1.2,
-               fontsize=\scriptsize, % scriptsize, footnotesize, small
-               linenos,
-               mathescape}
+%\renewcommand{\theFancyVerbLine}{\sffamily
+%  \textcolor[rgb]{0.5,0.5,1.0}{\tiny
+%    \oldstylenums{\arabic{FancyVerbLine}}}}
+
+\setminted{
+  frame=single,
+  framesep=2mm,
+  baselinestretch=1.2,
+  fontsize=\scriptsize, % scriptsize, footnotesize, small
+  linenos,
+  mathescape,
+}
 
 \SetupFloatingEnvironment{listing}{name=Fragmento de Código}
+
+%\usepackage{caption}
+%\captionsetup{justification=justified,singlelinecheck=true}
+
+%\usepackage{setspace}
+%%\captionsetup[listing]{font={stretch=1.0}}
+%\captionsetup{font={large,stretch=1.3}}
